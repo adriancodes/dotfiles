@@ -32,13 +32,13 @@
   (defun personal/connect-to-freenode ()
     (interactive)
     (erc :server "irc.freenode.net"
-         :nick "cromney"
-         :full-name "Christian Romney"))
+         :nick "amartin"
+         :full-name "Adrian Martin"))
   :bind ("<f9>" . personal/connect-to-freenode))
 
 (use-package erc-match
   :init
-  (setq erc-keywords '("cromney" "pointslope" "romney")
+  (setq erc-keywords '("amartin" "pointslope")
         erc-hide-list '("JOIN" "PART" "QUIT")
         erc-interpret-mirc-color t)
   :config

@@ -83,11 +83,11 @@
 ;; --- personal information ---
 
 ;; Who am I
-(setq user-email-address "cromney@pointslope.com")
-(setq user-full-name "Christian Romney")
+(setq user-email-address "amartin@pointslope.com")
+(setq user-full-name "Adrian Martin")
 
 ;; Where am I
-(setq calendar-latitude 26.017)
-(setq calendar-longitude -80.34110799999999)
-(setq calendar-location-name "Pembroke Pines, FL")
-(setq sunshine-location calendar-location-name)
+;; (setq calendar-latitude 26.017)
+;; (setq calendar-longitude -80.34110799999999)
+;; (setq calendar-location-name "Pembroke Pines, FL")
+;; (setq sunshine-location calendar-location-name)
