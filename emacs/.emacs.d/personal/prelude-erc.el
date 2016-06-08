@@ -21,7 +21,7 @@
 ;; Set erc-prompt-for-password to nil to use
 ;; $HOME/.authinfo.gpg encrypted credentials
 (use-package erc-mode
-  :init
+  :config
   (setq whitespace-global-modes '(not erc-mode))
   (setq erc-prompt-for-password nil) 
   (setq erc-autojoin-channels-alist
@@ -37,17 +37,15 @@
   :bind ("<f9>" . personal/connect-to-freenode))
 
 (use-package erc-match
-  :init
+  :config
   (setq erc-keywords '("amartin" "pointslope")
         erc-hide-list '("JOIN" "PART" "QUIT")
         erc-interpret-mirc-color t)
-  :config
   (erc-match-mode 1))
 
 (use-package erc-tweet
-  :init
-  (add-to-list 'erc-modules 'tweet)
   :config
+  (add-to-list 'erc-modules 'tweet)
   (erc-update-modules))
 
 (provide 'personal/prelude-erc)

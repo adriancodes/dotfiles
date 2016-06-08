@@ -71,6 +71,9 @@
    rinari
    bundler
    robe
+
+   recentf
+   ox-reveal
 ))
 
 ;; This will be used *everywhere* to simplify and

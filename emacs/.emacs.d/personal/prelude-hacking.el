@@ -10,7 +10,7 @@
 
 (use-package yasnippet
   :diminish (yas-minor-mode . " Ŷ")
-  :init
+  :config
   (defun check-expansion ()
     (save-excursion
       (if (looking-at "\\_>") t
@@ -44,7 +44,7 @@
 
 ;; Exuberant ctags 
 (use-package ctags
-  :init 
+  :config 
   (setq path-to-ctags "/usr/local/bin/ctags"
         projectile-tags-command "/usr/local/bin/ctags -Re %s %s"
         tags-revert-without-query t)
@@ -67,7 +67,7 @@
 
 ;; Zen Coding
 (use-package web-mode
-  :init
+  :config
   (progn
     (defun personal/disable-smartparens ()
       (smartparens-mode 0))
@@ -84,8 +84,6 @@
             web-mode-code-indent-offset 2
             web-mode-enable-auto-pairing t)
       (add-to-list 'sp-ignore-modes-list 'web-mode)))
-  
-  :config
   (setq auto-mode-alist (cons '("\\.php$" . web-mode) auto-mode-alist))
   (add-hook 'web-mode-hook  'personal/web-mode-hook)
   (add-hook 'web-mode-hook 'personal/disable-smartparens))

@@ -5,7 +5,7 @@
 ;;; 
 ;;; Code:
 (use-package org
-  :init
+  :config
   ;; Export
   (setq org-html-validation-link nil)
   (setq org-export-html-postamble nil)
@@ -28,19 +28,20 @@
   ;; Todo Lists
   (setq org-todo-keywords '((type "TODO" "IN-PROGRESS" "|" "DONE"))
         org-todo-keyword-faces '(("INPROGRESS" . (:foreground "blue" :weight bold))))
-
-  :bind
-  ("C-c a" . org-agenda)
-
-  :config
   (add-hook 'org-mode-hook
             (lambda ()
               (flyspell-mode)
               (writegood-mode)
-              (auto-fill-mode))))
+              (auto-fill-mode)))
+  :bind ("C-c a" . org-agenda))
+
+(use-package ox-reveal
+  :ensure t
+  :config
+  (setq org-reveal-root "http://cdn.jsdelivr.net/reveal.js/3.0.0/"))
 
 (use-package deft
-  :init
+  :config
   (setq deft-directory "~/Dropbox/org")
   (setq deft-use-filename-as-title t)
   (setq deft-extension "org")
@@ -76,10 +77,8 @@
 ;; Credentials are encrypted in ~/.authinfo.gpg
 ;; and Emacs can *just read them* if GPG agent is running
 (use-package org2blog-autoloads
-  :init
-  (require 'netrc)
   :config
-
+  (require 'netrc)
   (setq org2blog/wp-use-sourcecode-shortcode 't
         org2blog/wp-sourcecode-default-params nil
         org2blog/wp-sourcecode-langs

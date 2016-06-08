@@ -18,7 +18,7 @@
 (use-package robe
   :defer t
   :bind ("C-c M-RET" . company-robe)
-  :init  
+  :config 
   (progn (add-hook 'ruby-mode-hook 'robe-mode)
          (push 'company-robe company-backends)))
 
@@ -35,7 +35,7 @@
 
 (use-package rspec-mode
   :defer t
-  :init
+  :config
   (defun personal/rspec-verify-single ()
     "Runs the specified example at the point of the current buffer."
     (interactive)
@@ -47,7 +47,7 @@
         (widen)
         (number-to-string (line-number-at-pos))))
      (rspec-core-options)))
-  :config
+  
   (progn
     (setq rspec-command-options "--fail-fast --format documentation")
     (bind-key "C-c , ," 'rspec-rerun rspec-mode-map)

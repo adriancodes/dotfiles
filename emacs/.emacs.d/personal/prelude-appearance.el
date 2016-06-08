@@ -14,6 +14,8 @@
 (setq-default web-mode-markup-indent-offset 2)
 (setq-default sgml-basic-offset 2)
 (setq-default indent-tabs-mode nil) ;; spaces
+(setq-default comment-start "# ")
+
 
 (setq prelude-whitespace nil)
 (setq sentence-end-double-space nil)
@@ -26,7 +28,7 @@
 
 ;;; Themes and Global Minor Modes
 (use-package flatland-theme
-  :init
+  :config
   (add-to-list 'default-frame-alist '(font . "Source Code Pro-18"))
   (disable-theme 'zenburn)
   (disable-theme 'solarized)
@@ -35,7 +37,6 @@
   (column-number-mode t)
   (whitespace-mode t)
   (global-prettify-symbols-mode t)
-  :config
   (load-theme 'flatland)
   (add-hook 'prog-mode-hook 'rainbow-identifiers-mode))
 
@@ -49,9 +50,8 @@
 
 ;;; Line Numbers
 (use-package linum
-  :init
-  (setq linum-format " %d ")
   :config
+  (setq linum-format " %d ")
   (global-linum-mode t))
 
 (use-package ansi-color
