@@ -1,0 +1,267 @@
+[user]
+    # Replace with your details
+    name = Adrian Martin
+    email = adrian.martin@getcenter.com
+    # Uncomment and set if you use GPG signing
+    # signingkey = YOUR-GPG-KEY-ID
+
+[core]
+    editor = cursor --wait
+    # Ignore file mode changes
+    fileMode = false
+    # Use custom .gitignore
+    excludesfile = ~/.gitignore_global
+    # Handle line endings automatically
+    autocrlf = input
+    # Prevent showing files whose names contain non-ASCII symbols as unversioned
+    quotePath = false
+    # Speed up commands involving untracked files
+    untrackedCache = true
+    # Ensure consistent line endings
+    eol = lf
+    # Better diffs
+    pager = delta
+    # Large file handling
+    bigFileThreshold = 10m
+    # Improve performance
+    preloadIndex = true
+    # FSCache improves performance for certain operations
+    fsmonitor = true
+
+[init]
+    defaultBranch = main
+
+[pull]
+    # Always rebase instead of merge on pull
+    rebase = true
+    # Preserve merges during rebase
+    rebase = preserve
+
+[push]
+    # Push only the current branch
+    default = current
+    # Automatically set up remote branch
+    autoSetupRemote = true
+    # Push relevant tags automatically
+    followTags = true
+    # Verify what's being pushed
+    verify = true
+
+[fetch]
+    # Remove remote branches that no longer exist
+    prune = true
+    # Also prune tags
+    pruneTags = true
+    # Show progress
+    parallel = 0
+    # Write commit graph after fetch
+    writeCommitGraph = true
+
+[diff]
+    # Use better, descriptive prefixes
+    mnemonicPrefix = true
+    # Detect copies as well as renames
+    renames = copies
+    # Use Cursor as diff tool
+    tool = cursor
+    # Better diff algorithm
+    algorithm = histogram
+    # More accurate diffs
+    indentHeuristic = true
+    # Show moved lines differently
+    colorMoved = default
+    # Better detection of word changes
+    wordRegex = [^[:space:]]
+    # Show submodule changes
+    submodule = log
+
+[difftool "cursor"]
+    cmd = cursor --wait --diff $LOCAL $REMOTE
+
+[merge]
+    # Include summaries of merged commits in newly created merge commit messages
+    log = true
+    # Use Cursor as merge tool
+    tool = cursor
+    # Show common ancestor in conflicts
+    conflictstyle = zdiff3
+    # Verify merges aren't introducing whitespace changes
+    whitespace = warn
+
+[mergetool "cursor"]
+    cmd = cursor --wait $MERGED
+    # Don't save backup files
+    keepBackup = false
+    # Don't prompt before each invocation
+    prompt = false
+
+[color]
+    # Use colors in Git commands that are capable of colored output
+    ui = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[alias]
+    # Basic shortcuts
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    
+    # Safe force push
+    fpush = push --force-with-lease
+    
+    # Pull with rebase by default
+    p = pull --rebase
+    
+    # Branch management
+    b = branch -v                     # Branch with commit info
+    ba = branch -va                   # Show all branches
+    bd = branch -d                    # Delete branch
+    bdd = branch -D                   # Force delete branch
+    
+    # Commit handling
+    amend = commit --amend            # Amend last commit
+    undo = reset --soft HEAD^         # Undo last commit but keep changes
+    uncommit = reset --soft HEAD~1    # Remove last commit but keep changes
+    cleanup = "!git branch --merged | grep -v '\\*\\|master\\|main\\|develop' | xargs -n 1 git branch -d" # Remove merged branches
+    
+    # Logging
+    lg = log --graph --format='%C(auto)%h%d %s %C(green)(%ar) %C(bold blue)<%an>' --abbrev-commit
+    ls = log --pretty=format:'%C(yellow)%h%C(red)%d %C(reset)%s %C(blue)<%ae>' --decorate
+    ll = log --pretty=format:'%C(yellow)%h%C(red)%d %C(reset)%s %C(blue)<%ae>' --decorate --numstat
+    hist = log --pretty=format:'%C(yellow)%h %C(green)%ad%C(red)%d %C(reset)%s %C(blue)<%ae>' --graph --date=short
+    
+    # Show verbose output about tags, branches, remotes
+    tags = tag -l
+    branches = branch -a
+    remotes = remote -v
+    
+    # List contributors with number of commits
+    contributors = shortlog --summary --numbered
+    
+    # Find commits by source code
+    fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+    
+    # Find commits by commit message
+    fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+    
+    # List all aliases
+    aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+    
+    # Show current branch name
+    current = rev-parse --abbrev-ref HEAD
+    
+    # Interactive rebase with the given number of latest commits
+    reb = "!r() { git rebase -i HEAD~$1; }; r"
+    
+    # Find biggest files in git history
+    big = "!f() { git rev-list --objects --all \
+        | git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' \
+        | sed -n 's/^blob //p' \
+        | sort -k2nr \
+        | cut -c 1-12,41- \
+        | head -n 10; }; f"
+
+    # Stash operations
+    sl = stash list                   # List stashes
+    ss = stash save                   # Save stash
+    sp = stash pop                    # Pop stash
+    sa = stash apply                  # Apply stash
+    
+    # Show what you've done today
+    today = "!git log --since=midnight --author=\"$(git config user.name)\" --oneline"
+
+    # Show the state of your repository in a compact way
+    state = status -sb
+
+[delta]
+    # Enable side-by-side view
+    side-by-side = true
+    # Use syntax highlighting
+    syntax-theme = Monokai Extended
+    # Show line numbers
+    line-numbers = true
+    # Navigate through files
+    navigate = true
+    # Keep plus and minus markers
+    keep-plus-minus-markers = true
+    # Show file modification time
+    file-modification-label = true
+    # Highlight matching words
+    max-line-distance = 0.6
+
+[help]
+    # Automatically correct and execute mistyped commands
+    autocorrect = prompt
+
+[credential]
+    # Cache credentials for 1 hour
+    helper = cache --timeout=3600
+
+[rebase]
+    # Automatically stash/unstash changes when rebasing
+    autoStash = true
+    # Automatically squash fixup commits
+    autoSquash = true
+    # Update refs for dependent branches
+    updateRefs = true
+
+[status]
+    # Show the branch and tracking info in short status
+    branch = true
+    # Show a summary of changes
+    short = true
+    # Show number of stash entries
+    showStash = true
+
+[branch]
+    # Show most recently changed branches first
+    sort = -committerdate
+    # Always rebase on pull
+    autoSetupRebase = always
+
+[log]
+    # Use abbreviated commit IDs
+    abbrevCommit = true
+    # Follow file renames
+    follow = true
+    # Show commit signature information
+    showSignature = false
+
+[transfer]
+    # To guard against repository corruption
+    fsckObjects = true
+
+[maintenance]
+    # Enable automatic maintenance
+    auto = true
+    # Set maintenance strategy
+    strategy = incremental
+
+[feature]
+    # Enable new features
+    manyFiles = true
+    # Experimental features for large repositories
+    sparse = true
+
+[protocol]
+    # Use version 2 of Git protocol
+    version = 2

@@ -1,0 +1,237 @@
+# Required tools for this configuration:
+# brew install \
+#   eza \     # Modern ls replacement (maintained fork of exa)
+#   bat \     # Cat replacement with syntax highlighting
+#   fd \      # Find replacement (used in FZF config)
+#   ripgrep \ # Grep replacement
+#   fzf \     # Fuzzy finder
+#   zoxide    # Smarter cd command
+#
+# Optional but recommended tools:
+# brew install \
+#   dust \    # du replacement
+#   duf \     # df replacement
+#   procs \   # ps replacement
+#   btop \    # top replacement
+#   direnv    # Directory-specific environment variables
+
+# Performance profiling (uncomment to debug slow startup)
+# zmodload zsh/zprof
+
+# XDG Base Directory Specification
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+# ZINIT
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+
+# Download Zinit, if it's not there yet
+if [ ! -d "$ZINIT_HOME" ]; then
+    mkdir -p "$(dirname $ZINIT_HOME)"
+    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+
+# Source/Load zinit
+source "${ZINIT_HOME}/zinit.zsh"
+
+# Initialize completion before loading plugins
+autoload -Uz compinit
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+    compinit
+else
+    compinit -C
+fi
+
+# Load plugins
+# Note: zsh-syntax-highlighting must be loaded last
+zinit ice lucid wait='0'
+zinit light zsh-users/zsh-completions
+
+zinit ice lucid wait='0'
+zinit light Aloxaf/fzf-tab
+
+zinit ice lucid wait='0' atload='_zsh_autosuggest_start'
+zinit light zsh-users/zsh-autosuggestions
+
+# Load Oh-My-Zsh snippets
+zinit snippet OMZL::git.zsh
+zinit snippet OMZP::git
+zinit snippet OMZP::aws
+zinit snippet OMZP::command-not-found
+
+# Must be loaded last
+zinit ice lucid wait='0' atinit='zpcompinit'
+zinit light zsh-users/zsh-syntax-highlighting
+
+# Enhanced keybindings
+bindkey -e  # Emacs keybindings
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+bindkey '^[w' kill-region
+bindkey '^[[A' up-line-or-search      # Up arrow
+bindkey '^[[B' down-line-or-search    # Down arrow
+bindkey '^[[1;5C' forward-word        # Ctrl+right
+bindkey '^[[1;5D' backward-word       # Ctrl+left
+
+# History configuration
+HISTSIZE=50000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+setopt HIST_IGNORE_ALL_DUPS    # Remove older duplicate entries from history
+setopt HIST_REDUCE_BLANKS      # Remove superfluous blanks from history items
+setopt HIST_VERIFY             # Show command with history expansion to user before running it
+setopt SHARE_HISTORY          # Share history between all sessions
+setopt EXTENDED_HISTORY       # Record timestamp of command in HISTFILE
+setopt HIST_EXPIRE_DUPS_FIRST # Delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt HIST_IGNORE_SPACE      # Ignore commands that start with space
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'  # Case insensitive completion
+zstyle ':completion:*' menu select                         # Menu-style completion
+zstyle ':completion:*' special-dirs true                   # Complete . and .. special directories
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}     # Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*:approximate:*' max-errors 2
+
+# FZF tab completion styling
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --tree --level=1 --color=always $realpath || ls -l --color=always $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --tree --level=1 --color=always $realpath || ls -l --color=always $realpath'
+
+# Better directory navigation
+setopt AUTO_CD              # Go to folder path without using cd
+setopt AUTO_PUSHD          # Push the old directory onto the stack on cd
+setopt PUSHD_IGNORE_DUPS   # Do not store duplicates in the stack
+setopt PUSHD_SILENT        # Do not print the directory stack after pushd or popd
+
+# Enhanced aliases
+# Modern replacements for common tools
+if (( $+commands[eza] )); then
+    alias ls='eza --group-directories-first --icons'
+    alias ll='eza -l --group-directories-first --icons'
+    alias la='eza -la --group-directories-first --icons'
+    alias lt='eza --tree --level=2 --group-directories-first --icons'
+fi
+
+if (( $+commands[bat] )); then
+    alias cat='bat'
+fi
+
+if (( $+commands[fd] )); then
+    alias find='fd'
+fi
+
+if (( $+commands[ripgrep] )); then
+    alias grep='rg'
+fi
+
+# Conditional aliases based on OS
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS specific aliases
+    alias showfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+    alias hidefiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+    alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+fi
+
+# Directory and file operations
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias mkdir='mkdir -pv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias cat='bat'
+alias cr='cursor'
+# Git aliases
+alias g='git'
+alias gs='git status'
+alias gp='git push'
+alias gpl='git pull'
+alias gc='git commit'
+alias gco='git checkout'
+alias gb='git branch'
+alias gl='git log --oneline --graph --decorate'
+
+# Utility aliases
+alias aliases='alias | sort'         # List all aliases
+alias paths='echo -e ${PATH//:/\\n}' # List all paths
+
+# Development
+# alias npm-update='npx npm-check-updates -u && npm install'
+# alias yarn-update='yarn upgrade-interactive --latest'
+# alias docker-clean='docker system prune -af'
+
+
+
+# FZF configuration
+if (( $+commands[fzf] )); then
+    export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
+    if (( $+commands[bat] )); then
+        export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --preview 'bat --style=numbers --color=always {}'"
+    fi
+    if (( $+commands[fd] )); then
+        export FZF_DEFAULT_COMMAND='fd --type file --hidden --follow --exclude .git'
+        export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+        export FZF_ALT_C_COMMAND='fd --type directory --hidden --follow --exclude .git'
+    fi
+fi
+
+# Homebrew
+if [[ -f /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+if [[ -f "$(brew --prefix nvm)/nvm.sh" ]]; then
+    source "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
+fi
+
+# Paths
+# Local binaries
+export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.bin"
+
+# Node.js
+export PATH="$PATH:./node_modules/.bin"
+
+# Go
+if (( $+commands[go] )); then
+    export GOPATH=$HOME/go
+    export GOROOT="$(brew --prefix golang)/libexec"
+    export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+fi
+
+# pnpm
+export PNPM_HOME="/Users/adrian.martin/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Shell integrations (load only if commands exist)
+if (( $+commands[fzf] )); then
+    eval "$(fzf --zsh)"
+fi
+
+if (( $+commands[zoxide] )); then
+    eval "$(zoxide init zsh)"
+fi
+
+if (( $+commands[starship] )); then
+    eval "$(starship init zsh)"
+fi
+
+if (( $+commands[direnv] )); then
+    eval "$(direnv hook zsh)"
+fi
+
+
+
+# Load any local overrides
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# Performance profiling (uncomment with first line to debug slow startup)
+# zprof
+
