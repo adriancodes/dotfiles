@@ -1,19 +1,19 @@
 # Required tools for this configuration:
 # brew install \
-#   eza \     # Modern ls replacement (maintained fork of exa)
-#   bat \     # Cat replacement with syntax highlighting
-#   fd \      # Find replacement (used in FZF config)
-#   ripgrep \ # Grep replacement
-#   fzf \     # Fuzzy finder
-#   zoxide    # Smarter cd command
+#   eza \
+#   bat \
+#   fd \
+#   ripgrep \
+#   fzf \
+#   zoxide
 #
 # Optional but recommended tools:
 # brew install \
-#   dust \    # du replacement
-#   duf \     # df replacement
-#   procs \   # ps replacement
-#   btop \    # top replacement
-#   direnv    # Directory-specific environment variables
+#   dust \
+#   duf \
+#   procs \
+#   btop \
+#   direnv 
 
 # Performance profiling (uncomment to debug slow startup)
 # zmodload zsh/zprof
@@ -75,7 +75,7 @@ bindkey '^[[1;5C' forward-word        # Ctrl+right
 bindkey '^[[1;5D' backward-word       # Ctrl+left
 
 # History configuration
-HISTSIZE=50000
+HISTSIZE=100000000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 setopt HIST_IGNORE_ALL_DUPS    # Remove older duplicate entries from history
@@ -133,6 +133,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 fi
 
+# Shell
+
+alias reloadz='zsh'
+
 # Directory and file operations
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -143,6 +147,9 @@ alias mv='mv -iv'
 alias rm='rm -iv'
 alias cat='bat'
 alias cr='cursor'
+alias em='emacs -nw'
+alias editrc='emacs -nw ~/.zshrc'
+
 # Git aliases
 alias g='git'
 alias gs='git status'
@@ -155,13 +162,15 @@ alias gl='git log --oneline --graph --decorate'
 
 # Utility aliases
 alias aliases='alias | sort'         # List all aliases
-alias paths='echo -e ${PATH//:/\\n}' # List all paths
+alias paths='echo -e ${PATH//: \'
 
 # Development
 # alias npm-update='npx npm-check-updates -u && npm install'
 # alias yarn-update='yarn upgrade-interactive --latest'
 # alias docker-clean='docker system prune -af'
 
+# Emcas
+alias doomsync='~/.emacs.d/bin/doom sync'
 
 
 # FZF configuration
@@ -235,3 +244,6 @@ fi
 # Performance profiling (uncomment with first line to debug slow startup)
 # zprof
 
+
+# Added by Antigravity
+export PATH="/Users/adrian/.antigravity/antigravity/bin:$PATH"
