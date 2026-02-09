@@ -8,14 +8,9 @@
 ;; AI Integration (The Cursor Magic ✨)
 ;; ============================================
 
-;; GPTel - Best AI interface (supports Claude, GPT-4, local models)
-(package! gptel)
-
-;; GitHub Copilot - disabled (language server not installed)
-;; (package! copilot
-;;   :recipe (:host github
-;;            :repo "copilot-emacs/copilot.el"
-;;            :files ("*.el")))
+;; Claude Code IDE integration
+(package! claude-code-ide
+  :recipe (:host github :repo "manzaltu/claude-code-ide.el"))
 
 ;; ChatGPT Shell - alternative chat interface
 (package! chatgpt-shell)

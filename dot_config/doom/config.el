@@ -91,6 +91,12 @@
 (define-key input-decode-map "\e[<" [terminal-mouse-event])
 (define-key special-event-map [terminal-mouse-event] #'ignore)
 
+;; Handle bracketed paste mode sequences
+(define-key input-decode-map "\e[200~" [bracketed-paste-start])
+(define-key input-decode-map "\e[201~" [bracketed-paste-end])
+(define-key special-event-map [bracketed-paste-start] #'ignore)
+(define-key special-event-map [bracketed-paste-end] #'ignore)
+
 ;; Smoother scrolling
 (setq scroll-margin 3
       scroll-conservatively 101
@@ -212,8 +218,8 @@
 ;; ============================================
 
 (after! company
-  (setq company-idle-delay 0.1
-        company-minimum-prefix-length 1
+  (setq company-idle-delay 0.3
+        company-minimum-prefix-length 3
         company-show-quick-access t
         company-tooltip-limit 10
         company-tooltip-align-annotations t
@@ -222,7 +228,7 @@
         company-dabbrev-ignore-case nil
         company-require-match nil
         company-frontends '(company-pseudo-tooltip-frontend
-                           company-echo-metadata-frontend)))
+                            company-echo-metadata-frontend)))
 
 ;; ============================================
 ;; Projectile (Project Management)
@@ -261,9 +267,9 @@
 
 (setq +format-on-save-enabled-modes
       '(not emacs-lisp-mode    ; elisp formatting can be finicky
-            sql-mode           ; too opinionated
-            tex-mode           ; latex formatting is complex
-            latex-mode))
+        sql-mode           ; too opinionated
+        tex-mode           ; latex formatting is complex
+        latex-mode))
 
 ;; ============================================
 ;; File Management
@@ -318,7 +324,7 @@
 (defun gptel-get-anthropic-key ()
   "Get Anthropic API key from ~/.authinfo.gpg"
   (let ((found (car (auth-source-search :host "api.anthropic.com"
-                                         :require '(:secret)))))
+                                        :require '(:secret)))))
     (if found
         (funcall (plist-get found :secret))
       (error "No Anthropic API key found. Add to ~/.authinfo.gpg:
@@ -327,30 +333,19 @@ machine api.anthropic.com login apikey password YOUR-KEY-HERE"))))
 (defun gptel-get-openai-key ()
   "Get OpenAI API key from ~/.authinfo.gpg"
   (let ((found (car (auth-source-search :host "api.openai.com"
-                                         :require '(:secret)))))
+                                        :require '(:secret)))))
     (if found
         (funcall (plist-get found :secret))
       (error "No OpenAI API key found. Add to ~/.authinfo.gpg:
 machine api.openai.com login apikey password YOUR-KEY-HERE"))))
 
-;; --- GitHub Copilot (disabled - language server not installed) ---
-;; To re-enable: install with `npm install -g @github/copilot-language-server`
-;; then uncomment the block below
-;; (use-package! copilot
-;;   :hook ((prog-mode . copilot-mode)
-;;          (yaml-mode . copilot-mode)
-;;          (json-mode . copilot-mode))
-;;   :bind (:map copilot-completion-map
-;;               ("TAB" . copilot-accept-completion)
-;;               ("<tab>" . copilot-accept-completion)
-;;               ("C-TAB" . copilot-accept-completion-by-word)
-;;               ("C-<tab>" . copilot-accept-completion-by-word)
-;;               ("C-n" . copilot-next-completion)
-;;               ("C-p" . copilot-previous-completion)
-;;               ("C-g" . copilot-clear-overlay))
-;;   :config
-;;   (setq copilot-indent-offset-warning-disable t
-;;         copilot-max-char -1))
+
+;; ---- Claude Code Setup ---- ;;
+(use-package! claude-code-ide
+  :bind ("C-c C-'" . claude-code-ide-menu) ; Set your favorite keybinding
+  :config
+  (claude-code-ide-emacs-tools-setup)) ; Optionally enable Emacs MCP tools
+
 
 ;; --- Ellama (Ollama integration) ---
 (use-package! ellama

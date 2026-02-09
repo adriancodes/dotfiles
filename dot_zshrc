@@ -247,3 +247,5 @@ fi
 
 # Added by Antigravity
 export PATH="/Users/adrian/.antigravity/antigravity/bin:$PATH"
+
+. "$HOME/.local/share/../bin/env"
