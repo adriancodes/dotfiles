@@ -172,7 +172,6 @@ alias paths='echo -e ${PATH//: \'
 # Emcas
 alias doomsync='~/.emacs.d/bin/doom sync'
 
-
 # FZF configuration
 if (( $+commands[fzf] )); then
     export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
@@ -212,7 +211,7 @@ if (( $+commands[go] )); then
 fi
 
 # pnpm
-export PNPM_HOME="/Users/adrian.martin/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -236,16 +235,24 @@ if (( $+commands[direnv] )); then
     eval "$(direnv hook zsh)"
 fi
 
-
-
 # Load any local overrides
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # Performance profiling (uncomment with first line to debug slow startup)
 # zprof
 
-
 # Added by Antigravity
 export PATH="/Users/adrian/.antigravity/antigravity/bin:$PATH"
 
 . "$HOME/.local/share/../bin/env"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/adrian/.lmstudio/bin"
+# End of LM Studio CLI section
+
+# bun completions
+[ -s "/Users/adrian/.bun/_bun" ] && source "/Users/adrian/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

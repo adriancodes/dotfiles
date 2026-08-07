@@ -1,0 +1,5 @@
+{{ if ne .chezmoi.username "adrian" }}
+# Git identity stays with Adrian — the agent account must not commit as him
+.gitconfig
+.gitignore_global
+{{ end }}
