@@ -23,6 +23,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
+# Keep PATH free of duplicates no matter how many times it's appended below
+typeset -U path PATH
+
 # ZINIT
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -35,17 +38,12 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Initialize completion before loading plugins
-autoload -Uz compinit
-if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
-    compinit
-else
-    compinit -C
-fi
-
 # Load plugins
-# Note: zsh-syntax-highlighting must be loaded last
-zinit ice lucid wait='0'
+# Note: zsh-syntax-highlighting must be loaded last.
+# Completion is initialized once at the end via zinit's zicompinit (after every
+# completion source is loaded), so there's no manual compinit here. blockf stops
+# zsh-completions from calling compdef before that single init runs.
+zinit ice lucid wait='0' blockf
 zinit light zsh-users/zsh-completions
 
 zinit ice lucid wait='0'
@@ -61,7 +59,7 @@ zinit snippet OMZP::aws
 zinit snippet OMZP::command-not-found
 
 # Must be loaded last
-zinit ice lucid wait='0' atinit='zpcompinit'
+zinit ice lucid wait='0' atinit='zicompinit; zicdreplay'
 zinit light zsh-users/zsh-syntax-highlighting
 
 # Enhanced keybindings
@@ -75,7 +73,7 @@ bindkey '^[[1;5C' forward-word        # Ctrl+right
 bindkey '^[[1;5D' backward-word       # Ctrl+left
 
 # History configuration
-HISTSIZE=100000000
+HISTSIZE=1000000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 setopt HIST_IGNORE_ALL_DUPS    # Remove older duplicate entries from history
@@ -117,13 +115,9 @@ if (( $+commands[bat] )); then
     alias cat='bat'
 fi
 
-if (( $+commands[fd] )); then
-    alias find='fd'
-fi
-
-if (( $+commands[ripgrep] )); then
-    alias grep='rg'
-fi
+# Note: fd and rg are NOT flag-compatible with find/grep, so they're left under
+# their own names rather than shadowing the classics (avoids breaking pasted
+# `find -name` / `grep -oP` style commands). Use `fd` and `rg` directly.
 
 # Conditional aliases based on OS
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -135,7 +129,7 @@ fi
 
 # Shell
 
-alias reloadz='zsh'
+alias reloadz='exec zsh'
 
 # Directory and file operations
 alias ..='cd ..'
@@ -145,7 +139,6 @@ alias mkdir='mkdir -pv'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
-alias cat='bat'
 alias cr='cursor'
 alias em='emacs -nw'
 alias editrc='emacs -nw ~/.zshrc'
@@ -162,14 +155,14 @@ alias gl='git log --oneline --graph --decorate'
 
 # Utility aliases
 alias aliases='alias | sort'         # List all aliases
-alias paths='echo -e ${PATH//: \'
+alias paths='echo -e ${PATH//:/\n}'  # Print each PATH entry on its own line
 
 # Development
 # alias npm-update='npx npm-check-updates -u && npm install'
 # alias yarn-update='yarn upgrade-interactive --latest'
 # alias docker-clean='docker system prune -af'
 
-# Emcas
+# Emacs
 alias doomsync='~/.emacs.d/bin/doom sync'
 
 # FZF configuration
@@ -244,7 +237,7 @@ fi
 # Added by Antigravity
 export PATH="/Users/adrian/.antigravity/antigravity/bin:$PATH"
 
-. "$HOME/.local/share/../bin/env"
+. "$HOME/.local/bin/env"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/adrian/.lmstudio/bin"
