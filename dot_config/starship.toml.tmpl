@@ -178,13 +178,22 @@ symbol = " "
 symbol = " "
 
 [username]
+{{- if eq .chezmoi.username "neo" }}
+style_user = "bold red"  # agent profile — red so it's unmistakable which account you're in
+{{- else }}
 style_user = "bold dimmed blue"
+{{- end }}
 show_always = true  # This makes username always show
 format = "[$user]($style) "
 
-# Colored prompt character: green on success, red after a failed command
+# Colored prompt character. Success is green normally, but yellow in the agent
+# (neo) profile so even the caret signals which account you're operating in.
 [character]
+{{- if eq .chezmoi.username "neo" }}
+success_symbol = "[❯](bold yellow)"
+{{- else }}
 success_symbol = "[❯](bold green)"
+{{- end }}
 error_symbol = "[❯](bold red)"
 vimcmd_symbol = "[❮](bold green)"
 
