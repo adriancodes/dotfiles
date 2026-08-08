@@ -66,7 +66,11 @@ zinit snippet OMZP::aws
 zinit snippet OMZP::command-not-found
 
 # Must be loaded last
-zinit ice lucid wait='0' atinit='zicompinit; zicdreplay'
+# compinit -i: silently skip "insecure" completion dirs instead of prompting.
+# On a shared Mac, Homebrew's completion dirs are owned by the brew-owning user
+# (adrian), which zsh flags for any OTHER account (neo). -i drops just those and
+# keeps each account's own secure completions. No-op for the brew owner.
+zinit ice lucid wait='0' atinit='autoload -Uz compinit; compinit -i; zicdreplay'
 zinit light zsh-users/zsh-syntax-highlighting
 
 # Enhanced keybindings
@@ -244,7 +248,9 @@ fi
 # Added by Antigravity
 export PATH="/Users/adrian/.antigravity/antigravity/bin:$PATH"
 
-. "$HOME/.local/bin/env"
+# Sourced only if present — this file is created by the uv/rust installer and
+# won't exist on every account (e.g. neo), so guard it to avoid a startup error.
+[[ -f "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/adrian/.lmstudio/bin"
