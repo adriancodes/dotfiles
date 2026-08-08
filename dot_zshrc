@@ -209,11 +209,10 @@ if [[ -f /opt/homebrew/bin/brew ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Node Version Manager
-export NVM_DIR="$HOME/.nvm"
-if [[ -f "$(brew --prefix nvm)/nvm.sh" ]]; then
-    source "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
-fi
+# Node/Python/Go versions are managed by mise (activated at the very end of this
+# file so its shims take precedence). nvm was removed — it loaded synchronously on
+# every startup and its node was already shadowed. mise installs runtimes per-user,
+# which also suits the non-admin neo account (no brew/admin needed there).
 
 # Paths
 # Local binaries
@@ -277,3 +276,10 @@ export PATH="$PATH:/Users/adrian/.lmstudio/bin"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# mise — activate LAST so its runtime shims sit ahead of every PATH entry above
+# (including the Hermes node symlink in ~/.local/bin). Guarded so accounts without
+# mise just skip it. Run `mise use -g node@lts` once per account to pick a runtime.
+if (( $+commands[mise] )); then
+    eval "$(mise activate zsh)"
+fi
