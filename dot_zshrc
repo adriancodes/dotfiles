@@ -25,6 +25,21 @@
 export LANG="${LANG:-en_US.UTF-8}"
 export LC_ALL="${LC_ALL:-$LANG}"
 
+# Terminal capabilities (terminfo). Some terminals — notably Ghostty — ship their
+# own terminfo (xterm-ghostty) inside the app bundle and point to it via $TERMINFO,
+# which `su -` strips. That leaves $TERM unresolvable in another account (e.g. neo)
+# and breaks line editing. Layer 1: re-add known app-bundle terminfo dirs so the
+# real entry still resolves (trailing colon keeps the system database).
+for _tinfo in /Applications/Ghostty.app/Contents/Resources/terminfo; do
+    [[ -d $_tinfo ]] && export TERMINFO_DIRS="$_tinfo:${TERMINFO_DIRS}"
+done
+unset _tinfo
+# Layer 2: if $TERM still can't be resolved, fall back to a universally-available
+# entry so typing works no matter the terminal.
+if ! infocmp "$TERM" >/dev/null 2>&1; then
+    export TERM=xterm-256color
+fi
+
 # XDG Base Directory Specification
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
