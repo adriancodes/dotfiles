@@ -86,7 +86,7 @@ zinit snippet OMZP::command-not-found
 # (adrian), which zsh flags for any OTHER account (neo). -i drops just those and
 # keeps each account's own secure completions. No-op for the brew owner.
 zinit ice lucid wait='0' atinit='autoload -Uz compinit; compinit -i; zicdreplay'
-zinit light zsh-users/zsh-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 # Enhanced keybindings
 bindkey -e  # Emacs keybindings
@@ -251,6 +251,13 @@ fi
 
 if (( $+commands[direnv] )); then
     eval "$(direnv hook zsh)"
+fi
+
+# atuin — SQLite-backed, searchable shell history on Ctrl+R. Loaded after fzf so
+# atuin owns Ctrl+R; --disable-up-arrow leaves the custom up/down history-search
+# bindings above untouched. History DB is per-account (neo's stays separate).
+if (( $+commands[atuin] )); then
+    eval "$(atuin init zsh --disable-up-arrow)"
 fi
 
 # Load any local overrides
