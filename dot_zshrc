@@ -242,11 +242,20 @@ if (( $+commands[direnv] )); then
     eval "$(direnv hook zsh)"
 fi
 
-# atuin — SQLite-backed, searchable shell history on Ctrl+R. Loaded after fzf so
-# atuin owns Ctrl+R; --disable-up-arrow leaves the custom up/down history-search
-# bindings above untouched. History DB is per-account (neo's stays separate).
+# atuin — SQLite-backed, searchable shell history on Ctrl+R. Initialized on the
+# first precmd (deferred), NOT synchronously here: the syntax-highlighter and
+# autosuggestions are turbo-loaded after the first prompt, and initializing atuin
+# ahead of them tangles the zle widget-wrapping and corrupts on-screen typing.
+# This block is registered last, so its precmd hook runs after zinit's — meaning
+# atuin wraps the editor after those plugins. --disable-up-arrow keeps up/down.
 if (( $+commands[atuin] )); then
-    eval "$(atuin init zsh --disable-up-arrow)"
+    autoload -Uz add-zsh-hook
+    _atuin_lazy_init() {
+        eval "$(atuin init zsh --disable-up-arrow)"
+        add-zsh-hook -d precmd _atuin_lazy_init
+        unfunction _atuin_lazy_init
+    }
+    add-zsh-hook precmd _atuin_lazy_init
 fi
 
 # Load any local overrides
