@@ -1,0 +1,99 @@
+setupVersion: 2
+providers: 
+  webSearchOrder: 
+    []
+disabledProviders:
+  - llama.cpp
+  - lm-studio
+
+symbolPreset: nerd
+composer: 
+  shape: box
+theme: 
+  dark: titanium
+  light: light
+modelRoles:
+  default: openai-codex/gpt-5.6-luna:high
+  slow: anthropic/claude-sonnet-5:high
+  smol: openai-codex/gpt-5.6-luna:low
+  vision: anthropic/claude-opus-5:high
+  advisor: openai-codex/gpt-5.6-sol:medium
+  plan: openai-codex/gpt-5.6-sol:high
+  tiny: openai-codex/gpt-5.6-luna:minimal
+
+
+advisor:
+  enabled: true
+
+retry:
+  maxRetries: 5
+  maxDelayMs: 60000
+
+  fallbackChains:
+    default:
+      - anthropic/claude-haiku-4-5:low
+      - openai-codex/gpt-5.6-sol:high
+      - anthropic/claude-sonnet-5:high
+    openai-codex/gpt-5.6-sol:
+      - anthropic/claude-sonnet-5:high
+      - openai-codex/gpt-5.6-luna:high
+      - anthropic/claude-haiku-4-5:low
+
+    openai-codex/gpt-5.6-luna:
+      - anthropic/claude-haiku-4-5:low
+      - openai-codex/gpt-5.6-sol:high
+      - anthropic/claude-sonnet-5:high
+
+    anthropic/claude-sonnet-5:
+      - anthropic/claude-haiku-4-5:low
+      - openai-codex/gpt-5.6-sol:high
+      - openai-codex/gpt-5.6-luna:high
+    anthropic/claude-opus-5:
+      - openai-codex/gpt-5.6-luna:high
+      - openai-codex/gpt-5.6-sol:high
+      - anthropic/claude-sonnet-5:high
+
+tools:
+  approvalMode: write
+  approval:
+    bash: allow
+    eval: prompt
+
+bash:
+  patterns:
+    - match: "rm *"
+      approval: prompt
+    - match: "git reset --hard*"
+      approval: prompt
+    - match: "git clean *"
+      approval: prompt
+    - match: "git push *--force*"
+      approval: prompt
+    - match: "git branch -D *"
+      approval: prompt
+    - match: "git checkout -- *"
+      approval: prompt
+    - match: "git restore *"
+      approval: prompt
+    - match: "sudo *"
+      approval: prompt
+secrets:
+  enabled: true
+
+task:
+  isolation:
+    mode: auto
+  enableEffort: true
+  showResolvedModelBadge: true
+  maxConcurrency: 8
+  maxRuntimeMs: 1200000
+  enableLsp: true
+
+compaction:
+  handoffSaveToDisk: true
+
+checkpoint:
+  enabled: true
+
+branchSummary:
+  enabled: true
