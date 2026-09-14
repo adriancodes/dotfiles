@@ -1,0 +1,128 @@
+{
+  "agents": [
+    {
+      "name": "ecc-python-reviewer",
+      "profile": "read-only",
+      "workflow_skill": "ecc-python-reviewer",
+      "description": "Use when asked to review Python changes for typing, exception flow, concurrency, security, or idiomatic correctness."
+    },
+    {
+      "name": "ecc-fastapi-reviewer",
+      "profile": "read-only",
+      "workflow_skill": "ecc-fastapi-reviewer",
+      "description": "Use when asked to review FastAPI routes, dependencies, schemas, async database access, or API security."
+    }
+  ],
+  "skills": [
+    {
+      "name": "ecc-python-patterns",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/python-patterns/SKILL.md",
+      "adaptations": [
+        "Prefixed identity and pinned ECC MIT attribution",
+        "Added local-scope and read-only authority boundaries; commands remain illustrative",
+        "Preserved concrete source examples and consuming-project contracts",
+        "Removed concurrent fetch error-to-success-string conversion"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-python-testing",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/python-testing/SKILL.md",
+      "adaptations": [
+        "Prefixed identity and pinned ECC MIT attribution",
+        "Added local-scope and read-only authority boundaries; commands remain illustrative",
+        "Preserved concrete source examples and consuming-project contracts",
+        "Removed blanket coverage thresholds and unconditional TDD routing"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-fastapi-patterns",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/fastapi-patterns/SKILL.md",
+      "adaptations": [
+        "Prefixed identity and pinned ECC MIT attribution",
+        "Added local-scope and read-only authority boundaries; commands remain illustrative",
+        "Preserved concrete source examples and consuming-project contracts",
+        "Removed automatic startup schema creation; ensured shutdown cleanup"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-error-handling",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/error-handling/SKILL.md",
+      "adaptations": [
+        "Prefixed identity and pinned ECC MIT attribution",
+        "Added local-scope and read-only authority boundaries; commands remain illustrative",
+        "Preserved concrete source examples and consuming-project contracts",
+        "Clarified that logging alone does not handle a failed operation"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-mcp-server-patterns",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/mcp-server-patterns/SKILL.md",
+      "adaptations": [
+        "Prefixed identity and pinned ECC MIT attribution",
+        "Added local-scope and read-only authority boundaries; commands remain illustrative",
+        "Preserved concrete source examples and consuming-project contracts",
+        "Replaced absent capability-selection document with inline guidance; removed mandatory Context7 dependency; added explicit connection/approval boundaries"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-python-reviewer",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/python-reviewer.md",
+      "adaptations": [
+        "Preserved completed prior-worker shared workflow without modification",
+        "Thin persona delegates workflow loading with absolute installed fallback",
+        "Read-only review or bounded local-edit profile; optional references with inline fallback",
+        "MIT attribution and pinned source provenance"
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-fastapi-reviewer",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/fastapi-reviewer.md",
+      "adaptations": [
+        "Preserved completed prior-worker shared workflow without modification",
+        "Thin persona delegates workflow loading with absolute installed fallback",
+        "Read-only review or bounded local-edit profile; optional references with inline fallback",
+        "MIT attribution and pinned source provenance"
+      ],
+      "dependencies": []
+    }
+  ],
+  "files": [
+    ".agents/skills/ecc-python-patterns/SKILL.md",
+    ".agents/skills/ecc-python-patterns/LICENSE",
+    ".agents/skills/ecc-python-testing/SKILL.md",
+    ".agents/skills/ecc-python-testing/LICENSE",
+    ".agents/skills/ecc-fastapi-patterns/SKILL.md",
+    ".agents/skills/ecc-fastapi-patterns/LICENSE",
+    ".agents/skills/ecc-error-handling/SKILL.md",
+    ".agents/skills/ecc-error-handling/LICENSE",
+    ".agents/skills/ecc-mcp-server-patterns/SKILL.md",
+    ".agents/skills/ecc-mcp-server-patterns/LICENSE",
+    ".agents/skills/ecc-python-reviewer/SKILL.md",
+    ".agents/skills/ecc-python-reviewer/LICENSE",
+    ".agents/agents/ecc/personas/ecc-python-reviewer.md",
+    ".agents/skills/ecc-fastapi-reviewer/SKILL.md",
+    ".agents/skills/ecc-fastapi-reviewer/LICENSE",
+    ".agents/agents/ecc/personas/ecc-fastapi-reviewer.md"
+  ],
+  "exclusions": [
+    {
+      "source": "ECC numerical coverage goals",
+      "reason": "Project coverage contracts remain authoritative; blanket imported thresholds removed."
+    },
+    {
+      "source": "MCP docs/capability-surface-selection.md",
+      "reason": "Replaced dangling source-repository document reference with inline capability selection guidance."
+    },
+    {
+      "source": "ECC automatic environment and external actions",
+      "reason": "Examples are reference-only; installs, cache/reset/git actions, migrations, connections, and production/admin effects require separate authorization."
+    }
+  ],
+  "file_paths_relative_to": "home directory"
+}

@@ -1,0 +1,811 @@
+{
+  "agents": [
+    {
+      "name": "ecc-performance-optimizer",
+      "profile": "local-edit",
+      "workflow_skill": "ecc-performance-optimizer",
+      "description": "Use when a measured local latency, memory, rendering, or throughput problem needs correction."
+    },
+    {
+      "name": "ecc-mle-reviewer",
+      "profile": "read-only",
+      "workflow_skill": "ecc-mle-reviewer",
+      "description": "Use when supplied ML changes need review for leakage, reproducibility, promotion gates, or serving safety."
+    },
+    {
+      "name": "ecc-pytorch-build-resolver",
+      "profile": "local-edit",
+      "workflow_skill": "ecc-pytorch-build-resolver",
+      "description": "Use when a reported local PyTorch traceback involves tensor shape, device, autograd, or CUDA compatibility."
+    },
+    {
+      "name": "ecc-rag-pipeline-reviewer",
+      "profile": "read-only",
+      "workflow_skill": "ecc-rag-pipeline-reviewer",
+      "description": "Use when a retrieval pipeline needs review for context relevance, citations, tenant isolation, or evaluation gaps."
+    },
+    {
+      "name": "ecc-network-architect",
+      "profile": "read-only",
+      "workflow_skill": "ecc-network-architect",
+      "description": "Use when a proposed network topology, routing design, or segmentation plan needs static review."
+    },
+    {
+      "name": "ecc-network-config-reviewer",
+      "profile": "read-only",
+      "workflow_skill": "ecc-network-config-reviewer",
+      "description": "Use when a supplied router, switch, or firewall configuration needs risk review."
+    },
+    {
+      "name": "ecc-network-troubleshooter",
+      "profile": "read-only",
+      "workflow_skill": "ecc-network-troubleshooter",
+      "description": "Use when supplied network symptoms and device output need link, routing, DNS, or policy diagnosis."
+    },
+    {
+      "name": "ecc-homelab-architect",
+      "profile": "read-only",
+      "workflow_skill": "ecc-homelab-architect",
+      "description": "Use when a home-lab topology needs a VLAN, DNS, firewall, or VPN readiness review."
+    },
+    {
+      "name": "ecc-docs-lookup",
+      "profile": "docs-read",
+      "workflow_skill": "ecc-docs-lookup",
+      "description": "Use when a library or framework API question needs version-matched official documentation."
+    },
+    {
+      "name": "ecc-spec-miner",
+      "profile": "read-only",
+      "workflow_skill": "ecc-spec-miner",
+      "description": "Use when existing code needs a static behavioral specification with traced requirements and invariants."
+    }
+  ],
+  "skills": [
+    {
+      "name": "ecc-performance-optimizer",
+      "source": "agents/performance-optimizer.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Removed proactive routing, auto-downloading commands and telemetry; corrected LCP, INP, algorithm and React assumptions; limited fixes/profiling to requested local scope."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-mle-reviewer",
+      "source": "agents/mle-reviewer.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Converted test and training execution to supplied-evidence review; replaced mandatory peer-agent chain with optional workflow guidance and qualified review verdicts."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-database-reviewer",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-mle-workflow",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-performance-optimizer",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-python-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-pytorch-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-pytorch-build-resolver",
+      "source": "agents/pytorch-build-resolver.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Removed diagnostic suppression, cache resets, index clamping, blanket graph retention and automatic driver/training actions; preserved concrete shape/device/gradient fixes."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-rag-pipeline-reviewer",
+      "source": "agents/rag-pipeline-reviewer.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Removed mandatory reranker, changed-top-result heuristic, live evaluation, and peer handoffs; retained query-slice, citation, insufficient-context and metric policy review."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-docs-lookup",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-mle-reviewer",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-performance-optimizer",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-network-architect",
+      "source": "agents/network-architect.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Restricted to local artifacts and supplied device evidence; soft ecc-prefixed workflow references include inline fallbacks; no remote access or persona chains."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-cisco-ios-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-netmiko-ssh-automation",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-bgp-diagnostics",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-config-validation",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-interface-health",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-network-config-reviewer",
+      "source": "agents/network-config-reviewer.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Restricted to local artifacts and supplied device evidence; soft ecc-prefixed workflow references include inline fallbacks; no remote access or persona chains."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-network-troubleshooter",
+      "source": "agents/network-troubleshooter.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Restricted to local artifacts and supplied device evidence; soft ecc-prefixed workflow references include inline fallbacks; no remote access or persona chains."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-homelab-architect",
+      "source": "agents/homelab-architect.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Restricted to local artifacts and supplied device evidence; soft ecc-prefixed workflow references include inline fallbacks; no remote access or persona chains."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-homelab-network-readiness",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-homelab-network-setup",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-config-validation",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-interface-health",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-docs-lookup",
+      "source": "agents/docs-lookup.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Replaced Context7-only hardcoded tools and stale-knowledge fallback with supported official-doc reading, optional Context7, version matching and linked evidence; no setup execution."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-spec-miner",
+      "source": "agents/spec-miner.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Removed file-writing and peer-agent integration, arbitrary coverage/file-count claims and guessed return contracts; retained complete OpenSpec blocks and static provenance with ID collision guidance."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-docker-patterns",
+      "source": "skills/docker-patterns/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Preserved container/security/volume/network examples; bound local ports and secrets; removed ECC plugin/terminal harness dependencies, global prune and cache-reset workflows."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-kubernetes-patterns",
+      "source": "skills/kubernetes-patterns/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Qualified production claims and resource/probe defaults; corrected PDB, tag immutability, Secret encryption and Job semantics; removed live apply/exec/scale/rollback workflows and migration job."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-docker-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-redis-patterns",
+      "source": "skills/redis-patterns/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Embedded single-key sliding-window Lua; corrected ClusterNode API, swallowed errors, lock/failover guarantees, queue recovery, TTL and isolation claims; bounded in-process stampede locks."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-database-migrations",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-database-reviewer",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-django-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-postgres-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-mysql-patterns",
+      "source": "skills/mysql-patterns/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Converted database diagnostics to caller evidence; removed global logging/admin mutations and wildcard-account examples; bounded pool queues and replaced hardcoded connection credentials."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-database-migrations",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-database-reviewer",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-postgres-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-clickhouse-io",
+      "source": "skills/clickhouse-io/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Corrected count-state type, deduplication key semantics, predicate-order myth, retention/funnel SQL and CDC durability; removed automatic ETL scheduling and guaranteed throughput implications."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-prisma-patterns",
+      "source": "skills/prisma-patterns/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Corrected Prisma package/adapter, relation-loading, CUID, bulk timestamp, extended unique-filter, checksum and pool claims; removed unsafe migration execution and non-atomic returned-row workaround."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-database-migrations",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-nestjs-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-postgres-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-cost-aware-llm-pipeline",
+      "source": "skills/cost-aware-llm-pipeline/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Replaced unverified model/pricing table and incomplete composition with parameterized routing and Decimal reservation accounting; fixed retry import/attempt handling and prompt-caching semantics; removed immutable/logging mandates."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-content-hash-cache-pattern",
+      "source": "skills/content-hash-cache-pattern/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Replaced undefined serialization/types with complete bounded snapshot example; added config/version/authorization keying, atomic writes and visible corruption; removed automatic logging and blanket frozen-dataclass claims."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-regex-vs-llm-structured-text",
+      "source": "skills/regex-vs-llm-structured-text/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Removed unsupported accuracy/cost claims and paid-API stub; preserved parser/confidence/hybrid design with complete schema validation and explicit unmatched records rather than silent omissions."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-pytorch-patterns",
+      "source": "skills/pytorch-patterns/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Qualified device/determinism/speed/loading claims; corrected sample-weighted losses, empty-loader errors, dataset image lifetime and shape assumptions; no automatic training or installs."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-mle-workflow",
+      "source": "skills/mle-workflow/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Removed install profiles, mandatory SWE/agent orchestration and observation-ledger learning; preserved ten concrete ML scenarios and full workflow; fixed artifact snapshot hashing and NaN promotion-gate hole."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-ai-regression-testing",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-clickhouse-io",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-cost-aware-llm-pipeline",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-docker-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-python-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-python-testing",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-pytorch-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-network-bgp-diagnostics",
+      "source": "skills/network-bgp-diagnostics/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Retained concrete networking reference; all device commands are operator-plan examples, not automatic remote diagnostics; sibling references include inline fallback."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-cisco-ios-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-config-validation",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-interface-health",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-network-config-validation",
+      "source": "skills/network-config-validation/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Retained concrete networking reference; all device commands are operator-plan examples, not automatic remote diagnostics; sibling references include inline fallback."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-network-config-reviewer",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-interface-health",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-troubleshooter",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-network-interface-health",
+      "source": "skills/network-interface-health/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Retained concrete networking reference; all device commands are operator-plan examples, not automatic remote diagnostics; sibling references include inline fallback."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-homelab-network-setup",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-config-validation",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-troubleshooter",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-netmiko-ssh-automation",
+      "source": "skills/netmiko-ssh-automation/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Retained concrete networking reference; all device commands are operator-plan examples, not automatic remote diagnostics; sibling references include inline fallback.",
+        "Enabled known-host verification and preserved nonzero exception propagation in the single-device reference."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-cisco-ios-patterns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-config-validation",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-interface-health",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-cisco-ios-patterns",
+      "source": "skills/cisco-ios-patterns/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Retained concrete networking reference; all device commands are operator-plan examples, not automatic remote diagnostics; sibling references include inline fallback."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-network-config-reviewer",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-config-validation",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-interface-health",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-troubleshooter",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-homelab-network-readiness",
+      "source": "skills/homelab-network-readiness/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Retained concrete networking reference; all device commands are operator-plan examples, not automatic remote diagnostics; sibling references include inline fallback."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-homelab-network-setup",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-config-validation",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-interface-health",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-homelab-network-setup",
+      "source": "skills/homelab-network-setup/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Retained concrete networking reference; all device commands are operator-plan examples, not automatic remote diagnostics; sibling references include inline fallback."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-network-config-validation",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-network-interface-health",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-homelab-pihole-dns",
+      "source": "skills/homelab-pihole-dns/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Retained concrete networking reference; all device commands are operator-plan examples, not automatic remote diagnostics; sibling references include inline fallback.",
+        "Removed obsolete cloudflared installer and OS network-manager assumption; version-qualified Pi-hole v6 environment fields, restricted admin exposure and removed DNS-only NET_ADMIN; used home.arpa."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-homelab-network-setup",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-homelab-vlan-segmentation",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-homelab-wireguard-vpn",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-homelab-vlan-segmentation",
+      "source": "skills/homelab-vlan-segmentation/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Retained concrete networking reference; all device commands are operator-plan examples, not automatic remote diagnostics; sibling references include inline fallback."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-homelab-network-setup",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-homelab-pihole-dns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-homelab-wireguard-vpn",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-homelab-wireguard-vpn",
+      "source": "skills/homelab-wireguard-vpn/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Retained concrete networking reference; all device commands are operator-plan examples, not automatic remote diagnostics; sibling references include inline fallback.",
+        "Removed DDNS credentials/schema guess and suppressed cron errors; checked key subprocess failure; scoped NAT; qualified keepalive, IPv6 and public reachability. Configuration commands remain operator reference only."
+      ],
+      "dependencies": [
+        {
+          "name": "ecc-homelab-network-setup",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-homelab-pihole-dns",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        },
+        {
+          "name": "ecc-homelab-vlan-segmentation",
+          "required": false,
+          "fallback": "Inline guidance included at reference."
+        }
+      ]
+    },
+    {
+      "name": "ecc-latency-critical-systems",
+      "source": "skills/latency-critical-systems/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Converted production readbacks and canary installation to supplied-evidence analysis and proposals; retained latency/freshness metric distinctions."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-data-throughput-accelerator",
+      "source": "skills/data-throughput-accelerator/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Removed automatic catch-up, promotion and job creation; preserved batching/checkpoint/data-accounting workflow with illustrative metrics labeled."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-ai-regression-testing",
+      "source": "skills/ai-regression-testing/SKILL.md",
+      "adaptations": [
+        "Pinned ECC attribution and MIT license; on-demand, harness-neutral scope; no effectiveness certification.",
+        "Removed custom Claude command, mandatory project-wide verification and unsubstantiated prevalence claim; retained concrete Next/Vitest templates, with caller-supplied application modules and parity limitations explicit."
+      ],
+      "dependencies": []
+    }
+  ],
+  "files": [
+    ".agents/skills/ecc-performance-optimizer/SKILL.md",
+    ".agents/skills/ecc-performance-optimizer/LICENSE",
+    ".agents/agents/ecc/personas/ecc-performance-optimizer.md",
+    ".agents/skills/ecc-mle-reviewer/SKILL.md",
+    ".agents/skills/ecc-mle-reviewer/LICENSE",
+    ".agents/agents/ecc/personas/ecc-mle-reviewer.md",
+    ".agents/skills/ecc-pytorch-build-resolver/SKILL.md",
+    ".agents/skills/ecc-pytorch-build-resolver/LICENSE",
+    ".agents/agents/ecc/personas/ecc-pytorch-build-resolver.md",
+    ".agents/skills/ecc-rag-pipeline-reviewer/SKILL.md",
+    ".agents/skills/ecc-rag-pipeline-reviewer/LICENSE",
+    ".agents/agents/ecc/personas/ecc-rag-pipeline-reviewer.md",
+    ".agents/skills/ecc-network-architect/SKILL.md",
+    ".agents/skills/ecc-network-architect/LICENSE",
+    ".agents/agents/ecc/personas/ecc-network-architect.md",
+    ".agents/skills/ecc-network-config-reviewer/SKILL.md",
+    ".agents/skills/ecc-network-config-reviewer/LICENSE",
+    ".agents/agents/ecc/personas/ecc-network-config-reviewer.md",
+    ".agents/skills/ecc-network-troubleshooter/SKILL.md",
+    ".agents/skills/ecc-network-troubleshooter/LICENSE",
+    ".agents/agents/ecc/personas/ecc-network-troubleshooter.md",
+    ".agents/skills/ecc-homelab-architect/SKILL.md",
+    ".agents/skills/ecc-homelab-architect/LICENSE",
+    ".agents/agents/ecc/personas/ecc-homelab-architect.md",
+    ".agents/skills/ecc-docs-lookup/SKILL.md",
+    ".agents/skills/ecc-docs-lookup/LICENSE",
+    ".agents/agents/ecc/personas/ecc-docs-lookup.md",
+    ".agents/skills/ecc-spec-miner/SKILL.md",
+    ".agents/skills/ecc-spec-miner/LICENSE",
+    ".agents/agents/ecc/personas/ecc-spec-miner.md",
+    ".agents/skills/ecc-docker-patterns/SKILL.md",
+    ".agents/skills/ecc-docker-patterns/LICENSE",
+    ".agents/skills/ecc-kubernetes-patterns/SKILL.md",
+    ".agents/skills/ecc-kubernetes-patterns/LICENSE",
+    ".agents/skills/ecc-redis-patterns/SKILL.md",
+    ".agents/skills/ecc-redis-patterns/LICENSE",
+    ".agents/skills/ecc-mysql-patterns/SKILL.md",
+    ".agents/skills/ecc-mysql-patterns/LICENSE",
+    ".agents/skills/ecc-clickhouse-io/SKILL.md",
+    ".agents/skills/ecc-clickhouse-io/LICENSE",
+    ".agents/skills/ecc-prisma-patterns/SKILL.md",
+    ".agents/skills/ecc-prisma-patterns/LICENSE",
+    ".agents/skills/ecc-cost-aware-llm-pipeline/SKILL.md",
+    ".agents/skills/ecc-cost-aware-llm-pipeline/LICENSE",
+    ".agents/skills/ecc-content-hash-cache-pattern/SKILL.md",
+    ".agents/skills/ecc-content-hash-cache-pattern/LICENSE",
+    ".agents/skills/ecc-regex-vs-llm-structured-text/SKILL.md",
+    ".agents/skills/ecc-regex-vs-llm-structured-text/LICENSE",
+    ".agents/skills/ecc-pytorch-patterns/SKILL.md",
+    ".agents/skills/ecc-pytorch-patterns/LICENSE",
+    ".agents/skills/ecc-mle-workflow/SKILL.md",
+    ".agents/skills/ecc-mle-workflow/LICENSE",
+    ".agents/skills/ecc-network-bgp-diagnostics/SKILL.md",
+    ".agents/skills/ecc-network-bgp-diagnostics/LICENSE",
+    ".agents/skills/ecc-network-config-validation/SKILL.md",
+    ".agents/skills/ecc-network-config-validation/LICENSE",
+    ".agents/skills/ecc-network-interface-health/SKILL.md",
+    ".agents/skills/ecc-network-interface-health/LICENSE",
+    ".agents/skills/ecc-netmiko-ssh-automation/SKILL.md",
+    ".agents/skills/ecc-netmiko-ssh-automation/LICENSE",
+    ".agents/skills/ecc-cisco-ios-patterns/SKILL.md",
+    ".agents/skills/ecc-cisco-ios-patterns/LICENSE",
+    ".agents/skills/ecc-homelab-network-readiness/SKILL.md",
+    ".agents/skills/ecc-homelab-network-readiness/LICENSE",
+    ".agents/skills/ecc-homelab-network-setup/SKILL.md",
+    ".agents/skills/ecc-homelab-network-setup/LICENSE",
+    ".agents/skills/ecc-homelab-pihole-dns/SKILL.md",
+    ".agents/skills/ecc-homelab-pihole-dns/LICENSE",
+    ".agents/skills/ecc-homelab-vlan-segmentation/SKILL.md",
+    ".agents/skills/ecc-homelab-vlan-segmentation/LICENSE",
+    ".agents/skills/ecc-homelab-wireguard-vpn/SKILL.md",
+    ".agents/skills/ecc-homelab-wireguard-vpn/LICENSE",
+    ".agents/skills/ecc-latency-critical-systems/SKILL.md",
+    ".agents/skills/ecc-latency-critical-systems/LICENSE",
+    ".agents/skills/ecc-data-throughput-accelerator/SKILL.md",
+    ".agents/skills/ecc-data-throughput-accelerator/LICENSE",
+    ".agents/skills/ecc-ai-regression-testing/SKILL.md",
+    ".agents/skills/ecc-ai-regression-testing/LICENSE",
+    ".agents/ecc/InfraData.json"
+  ],
+  "exclusions": [
+    {
+      "source": "skills/docker-patterns/SKILL.md: Exercise the ECC Plugin Setup Harness through named-session cleanup",
+      "reason": "ECC-specific plugin and terminal integration requires unselected docker/plugin-setup scripts and mutates harness installations. Replaced with a self-contained isolation template; container safety detail retained."
+    },
+    {
+      "source": "skills/cost-aware-llm-pipeline/SKILL.md: Pricing Reference (2026)",
+      "reason": "Unsupported model names and prices are not reliable reference facts. Replaced with caller-supplied model IDs and official price-source requirement."
+    }
+  ],
+  "file_paths_relative_to": "home directory"
+}

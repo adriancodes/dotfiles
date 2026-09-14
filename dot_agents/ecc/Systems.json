@@ -1,0 +1,170 @@
+{
+  "agents": [
+    {
+      "name": "ecc-go-reviewer",
+      "profile": "read-only",
+      "workflow_skill": "ecc-go-reviewer",
+      "description": "Use when asked to review a Go patch for error propagation, goroutine leaks, races, resource ownership, or idiomatic correctness."
+    },
+    {
+      "name": "ecc-go-build-resolver",
+      "profile": "local-edit",
+      "workflow_skill": "ecc-go-build-resolver",
+      "description": "Use when a Go build, vet, type check, interface implementation, or module resolution fails and a local fix is requested."
+    },
+    {
+      "name": "ecc-rust-reviewer",
+      "profile": "read-only",
+      "workflow_skill": "ecc-rust-reviewer",
+      "description": "Use when asked to review a Rust patch for ownership, lifetimes, unsafe invariants, error handling, or async concurrency defects."
+    },
+    {
+      "name": "ecc-rust-build-resolver",
+      "profile": "local-edit",
+      "workflow_skill": "ecc-rust-build-resolver",
+      "description": "Use when Rust compilation, borrow checking, trait resolution, Cargo features, or dependency resolution fails and a local fix is requested."
+    }
+  ],
+  "skills": [
+    {
+      "name": "ecc-golang-patterns",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/golang-patterns/SKILL.md",
+      "adaptations": [
+        "Preserved upstream language-specific examples and technical guidance",
+        "Pinned attribution and bundled MIT license",
+        "Bounded commands to authorized local scope and project contracts",
+        "Removed automatic dependency refresh/install and blanket coverage/full-suite gates where present"
+      ],
+      "dependencies": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "ecc-golang-testing",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/golang-testing/SKILL.md",
+      "adaptations": [
+        "Preserved upstream language-specific examples and technical guidance",
+        "Pinned attribution and bundled MIT license",
+        "Bounded commands to authorized local scope and project contracts",
+        "Removed automatic dependency refresh/install and blanket coverage/full-suite gates where present"
+      ],
+      "dependencies": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "ecc-rust-patterns",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/rust-patterns/SKILL.md",
+      "adaptations": [
+        "Preserved upstream language-specific examples and technical guidance",
+        "Pinned attribution and bundled MIT license",
+        "Bounded commands to authorized local scope and project contracts",
+        "Removed automatic dependency refresh/install and blanket coverage/full-suite gates where present"
+      ],
+      "dependencies": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "ecc-rust-testing",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/rust-testing/SKILL.md",
+      "adaptations": [
+        "Preserved upstream language-specific examples and technical guidance",
+        "Pinned attribution and bundled MIT license",
+        "Bounded commands to authorized local scope and project contracts",
+        "Removed automatic dependency refresh/install and blanket coverage/full-suite gates where present"
+      ],
+      "dependencies": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "ecc-go-reviewer",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/go-reviewer.md",
+      "adaptations": [
+        "Preserved upstream language-specific examples and technical guidance",
+        "Pinned attribution and bundled MIT license",
+        "Bounded commands to authorized local scope and project contracts",
+        "Removed automatic dependency refresh/install and blanket coverage/full-suite gates where present",
+        "Removed upstream harness frontmatter and Prompt Defense Baseline",
+        "Moved detailed workflow into shared skill",
+        "Made sibling background optional with inline fallback"
+      ],
+      "dependencies": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "ecc-go-build-resolver",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/go-build-resolver.md",
+      "adaptations": [
+        "Preserved upstream language-specific examples and technical guidance",
+        "Pinned attribution and bundled MIT license",
+        "Bounded commands to authorized local scope and project contracts",
+        "Removed automatic dependency refresh/install and blanket coverage/full-suite gates where present",
+        "Removed upstream harness frontmatter and Prompt Defense Baseline",
+        "Moved detailed workflow into shared skill",
+        "Made sibling background optional with inline fallback"
+      ],
+      "dependencies": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "ecc-rust-reviewer",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/rust-reviewer.md",
+      "adaptations": [
+        "Preserved upstream language-specific examples and technical guidance",
+        "Pinned attribution and bundled MIT license",
+        "Bounded commands to authorized local scope and project contracts",
+        "Removed automatic dependency refresh/install and blanket coverage/full-suite gates where present",
+        "Removed upstream harness frontmatter and Prompt Defense Baseline",
+        "Moved detailed workflow into shared skill",
+        "Made sibling background optional with inline fallback"
+      ],
+      "dependencies": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "ecc-rust-build-resolver",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/rust-build-resolver.md",
+      "adaptations": [
+        "Preserved upstream language-specific examples and technical guidance",
+        "Pinned attribution and bundled MIT license",
+        "Bounded commands to authorized local scope and project contracts",
+        "Removed automatic dependency refresh/install and blanket coverage/full-suite gates where present",
+        "Removed upstream harness frontmatter and Prompt Defense Baseline",
+        "Moved detailed workflow into shared skill",
+        "Made sibling background optional with inline fallback"
+      ],
+      "dependencies": [
+        "LICENSE"
+      ]
+    }
+  ],
+  "files": [
+    ".agents/skills/ecc-golang-patterns/SKILL.md",
+    ".agents/skills/ecc-golang-patterns/LICENSE",
+    ".agents/skills/ecc-golang-testing/SKILL.md",
+    ".agents/skills/ecc-golang-testing/LICENSE",
+    ".agents/skills/ecc-rust-patterns/SKILL.md",
+    ".agents/skills/ecc-rust-patterns/LICENSE",
+    ".agents/skills/ecc-rust-testing/SKILL.md",
+    ".agents/skills/ecc-rust-testing/LICENSE",
+    ".agents/skills/ecc-go-reviewer/SKILL.md",
+    ".agents/skills/ecc-go-reviewer/LICENSE",
+    ".agents/agents/ecc/personas/ecc-go-reviewer.md",
+    ".agents/skills/ecc-go-build-resolver/SKILL.md",
+    ".agents/skills/ecc-go-build-resolver/LICENSE",
+    ".agents/agents/ecc/personas/ecc-go-build-resolver.md",
+    ".agents/skills/ecc-rust-reviewer/SKILL.md",
+    ".agents/skills/ecc-rust-reviewer/LICENSE",
+    ".agents/agents/ecc/personas/ecc-rust-reviewer.md",
+    ".agents/skills/ecc-rust-build-resolver/SKILL.md",
+    ".agents/skills/ecc-rust-build-resolver/LICENSE",
+    ".agents/agents/ecc/personas/ecc-rust-build-resolver.md"
+  ],
+  "exclusions": [],
+  "file_paths_relative_to": "home directory"
+}

@@ -1,0 +1,53 @@
+{
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "hooks": {
+    "BeforeAgent": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh' ] && [ -r '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh' ] && [ -x '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh' ]; then /bin/sh '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "AfterAgent": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh' ] && [ -r '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh' ] && [ -x '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh' ]; then /bin/sh '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "AfterTool": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh' ] && [ -r '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh' ] && [ -x '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh' ]; then /bin/sh '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "BeforeTool": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh' ] && [ -r '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh' ] && [ -x '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh' ]; then /bin/sh '{{ .chezmoi.destDir }}/.orca/agent-hooks/gemini-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
+            "timeout": 10000
+          }
+        ]
+      }
+    ]
+  }
+}

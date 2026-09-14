@@ -1,0 +1,3595 @@
+{
+  "schema_version": 3,
+  "managed_by": "chezmoi",
+  "path_base": "home directory; every file, target, and group-manifest path is relative to it",
+  "source": {
+    "repository": "https://github.com/affaan-m/ECC",
+    "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8",
+    "license": "MIT",
+    "inputs": [
+      {
+        "type": "agent-persona",
+        "name": "ecc-a11y-architect",
+        "path": "agents/a11y-architect.md",
+        "sha256": "88e684476cbc449a2444a1218a79034d275465f375ce45b6d86ab99958bf45e7",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-agent-eval",
+        "path": "skills/agent-eval/SKILL.md",
+        "sha256": "57fa683e356b6f5612bc6d7dc101ae39c126e6edf9a48f4ec53afea3e80d7e5d",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-ai-regression-testing",
+        "path": "skills/ai-regression-testing/SKILL.md",
+        "sha256": "83f2f5c4083af5762dd658f742d4a390eb3a6f969d835f69e8f47efba296c127",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-bun-runtime",
+        "path": "skills/bun-runtime/SKILL.md",
+        "sha256": "8015a977827ddd8536e89c4693a575b8deb5b04073b8a483c320c5419abc35da",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-cisco-ios-patterns",
+        "path": "skills/cisco-ios-patterns/SKILL.md",
+        "sha256": "85b6a97574cc236d4a9336b1c74b42aaf4386338417e787cbed0c88677bf1179",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-clickhouse-io",
+        "path": "skills/clickhouse-io/SKILL.md",
+        "sha256": "9f0f2b632f3feb1bd4ca7bae119fe05454668ab763b7d3c3d304f8740b8fd415",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-comment-analyzer",
+        "path": "agents/comment-analyzer.md",
+        "sha256": "ce7fdf759885ba9ef5ee1bdc9da4ce88d78ba65501facf53e581082fcf402b07",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-content-hash-cache-pattern",
+        "path": "skills/content-hash-cache-pattern/SKILL.md",
+        "sha256": "c0242ee2fcb5c096d0625cb6957481fce2266e92985036795f5b5c13c329d802",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-cost-aware-llm-pipeline",
+        "path": "skills/cost-aware-llm-pipeline/SKILL.md",
+        "sha256": "2d6c19c2d21a473db8720c4f723f17d265eeec48f84614f0169be2df2fbe28ff",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-data-throughput-accelerator",
+        "path": "skills/data-throughput-accelerator/SKILL.md",
+        "sha256": "ed164d18536a456f71b876a84c54a94a5fc0a0f6aca25299c1c4a2b8f5476449",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-database-migrations",
+        "path": "skills/database-migrations/SKILL.md",
+        "sha256": "ad7f2f04ca03e592a16e2a539d8c6e90bf4e08892408820ce99a53e9d07775de",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-database-reviewer",
+        "path": "agents/database-reviewer.md",
+        "sha256": "945c107dea01ca74e3e9bc3a5841e79e744673e8f14697e88cf1cfd9c01a1cc5",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-design-system",
+        "path": "skills/design-system/SKILL.md",
+        "sha256": "baa6057bec07334f531789d07fbdd656afd725c0540992bd04db7589cac36d26",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-docker-patterns",
+        "path": "skills/docker-patterns/SKILL.md",
+        "sha256": "2a880cf2f6401874151daa9bcc0eacd10cf79f5f48b97f98e93a877a8f3fd12b",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-docs-lookup",
+        "path": "agents/docs-lookup.md",
+        "sha256": "11560171e4535419e7917158d0de3bc7bbbf0408f83f61f0f3558b356802419e",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-e2e-runner",
+        "path": "agents/e2e-runner.md",
+        "sha256": "94811f4bbc491c351cdf220ab103d6bd251fb1d88d9d46ba4c8162637a236a5b",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-e2e-testing",
+        "path": "skills/e2e-testing/SKILL.md",
+        "sha256": "b0e00e7e17cb259101139900816c5528aed18dd10bcf5f9cb42cfc35baf8a755",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-error-handling",
+        "path": "skills/error-handling/SKILL.md",
+        "sha256": "e8eec6756c950b570486493e64e3bf14c12baf6bf0858bf3928097fe2bfeaf79",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-fastapi-patterns",
+        "path": "skills/fastapi-patterns/SKILL.md",
+        "sha256": "f54c2bf5a61eeda47c939da265b1431d609c231611e71b688b0b734a064b18f3",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-fastapi-reviewer",
+        "path": "agents/fastapi-reviewer.md",
+        "sha256": "d8704e52fda045fa72cfc51de7937aa4e313b2161279ff8e11d878f6ab8a0d81",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-frontend-a11y",
+        "path": "skills/frontend-a11y/SKILL.md",
+        "sha256": "62afdfd4e616ed21bf9037d47f771f3504d21838c898b9e9de8ac0da9b0bf3f7",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-go-build-resolver",
+        "path": "agents/go-build-resolver.md",
+        "sha256": "fa191d2a3c66915402b343a8f2da21090bb330968e62a8615739acccfce90424",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-go-reviewer",
+        "path": "agents/go-reviewer.md",
+        "sha256": "be174fc66f6be1ade25f496548ba7040c00894aec81da163863b046d44233e39",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-golang-patterns",
+        "path": "skills/golang-patterns/SKILL.md",
+        "sha256": "d643e354683167727cfeb76934855db988468cd15b3ca01db9a32db43902edf7",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-golang-testing",
+        "path": "skills/golang-testing/SKILL.md",
+        "sha256": "e3399562c58590dfcbd09bfcbf8f401120a2ded0418eb33bbfca6c697ac485ad",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-homelab-architect",
+        "path": "agents/homelab-architect.md",
+        "sha256": "d851727c8d07d2c44ea953d1ccab812865de3ba4b693d0392e86ba52187664bc",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-homelab-network-readiness",
+        "path": "skills/homelab-network-readiness/SKILL.md",
+        "sha256": "056835b13ab04b672bd8e6c19376b58afb2893b5411428c1588fd07b19571c9d",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-homelab-network-setup",
+        "path": "skills/homelab-network-setup/SKILL.md",
+        "sha256": "8104e87516857c7f773da9aba0dd13b61c3e490913adb4555d036614a9a937be",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-homelab-pihole-dns",
+        "path": "skills/homelab-pihole-dns/SKILL.md",
+        "sha256": "23a801545a4839c4fc04dc287e1122cc3913016a116b2cb5c7720e193edfa6c2",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-homelab-vlan-segmentation",
+        "path": "skills/homelab-vlan-segmentation/SKILL.md",
+        "sha256": "a6e5d6574566881d31e949cc0fad927e1e547d2ebe6f11d1f94f2890ed6ddd5e",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-homelab-wireguard-vpn",
+        "path": "skills/homelab-wireguard-vpn/SKILL.md",
+        "sha256": "38df424e399549d3ba42d6f50c77554d9a88a46b3bac4dd1436158874535c13c",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-kubernetes-patterns",
+        "path": "skills/kubernetes-patterns/SKILL.md",
+        "sha256": "808b2ec032224e251f1bef9f6e9879e88e2e7abd0feb393632fb6042d8ac5ecc",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-latency-critical-systems",
+        "path": "skills/latency-critical-systems/SKILL.md",
+        "sha256": "5df315a5b5dd306a569ba8b3220f4eab80302c3d7f90128c290398b64bb76275",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-mcp-server-patterns",
+        "path": "skills/mcp-server-patterns/SKILL.md",
+        "sha256": "eacb07c953e0440c758e3ee7d92984d2c9128e3444005ea7ad5da7bc0201d43d",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-mle-reviewer",
+        "path": "agents/mle-reviewer.md",
+        "sha256": "c505be5fccea9d067775b86fed76bc4b84e63e17090855ac135694adbc83a7f8",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-mle-workflow",
+        "path": "skills/mle-workflow/SKILL.md",
+        "sha256": "2497888dd543ca7bdf5d0cb4d90fce023eb2c1c14f860f0af8e8be42423131b4",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-motion-advanced",
+        "path": "skills/motion-advanced/SKILL.md",
+        "sha256": "1ee09b942bf328ffa97148bed838ecc8789c1891ca441abccdca52b4c47a9742",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-motion-patterns",
+        "path": "skills/motion-patterns/SKILL.md",
+        "sha256": "9d78bcd2c3b52abdb6fb29162f289b9c709547de264ad064b12e00bedb031907",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-mysql-patterns",
+        "path": "skills/mysql-patterns/SKILL.md",
+        "sha256": "cab57c6a6d7e0bab99329945edda900811c40ec929b47aa95611f9df58f7391d",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-netmiko-ssh-automation",
+        "path": "skills/netmiko-ssh-automation/SKILL.md",
+        "sha256": "6dc91c80144c2ad86a5f457c5377dc5193fd0b64dd3e1ca4433f70188a38e104",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-network-architect",
+        "path": "agents/network-architect.md",
+        "sha256": "1b434aa8496a1cb8c39add08d0c68a4b27af8378de725f370d7682c02a56997e",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-network-bgp-diagnostics",
+        "path": "skills/network-bgp-diagnostics/SKILL.md",
+        "sha256": "44a8d9ba4644f33cb86227e54641930a280fc4417ebce5c1744985b9f4913d03",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-network-config-reviewer",
+        "path": "agents/network-config-reviewer.md",
+        "sha256": "12b2b04d8235941f6a9a0d42a679c581ce89963172d5fb0f63abb4202521593f",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-network-config-validation",
+        "path": "skills/network-config-validation/SKILL.md",
+        "sha256": "08ba871a685d55e14e0866de27eb98a37ebf91dc2d0d06976c4acb4e99f76550",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-network-interface-health",
+        "path": "skills/network-interface-health/SKILL.md",
+        "sha256": "612cd44e1b80e10dd56f9a2296348cb48882fe24e2435654dae3b6447555e0a3",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-network-troubleshooter",
+        "path": "agents/network-troubleshooter.md",
+        "sha256": "64528c41b59eea2cb4ac642bd3197bbadc8c456f3601520e410cf606e848fb07",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-nextjs-turbopack",
+        "path": "skills/nextjs-turbopack/SKILL.md",
+        "sha256": "44b68f7c74b237742bee4f39660f8a9160f755004cab0658594fdf494a42e681",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-performance-optimizer",
+        "path": "agents/performance-optimizer.md",
+        "sha256": "76d00a70fcc07a0b207f6b517d54078fa7a59f29e157fea72bf5f1d9cab8f9b2",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-postgres-patterns",
+        "path": "skills/postgres-patterns/SKILL.md",
+        "sha256": "9c8c391ae9e9aa87faa7ca091e1d395c97766df14080d0bfbea8a97721776163",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-pr-test-analyzer",
+        "path": "agents/pr-test-analyzer.md",
+        "sha256": "5432aaf7e5fcb0813ac21828382971cc00f17d56ee95eac6d0ce180fc5d58016",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-prisma-patterns",
+        "path": "skills/prisma-patterns/SKILL.md",
+        "sha256": "fb0c7644f32b22ee030071c71fa00bda1825f955f7304a375ef299a7290227f2",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-python-patterns",
+        "path": "skills/python-patterns/SKILL.md",
+        "sha256": "103e0130dac33a49d26705fc5a2df804980fcab6a0138d65bc7f370a987d49f6",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-python-reviewer",
+        "path": "agents/python-reviewer.md",
+        "sha256": "d2180b115f5840383268c13d5d075b0541fe7ef2a1ac8ecd5d835266ca1b27ce",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-python-testing",
+        "path": "skills/python-testing/SKILL.md",
+        "sha256": "b9f7a158dae3b6c06c9c75ffe84e27a1edc86092d2afdcb39e96fc2569902eb7",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-pytorch-build-resolver",
+        "path": "agents/pytorch-build-resolver.md",
+        "sha256": "5ec08de6c6b616b068e7075be4496edd3e4ef3b041f0095a2e073131a58a9f7c",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-pytorch-patterns",
+        "path": "skills/pytorch-patterns/SKILL.md",
+        "sha256": "168c8740f548414a75f576265ddb03329be98ed57f06c5edaf79c7cd4b6a9cf4",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-rag-pipeline-reviewer",
+        "path": "agents/rag-pipeline-reviewer.md",
+        "sha256": "793432a0c4e44aa4c640cb85ec24b47062ed044782852b0ba67323d860154fec",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-react-build-resolver",
+        "path": "agents/react-build-resolver.md",
+        "sha256": "a29dec6de18ac3d7b65c746f8133c1f14de5886592fa340c5c2a62fe7c4584e0",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-react-native-patterns",
+        "path": "skills/react-native-patterns/SKILL.md",
+        "sha256": "caf04da7ea1f20213b010f24dc19a8a20f1939c928156caa2f0482f26c31b12b",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-react-patterns",
+        "path": "skills/react-patterns/SKILL.md",
+        "sha256": "f3208d44a5d553038c42e046cec4dc16e4a3d90a9dbf931f883a2e21919a64a9",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-react-performance",
+        "path": "skills/react-performance/SKILL.md",
+        "sha256": "ac76e8694d4f802a7bccc3c07a73ac68ace6d82a65ea10f10d8b7384dda61a8f",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-react-reviewer",
+        "path": "agents/react-reviewer.md",
+        "sha256": "17d0286b4f101e27b818cad026a6bfc1f9fd3e7f9b52c8414e6ea2a05481995a",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-react-testing",
+        "path": "skills/react-testing/SKILL.md",
+        "sha256": "51c18b4e28285bb876ef469e47c6f53108b5a9f900950a60e897c3c24826a65e",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-redis-patterns",
+        "path": "skills/redis-patterns/SKILL.md",
+        "sha256": "6cabb1cd03174a0584ff3538371c780aba90da156db15260691278ed3307d8fe",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-regex-vs-llm-structured-text",
+        "path": "skills/regex-vs-llm-structured-text/SKILL.md",
+        "sha256": "35ba82a9b1b7253fd84b6873c4350b974528c744ffd825544f2a4f8ccbef6d44",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-rust-build-resolver",
+        "path": "agents/rust-build-resolver.md",
+        "sha256": "78c75c6be38ff376963b3c5b26d60dce0491064481d1a61e842a6d2879534e82",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-rust-patterns",
+        "path": "skills/rust-patterns/SKILL.md",
+        "sha256": "51379df2bd92a482309e109e5a210210842594f660cceeb2d68d18e995108edf",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-rust-reviewer",
+        "path": "agents/rust-reviewer.md",
+        "sha256": "10af67c5764677596d43f32a952d8ec28662bb353fd986d726daefd3382ebeca",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-rust-testing",
+        "path": "skills/rust-testing/SKILL.md",
+        "sha256": "02a9a40dcc42dd21d14730d29b13ee0a8b274694360585dc0fadb2602eb56ddf",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-silent-failure-hunter",
+        "path": "agents/silent-failure-hunter.md",
+        "sha256": "e5e2094c6f50cc515a77376331c78e4955d5ff16c7a0e5d8f6edec692b7ebd8d",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-skill-stocktake",
+        "path": "skills/skill-stocktake/SKILL.md",
+        "sha256": "aa8f287c48c5a33bf15094358ffccbe0d4faff9eee9fa2ffcd70c8e9f3d22cdd",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-spec-miner",
+        "path": "agents/spec-miner.md",
+        "sha256": "a9270c2012e2dc979f153a481cdfdc7c5413e8774f579ada0319c00ea8903ba2",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-type-design-analyzer",
+        "path": "agents/type-design-analyzer.md",
+        "sha256": "753908aadd759d4710e07ac1a0ba8a6fbc0bc35fe369cadd3ede9655da5d1c49",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-typescript-reviewer",
+        "path": "agents/typescript-reviewer.md",
+        "sha256": "6b012db1a9039870c4f040975144a0d4e3592510d6332e2d260f02859ec66da1",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-vite-patterns",
+        "path": "skills/vite-patterns/SKILL.md",
+        "sha256": "2238d353196b6732ba897e32f1872078fde7a9d11f5aca43b53da8bfc7e3917d",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "agent-persona",
+        "name": "ecc-vue-reviewer",
+        "path": "agents/vue-reviewer.md",
+        "sha256": "c675814544f06703cf34347c24c630267073d6ee605e70820fc1c1a74e71358a",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-article-writing",
+        "path": "skills/article-writing/SKILL.md",
+        "sha256": "4aa61709450a2148ef4036896d870da748e93ad68528bb7679b74f3597ffb021",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-brand-discovery",
+        "path": "skills/brand-discovery/SKILL.md",
+        "sha256": "0c6ef1b72b0fe635d1681abf3857ec34214fd6580fad7708a96a8f4abc096ef5",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-brand-discovery",
+        "path": "skills/brand-discovery/references/10_purpose-why.md",
+        "sha256": "d70beb1dcf73512e235a377c59ca43f544de084dd555701f99a65574b17939ea",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-brand-discovery",
+        "path": "skills/brand-discovery/references/20_positioning.md",
+        "sha256": "50e2c71b8b4d6a44d59b45609c06aa258f6c16871a4d2a184f68983433e954c4",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-brand-discovery",
+        "path": "skills/brand-discovery/references/30_audience-niche.md",
+        "sha256": "189e8d41d08df421fa5bad5d15e814334dc8fe706255701b277e258100b6007d",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-brand-discovery",
+        "path": "skills/brand-discovery/references/40_personality-archetype.md",
+        "sha256": "58b04b09cf1e206d1240fc01d8c77c22fcc9b9c0d8ef326ad418476589072182",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-brand-discovery",
+        "path": "skills/brand-discovery/references/50_voice-tone.md",
+        "sha256": "cf69dc9573ed00561cfb8e7e489450ae644b90703a2d9315b77d8629af69bde3",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-brand-discovery",
+        "path": "skills/brand-discovery/references/60_narrative-story.md",
+        "sha256": "46a6184f00ffa8d6900d59d58164f5e767012bc12dd67dc2b2ba53976d6811b9",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-brand-discovery",
+        "path": "skills/brand-discovery/references/70_founder-tension.md",
+        "sha256": "88e7149f2ace5d3f726d33e5fb7ca2caddb7e3301574e849517e16277590ab39",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-brand-discovery",
+        "path": "skills/brand-discovery/references/90_SYNTHESIS.md",
+        "sha256": "04d0215bb054685ab8f6956f8369a7eb9d39e16acd1f7ae5ffe46725f2c00c61",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-brand-voice",
+        "path": "skills/brand-voice/SKILL.md",
+        "sha256": "57c7f8440b7bd4c91c0d325640b5c6fb7a3dc7fc05595946c7bc705761a987a7",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-brand-voice",
+        "path": "skills/brand-voice/references/voice-profile-schema.md",
+        "sha256": "3c5c2b04fd4b68642d2d3279829541bc56d211fdefc3498e86c1486abee8261b",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-content-engine",
+        "path": "skills/content-engine/SKILL.md",
+        "sha256": "a1ccc0ecfe30ae53db26a73159a80ecad8c63a6a96c461a297789d889bf9ad2c",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-crosspost",
+        "path": "skills/crosspost/SKILL.md",
+        "sha256": "03bd2ef6e08191cd336e9b8e7a55c29040e7a3225defdaeab1b51d983565661f",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-customer-billing-ops",
+        "path": "skills/customer-billing-ops/SKILL.md",
+        "sha256": "4214d79be7d1bcb62587cf6364e96ed3b70b875ec41871ac632e827ef96b370e",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-deep-research",
+        "path": "skills/deep-research/SKILL.md",
+        "sha256": "72e184f5d0f31ca4d45286753409d8c8431b025e8ac3800dcc9f32d9e930f58a",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-email-ops",
+        "path": "skills/email-ops/SKILL.md",
+        "sha256": "188b226ec0dfd4304d6c9b60498b5f0dc2b3c97b14e159e5bde5db323ad45721",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-finance-billing-ops",
+        "path": "skills/finance-billing-ops/SKILL.md",
+        "sha256": "823a1b8f75495022227bb9af4537eb5c0b1c62793d68b74c6bd1af14eea79786",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-frontend-slides",
+        "path": "skills/frontend-slides/SKILL.md",
+        "sha256": "9d58ad7d4555a9d6ea1944a5084fd0428ee44276ac13ee8df02c1c4e63925291",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-frontend-slides",
+        "path": "skills/frontend-slides/STYLE_PRESETS.md",
+        "sha256": "f3448493022f8fa3f858319b14c0c48a35d441864dc78a2411f7938c28e7a265",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-frontend-slides",
+        "path": "skills/frontend-slides/animation-patterns.md",
+        "sha256": "152ac81e87eba92dea96ef5ac488e3e0a341836aca034e908b0c1b6d60bff204",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-frontend-slides",
+        "path": "skills/frontend-slides/html-template.md",
+        "sha256": "0ba1acf5016472f0f902ee2a67cf2d6e20e8dbd3f733df9cd8f5ee67d5ca0adf",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-frontend-slides",
+        "path": "skills/frontend-slides/scripts/export-pdf.sh",
+        "sha256": "d1a45b2516883dc761ecf2a5d838ec515974c8d7660753b5c4945a1825cbdc77",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-frontend-slides",
+        "path": "skills/frontend-slides/scripts/extract-pptx.py",
+        "sha256": "4f5e7603c99b8b53e20c5b2a65abdf5edf9422b4c490dca9f2b872a752c17d2a",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-frontend-slides",
+        "path": "skills/frontend-slides/viewport-base.css",
+        "sha256": "dab42c1a556a0fa51d3c39f7edfb93d8303e5c29625ade479a18ba97f2640734",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-google-workspace-ops",
+        "path": "skills/google-workspace-ops/SKILL.md",
+        "sha256": "93ab16b44764e3c00472c7dfb0b58cf59a3c7493ac99ab93fcabf280f164b6a1",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-investor-materials",
+        "path": "skills/investor-materials/SKILL.md",
+        "sha256": "e2c8d64412e2af9a2def3144b3d1e32f0fd69c724f2d17615fcf5a9bfa5f01cc",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-investor-outreach",
+        "path": "skills/investor-outreach/SKILL.md",
+        "sha256": "e5d4918dcbc62eb25d42829b56683ae6befe3a623f7ce6ed66bef37ce1a57c65",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-knowledge-ops",
+        "path": "skills/knowledge-ops/SKILL.md",
+        "sha256": "958529713af2ab29c7b31b3cb758953271174b8909c94f1238dd7c78671672c2",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-lead-intelligence",
+        "path": "skills/lead-intelligence/SKILL.md",
+        "sha256": "1b24027c5ef0ebfb046990433905b80d8df63d93f83fff9fdef4f74ad883a5f2",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-lead-intelligence",
+        "path": "skills/lead-intelligence/agents/enrichment-agent.md",
+        "sha256": "ad0e369651b45f2ab82e9aa8b0419d551c918614ba70d84b43f3ca74faf57092",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-lead-intelligence",
+        "path": "skills/lead-intelligence/agents/mutual-mapper.md",
+        "sha256": "fb741c0f2ee3d08df81f7569424a5e542c4549ce6d16c90296bfffa3b1049ba9",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-lead-intelligence",
+        "path": "skills/lead-intelligence/agents/outreach-drafter.md",
+        "sha256": "e7406e69a0f3dfb8e6457bd43e51e8624c54fea43e3ad77a696d723a325c789c",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-lead-intelligence",
+        "path": "skills/lead-intelligence/agents/signal-scorer.md",
+        "sha256": "d6aa79f50c93259e37d20adc6cbe8cc6629b1ecde621cfa3e45508e8d53d20c5",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-market-research",
+        "path": "skills/market-research/SKILL.md",
+        "sha256": "8cfc36dc8a93476d092115f3fc70c631dcab14fcd6e04371160fc4fb29547800",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-marketing-campaign",
+        "path": "skills/marketing-campaign/SKILL.md",
+        "sha256": "f4d2501b1abb19f7ef5f73b21afa5a7ea51c5dc3d766e8dbd239ec548899213f",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-product-capability",
+        "path": "skills/product-capability/SKILL.md",
+        "sha256": "c26114356edb15f0340e5af66b6f4444892bdf376b053a7152312fd04d22aced",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-product-lens",
+        "path": "skills/product-lens/SKILL.md",
+        "sha256": "d082be7c3dd9fed8523ce757a6e2b823a53003d57d2488ead5cec5d5e0a4270f",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-seo",
+        "path": "skills/seo/SKILL.md",
+        "sha256": "4b744d2ff5c9313e903e4e5139322cc98adb9f9778a7231d4826216ab0f6873a",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-social-publisher",
+        "path": "skills/social-publisher/SKILL.md",
+        "sha256": "c2fde5ac9d953cb649ce69331ca49be1df854d051ebc31eb54423c5d262337f6",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "workflow-skill",
+        "name": "ecc-x-api",
+        "path": "skills/x-api/SKILL.md",
+        "sha256": "997937ac9dc11779c6bb6c16833630836a22f1b2f115482982f6350474fa8ff1",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      },
+      {
+        "type": "skill-support",
+        "name": "ecc-product-capability",
+        "path": "docs/examples/product-capability-template.md",
+        "sha256": "89493f6c7ac5751517f24060a435844ce2dceed1f75782f3224bd0df921cebd2",
+        "source": "https://github.com/affaan-m/ECC",
+        "revision": "e04ea0b9cc8248686edf5ac751cadff550e162b8"
+      }
+    ]
+  },
+  "counts": {
+    "personas": 27,
+    "native_agent_adapters": 108,
+    "skill_guides": 98,
+    "upstream_agents": 68,
+    "upstream_skills": 286
+  },
+  "selection": {
+    "agents": [
+      "ecc-a11y-architect",
+      "ecc-comment-analyzer",
+      "ecc-database-reviewer",
+      "ecc-docs-lookup",
+      "ecc-e2e-runner",
+      "ecc-fastapi-reviewer",
+      "ecc-go-build-resolver",
+      "ecc-go-reviewer",
+      "ecc-homelab-architect",
+      "ecc-mle-reviewer",
+      "ecc-network-architect",
+      "ecc-network-config-reviewer",
+      "ecc-network-troubleshooter",
+      "ecc-performance-optimizer",
+      "ecc-pr-test-analyzer",
+      "ecc-python-reviewer",
+      "ecc-pytorch-build-resolver",
+      "ecc-rag-pipeline-reviewer",
+      "ecc-react-build-resolver",
+      "ecc-react-reviewer",
+      "ecc-rust-build-resolver",
+      "ecc-rust-reviewer",
+      "ecc-silent-failure-hunter",
+      "ecc-spec-miner",
+      "ecc-type-design-analyzer",
+      "ecc-typescript-reviewer",
+      "ecc-vue-reviewer"
+    ],
+    "skills": [
+      "ecc-a11y-architect",
+      "ecc-agent-eval",
+      "ecc-ai-regression-testing",
+      "ecc-article-writing",
+      "ecc-brand-discovery",
+      "ecc-brand-voice",
+      "ecc-bun-runtime",
+      "ecc-cisco-ios-patterns",
+      "ecc-clickhouse-io",
+      "ecc-comment-analyzer",
+      "ecc-content-engine",
+      "ecc-content-hash-cache-pattern",
+      "ecc-cost-aware-llm-pipeline",
+      "ecc-crosspost",
+      "ecc-customer-billing-ops",
+      "ecc-data-throughput-accelerator",
+      "ecc-database-migrations",
+      "ecc-database-reviewer",
+      "ecc-deep-research",
+      "ecc-design-system",
+      "ecc-docker-patterns",
+      "ecc-docs-lookup",
+      "ecc-e2e-runner",
+      "ecc-e2e-testing",
+      "ecc-email-ops",
+      "ecc-error-handling",
+      "ecc-fastapi-patterns",
+      "ecc-fastapi-reviewer",
+      "ecc-finance-billing-ops",
+      "ecc-frontend-a11y",
+      "ecc-frontend-slides",
+      "ecc-go-build-resolver",
+      "ecc-go-reviewer",
+      "ecc-golang-patterns",
+      "ecc-golang-testing",
+      "ecc-google-workspace-ops",
+      "ecc-homelab-architect",
+      "ecc-homelab-network-readiness",
+      "ecc-homelab-network-setup",
+      "ecc-homelab-pihole-dns",
+      "ecc-homelab-vlan-segmentation",
+      "ecc-homelab-wireguard-vpn",
+      "ecc-investor-materials",
+      "ecc-investor-outreach",
+      "ecc-knowledge-ops",
+      "ecc-kubernetes-patterns",
+      "ecc-latency-critical-systems",
+      "ecc-lead-intelligence",
+      "ecc-market-research",
+      "ecc-marketing-campaign",
+      "ecc-mcp-server-patterns",
+      "ecc-mle-reviewer",
+      "ecc-mle-workflow",
+      "ecc-motion-advanced",
+      "ecc-motion-patterns",
+      "ecc-mysql-patterns",
+      "ecc-netmiko-ssh-automation",
+      "ecc-network-architect",
+      "ecc-network-bgp-diagnostics",
+      "ecc-network-config-reviewer",
+      "ecc-network-config-validation",
+      "ecc-network-interface-health",
+      "ecc-network-troubleshooter",
+      "ecc-nextjs-turbopack",
+      "ecc-performance-optimizer",
+      "ecc-postgres-patterns",
+      "ecc-pr-test-analyzer",
+      "ecc-prisma-patterns",
+      "ecc-product-capability",
+      "ecc-product-lens",
+      "ecc-python-patterns",
+      "ecc-python-reviewer",
+      "ecc-python-testing",
+      "ecc-pytorch-build-resolver",
+      "ecc-pytorch-patterns",
+      "ecc-rag-pipeline-reviewer",
+      "ecc-react-build-resolver",
+      "ecc-react-native-patterns",
+      "ecc-react-patterns",
+      "ecc-react-performance",
+      "ecc-react-reviewer",
+      "ecc-react-testing",
+      "ecc-redis-patterns",
+      "ecc-regex-vs-llm-structured-text",
+      "ecc-rust-build-resolver",
+      "ecc-rust-patterns",
+      "ecc-rust-reviewer",
+      "ecc-rust-testing",
+      "ecc-seo",
+      "ecc-silent-failure-hunter",
+      "ecc-skill-stocktake",
+      "ecc-social-publisher",
+      "ecc-spec-miner",
+      "ecc-type-design-analyzer",
+      "ecc-typescript-reviewer",
+      "ecc-vite-patterns",
+      "ecc-vue-reviewer",
+      "ecc-x-api"
+    ],
+    "policy": "Existing approved selection preserved; skills are real directories under .agents/skills, personas and native wrappers are real files under .agents/agents/ecc. No credentials, global settings, hooks, services, or automatic updates are managed by this ECC manifest."
+  },
+  "group_manifests": [
+    ".agents/ecc/BusinessConnected.json",
+    ".agents/ecc/BusinessCore.json",
+    ".agents/ecc/InfraData.json",
+    ".agents/ecc/PythonPhp.json",
+    ".agents/ecc/Systems.json",
+    ".agents/ecc/Web.json"
+  ],
+  "file_hash_normalization": "Before SHA-256, replace the absolute deployment home directory in UTF-8 file bytes with the literal ${HOME}. Files without that path are hashed unchanged. The manifest excludes its own hash.",
+  "files": [
+    {
+      "path": ".agents/agents/ecc/claude/ecc-a11y-architect.md",
+      "sha256": "84858d6d8ac20b2c487e15d492d21ad4eb4c5d62f326c2d71ab267c90c999572"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-comment-analyzer.md",
+      "sha256": "fe2d5b1b8a25b76c0e205175b413aef3ae57e2c4e6f75b753ac683db84880105"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-database-reviewer.md",
+      "sha256": "b28bb95313d94e0b523460f1dfc1c5adc6be10ba25d6a848f51a985c31c53131"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-docs-lookup.md",
+      "sha256": "5e3c422d7d5143ebae2823afc25bbdbd1368fccb147c280d7bdd5beef4badd5a"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-e2e-runner.md",
+      "sha256": "02e1ccb5665bde7f69e9f3728e63ed412ae5d36bf8e87ae1aac7a83bf3a2ceca"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-fastapi-reviewer.md",
+      "sha256": "abbf9b54928f81521d8a4b72f49651d1376a90ab0a2c9c00569a1c7e1b4a1bee"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-go-build-resolver.md",
+      "sha256": "3b1e2aa1d16ba04bfa0f54c52408dc7d7e8bf2b46641aa8ed8c031df37de0346"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-go-reviewer.md",
+      "sha256": "9a2bf16b63679bed26200ad0ae9e5888676db4567a95584e0ba5d8131be750c6"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-homelab-architect.md",
+      "sha256": "5797c59e655274f8c5d3183fa30f21f0147f46e6be9cd0394557275a1bfe6b0f"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-mle-reviewer.md",
+      "sha256": "0fbec0b157301e7bfbd87486684cd70d5d42439347fe0eebebfdef2bb3012308"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-network-architect.md",
+      "sha256": "b2f4901b52daa735ff2484cada6b37fad72233ec21f5817c1464bc9f0f2e4d4b"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-network-config-reviewer.md",
+      "sha256": "29dd037f5a258d144a169bdeb2712b32aaacb1abdc04e6726db335f3a6a73658"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-network-troubleshooter.md",
+      "sha256": "40bbeba40659f8f5905b1e97d5d7b7c33eef4c7d74f86075a1ca1c53b224560e"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-performance-optimizer.md",
+      "sha256": "9023ba92a1ac98c055f9a74e867b254042bc8828485d33311ddf000446df05af"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-pr-test-analyzer.md",
+      "sha256": "f18ccedc943045668b7b45a70408c9fab5ec644e90e774f727f2827d45fc318b"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-python-reviewer.md",
+      "sha256": "9ac8f04dcdbaf4c13f04577f3fc883894bc5d02a61768d3502906559d5e1c873"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-pytorch-build-resolver.md",
+      "sha256": "952b374f78314eaef67d896f2175a7f692eb2934c3b54439e6404a3c1f3ed798"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-rag-pipeline-reviewer.md",
+      "sha256": "0039a066933a100f54b107d6ab708c50d2380259ce7e7b596db2f34a15a45419"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-react-build-resolver.md",
+      "sha256": "5063d0052c3bbccf84a15bd358c50c307923592f1c7731ca8a6cc8ecedcadc0a"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-react-reviewer.md",
+      "sha256": "d0ecd7f05d80332f3e6a51b8fffbbfdcb4b2889ae527ede96dba2f521fd71eb6"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-rust-build-resolver.md",
+      "sha256": "264b8b2f5b963e9321fe58989f478f56fe6fd62761856f1d357d37075011fffc"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-rust-reviewer.md",
+      "sha256": "fbba43e55548df8cebafa12a0db2350b068b05d944c6827fe2e867fcb7de9b35"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-silent-failure-hunter.md",
+      "sha256": "73162f108672778012741299249048a3bf2d243b06c67c637402ad66b4a7bf8b"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-spec-miner.md",
+      "sha256": "a26ca398a0225cc637d730e6f31d5caf4eb0e9a9a3ece86e4211cf82c7574a2b"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-type-design-analyzer.md",
+      "sha256": "4d803c5860579e31b32bde27267c362f592e5c44610b2c0899b0821c8da9e4e5"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-typescript-reviewer.md",
+      "sha256": "c4f0ca3f0aaf0313a3ac7308f841342c89adb99914840e1f689bc3a8776d6fc1"
+    },
+    {
+      "path": ".agents/agents/ecc/claude/ecc-vue-reviewer.md",
+      "sha256": "89d3ed91b208a788354f27f3dae74ac99ee3895f053f0e1797eee92e9df7050b"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-a11y-architect.toml",
+      "sha256": "b4031ad39b064dec986e1723279742792ca130d2b173868c42032fe94354cc0b"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-comment-analyzer.toml",
+      "sha256": "115ce0c1dddec3271fda40f0dd9d80185e33e70d7776e32733a41cf5a4934d41"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-database-reviewer.toml",
+      "sha256": "7869a36857afd653c0a553369a60d6a0d7e6970609717262f1c07fec8a42c071"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-docs-lookup.toml",
+      "sha256": "452c5a8126abf9c50ab53bc0faa46c76c3ac8517352a120b7d92eff5f66fb86b"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-e2e-runner.toml",
+      "sha256": "9cf62dbfaec11e1b1a3c3b9c72744752e25198ccebc08e57c0687f3fb519182e"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-fastapi-reviewer.toml",
+      "sha256": "0594742aafc5aff536cff69895d4cc427579d729f92c17213719406e9296c795"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-go-build-resolver.toml",
+      "sha256": "48f44f5d0fb0043d5472e259495b04921776a25e821c867bc7e5c7ae5352205d"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-go-reviewer.toml",
+      "sha256": "af0438d60b4d6438d74e046dd6913474abdfb6bfeac0a6a0f63496ce2d916105"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-homelab-architect.toml",
+      "sha256": "2eadc1baa13c34083e86ac732f9da5cb356308454c5ef601dc3ecfe30ba812d2"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-mle-reviewer.toml",
+      "sha256": "bdd428d638f53a00ca2d9ec7f14f6f1ae64c37b126c648c0160a1e11c4948b57"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-network-architect.toml",
+      "sha256": "ba4e151de2b1eba69bf965bef8baeec32f6d6f0b4a6ceb0b0033477a95d28925"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-network-config-reviewer.toml",
+      "sha256": "bf121142ea318870076add14e500741462783bc5798dead4a4cdd09f7c95c0e3"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-network-troubleshooter.toml",
+      "sha256": "ca753e04175e9133e71c8dca060e816fd62dda23285896ffbba43b08fbaea970"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-performance-optimizer.toml",
+      "sha256": "96cbb48a38c63cec153a0c16749b72367f4342482a511ea1681523a9dc56bd8e"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-pr-test-analyzer.toml",
+      "sha256": "4a2a8cfbae0cfe00fbbbc05dddc39f5bcfd0cf32f55fd0598fd4164879edffc7"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-python-reviewer.toml",
+      "sha256": "59e59c2c21aaaf4f764da3c67d856a16eeb70f58cf60691d1ae3958729fd7e98"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-pytorch-build-resolver.toml",
+      "sha256": "cf6d33a3a843c7a0201740cbe1fd52ebdd3cfcf85ea5a9be2da84334bc0b0baa"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-rag-pipeline-reviewer.toml",
+      "sha256": "6bf953c3f4f9e01875da6e3e86f5625cc56bc474cd6cdb0c6b0e97b50e34531b"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-react-build-resolver.toml",
+      "sha256": "c2a2db377f7f203f7108380e467113d51a68c7ae7b268c61cf720527037ce40b"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-react-reviewer.toml",
+      "sha256": "7b5b98a778b2ef1019d5ee83120a3b78a6911e72957cd56a65537833be4f1acf"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-rust-build-resolver.toml",
+      "sha256": "1606df6c892b5df686a7cf0826c23c357f446945dc335271dcca3f71f2d95bea"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-rust-reviewer.toml",
+      "sha256": "28d2165cb6fadc127e065a4f7840289bbe152c809aa999af3dde7707768a259f"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-silent-failure-hunter.toml",
+      "sha256": "d45fda10d999b47152fb0ad0b1d1277b53c1a5c4cf6b668ceb3885f8782ac190"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-spec-miner.toml",
+      "sha256": "8099b9dd540274fbd01d66aa69180154ef7b0ff61b1e53ac233e0041ba705f80"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-type-design-analyzer.toml",
+      "sha256": "751b362de16a43be87cd4e40057f6070f545f734530ff23220100f8a85bfb6cf"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-typescript-reviewer.toml",
+      "sha256": "7255e15e21a2eda9f1c62b5d9623ec45effb0308574e41bd8d266b8cc0a160d7"
+    },
+    {
+      "path": ".agents/agents/ecc/codex/ecc-vue-reviewer.toml",
+      "sha256": "c688e927532b73ab743e4f2206fb2532648023dfdd678e2f79d4609eb9cde751"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-a11y-architect.md",
+      "sha256": "448121e9898070bd3f1537745712663cb1045bed0fe41ab05917a483b7967c6d"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-comment-analyzer.md",
+      "sha256": "4a753791a8332418943afa59420214ad74afdd5f113904abb87bc59968eaef2d"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-database-reviewer.md",
+      "sha256": "cc81655e5a784cd51f3c1d15c2ee958ea76388a25a3310b409711f58b50ad919"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-docs-lookup.md",
+      "sha256": "e8becd6bfc5d19d858fdea5b31aabc6f608c24f97dba1e655c068f2749032c96"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-e2e-runner.md",
+      "sha256": "362ee16d20da35f959ccb4ec1bb26bae7d210b8a8c1a11a0b58566b5aa790d83"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-fastapi-reviewer.md",
+      "sha256": "9da575cad6ddf31e7a506319609f2ed606a6bccb7a0f7c71cb3ca166a50f255f"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-go-build-resolver.md",
+      "sha256": "4c620cb18c40e23be68b8358327f3af75aba5848ce319af3742f71cc4f309e0f"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-go-reviewer.md",
+      "sha256": "84083f58e9902438cf8581183310fb1adeee93b4304e9f51cd8dd9e356eeb7f7"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-homelab-architect.md",
+      "sha256": "557428af09160c53246e91d9a70c16f62729b3d5f4697c9a3d9bbda8a612e080"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-mle-reviewer.md",
+      "sha256": "18879feca0cb65651a158b389e0b870dbbf4c4a7e52f5274ebc20f4e8e289dd6"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-network-architect.md",
+      "sha256": "7874605d74c101a3f8d0da8e881fe2f590de0462d8ec4e381281c3393333d2e5"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-network-config-reviewer.md",
+      "sha256": "76d0974d0db089be10ff695c0f6e148ac2122ac40e7d6c225fea37b2b72d9558"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-network-troubleshooter.md",
+      "sha256": "29e522da203c10c6e813554f22f66ddb75b2638273fa5eaed45aa342e0338ed1"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-performance-optimizer.md",
+      "sha256": "a030a64a7f09f67c7ba85e2410102f62deff64a7d0ca7cb94026c941f68790dc"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-pr-test-analyzer.md",
+      "sha256": "8a08277b709f9d6199556b9a61b2fcc6402ee33f14c184b603ceac626641d1ee"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-python-reviewer.md",
+      "sha256": "4ceb01254306fd2881b701445e397f9124527b608f02548a376619be0b7ee0d7"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-pytorch-build-resolver.md",
+      "sha256": "7e8b70358cb6041ceeee59937ad209f464f75e8b128a9be12b7b636d79f4e526"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-rag-pipeline-reviewer.md",
+      "sha256": "758cc403e731da5df464b6477e9b5be5909e3ca92f0fe96c14c9ff51aede4e3a"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-react-build-resolver.md",
+      "sha256": "c06a128907a3464adeb011719be6a6b1ef7e174c69e4a29e764bdb8c4b0081fb"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-react-reviewer.md",
+      "sha256": "fc9bc5bd46cad756b7949ac4b0ba69bb898e1597c356ed43ec600a4b75cc782b"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-rust-build-resolver.md",
+      "sha256": "7ab9e957569d1120783a0f2332430e3c13604aded7185e57361a229ae9d91399"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-rust-reviewer.md",
+      "sha256": "2d13a8ee8e74f8d6354c1c2f47ac4f60fd4822c3eb39a2ce51296e84ec93c5ca"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-silent-failure-hunter.md",
+      "sha256": "d3c046eec0f95f17e7ef57c33aae3d115230c27808a9da0a1e6930d43590338c"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-spec-miner.md",
+      "sha256": "ce1d86d5279ce0a2298a84452a8ab06b6187eec71196e2a4fed0f379a499ab94"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-type-design-analyzer.md",
+      "sha256": "ffb920d57f954cd1695d06b913489214673698c93229efe5100ed357d267aae9"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-typescript-reviewer.md",
+      "sha256": "2a70e0b2fb4843f89b262a55a8f63cf3554a7d965aaa7d402e1e61a98c8c84c6"
+    },
+    {
+      "path": ".agents/agents/ecc/omp/ecc-vue-reviewer.md",
+      "sha256": "3225cb5df4f581b2fc879f5e9c34bb888c3c972b06408a8ffcd38cd84b2e182f"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-a11y-architect.md",
+      "sha256": "c4aea0c9d8ea89863b0eecc0620820e4579384167d81a47feca007c9f1a20ac3"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-comment-analyzer.md",
+      "sha256": "c9a8b1cbd1a60882ae5265b94ccb96759a603668ade892e2fee46fdf18c8d80e"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-database-reviewer.md",
+      "sha256": "4d0ca4060e250133d0d0027594872d166e9188a6f12e2053391b6b49609ed6cf"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-docs-lookup.md",
+      "sha256": "fad05a54f9faa8baf207436067f463dbfb5da545c79067a99530880908ff4ac1"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-e2e-runner.md",
+      "sha256": "f2cf634208dcffbdd7509f71ceee4b4b6cc34b0d7f63194caaebd96ae483d4e9"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-fastapi-reviewer.md",
+      "sha256": "4dbf6e8cc0a85f686f5442fd3f564633d71eddade9e7ffaa6dea3ab2a231cd50"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-go-build-resolver.md",
+      "sha256": "cce3af71e531634a89e591857f0cef09090c840863fb8c398aed202155ce438e"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-go-reviewer.md",
+      "sha256": "888bc3bc3fc4aab047dfcb6527c45f0b01bc295946b0fef020266aac08f74ba3"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-homelab-architect.md",
+      "sha256": "bfa1d148ca9838bf3985d5c5ed63ee30bf2a8c7d2f7d297cd1ad25b767a4abbc"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-mle-reviewer.md",
+      "sha256": "f49eb0b0195bef044cddc0f091d9d8897ce904e8f8ff3dc2ab7b6023bd1c8fb2"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-network-architect.md",
+      "sha256": "684b6604bf16282082830bea9318c74fd69adebf6b5fbdedaba91315d280951d"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-network-config-reviewer.md",
+      "sha256": "78c8ca5e912fd34e320861c8b8aa879494cd96da9347fd292967d437985ec1f0"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-network-troubleshooter.md",
+      "sha256": "ff23141a7a8af72124301dcf0583267e4a3662ad33243e596258a273b9f559c4"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-performance-optimizer.md",
+      "sha256": "2b6630c1299c1d120b4efb2eedae32c575eade551d2b5c2998f7487a8bbfe7de"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-pr-test-analyzer.md",
+      "sha256": "78a2a33201cbf36acf866ad15aec49cd2f6c4b492e72b28f760741e0ee8c173d"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-python-reviewer.md",
+      "sha256": "687ef8722731e1f349aec4cf963f4eeaca7606e99049e9a8918f2a8ec7127f6b"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-pytorch-build-resolver.md",
+      "sha256": "9086a8b4d2da387d261059988d8909337e51f73a33928f5491d35224c4142fcf"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-rag-pipeline-reviewer.md",
+      "sha256": "aa463ef493d39a1ef15d73ae181c119ee5d8a776f4a77c1e588a0fbcae315ee0"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-react-build-resolver.md",
+      "sha256": "9fec262b4137c5ce2a791941a1dc3b51788219c63c2870e9288dfe6f7816462e"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-react-reviewer.md",
+      "sha256": "1bf3a3b35b79dceef325e52e3f0e38b4165974428fae50ab4566da80eba78a8e"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-rust-build-resolver.md",
+      "sha256": "958d52fe46fe65e147daf961bce3918f2c259f51902278d96cff7ffd4ff8e44e"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-rust-reviewer.md",
+      "sha256": "37a71183639091b9445e81fadfff8eeffe29616f515b9c3184835f6016d56b61"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-silent-failure-hunter.md",
+      "sha256": "daaa449ef2c9258d8ca3d10bfd7fd06c2ed0c1602894325fc9d95e83212e8d23"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-spec-miner.md",
+      "sha256": "f4ad0b64d2bdb1174753e048932e9b9d9517c048c3ca3a98a10863389a870903"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-type-design-analyzer.md",
+      "sha256": "a02448b23bdfd07d5b6c268a8390de94ff0f754986f821c09f162807d96cf4ee"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-typescript-reviewer.md",
+      "sha256": "137420f2b4812c926fd1e2fba88c5d014e6f81a57edb0572d3fd6dc56eea7359"
+    },
+    {
+      "path": ".agents/agents/ecc/opencode/ecc-vue-reviewer.md",
+      "sha256": "2d994b6647799f84cc4ee127c5d242f1c8d1d31ee90e0d364bc4281888e13d07"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-a11y-architect.md",
+      "sha256": "bdf8d29a95a33578a6aebed0aef784dff5f76bea42921aa7fb55ea5ede77af19"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-comment-analyzer.md",
+      "sha256": "a2a0c14e82d717b99dfeae5e73c97908d1609fc78b40e0fafc5ceef153a22288"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-database-reviewer.md",
+      "sha256": "ad44084abf4c9e75ff41f1adbb4f8c44385f5275ff94677182b8965753de8fce"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-docs-lookup.md",
+      "sha256": "2dbd524f0ebbf8006d07820b74c014f49cf8810d80f791938ffb4b9f917a2fcb"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-e2e-runner.md",
+      "sha256": "dbac8dd546f052e1b175b5b4f652fa2a57b1036de2d5b6119281a274c3980a4f"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-fastapi-reviewer.md",
+      "sha256": "64f11e97eaeb650f3a1b468e5153d19533a21b92f556bc5b609f9897be36807d"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-go-build-resolver.md",
+      "sha256": "ca50913a4e7c1eeae32c1b358a821ee6e1237cfabe59e6e7feb7e99af034a093"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-go-reviewer.md",
+      "sha256": "32b39480cc5f93d89f64aaf11f96f44027f70e2f50b76e2e7484d8404f8c35ec"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-homelab-architect.md",
+      "sha256": "7a1845b9cb90f9e8456d1703da80c30aaa0403c4ba7cbbd822baecac030434b4"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-mle-reviewer.md",
+      "sha256": "d8e4abf91bae04c5e72e3716724a0e6ffab9067b7dd2ecf52e60752e7da9e5c8"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-network-architect.md",
+      "sha256": "326b4e7a59f72b328f1753a09ccf00f0111e6e1b2aaa71225d90ec4b9f6cea33"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-network-config-reviewer.md",
+      "sha256": "1c2daf1043861be136f5976f66bd961065bf29cd2745e013b5b66a4b748ce89d"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-network-troubleshooter.md",
+      "sha256": "1f299dcbb9996b6044f09ab45457d138dd7418033129ef91a281f7ae0e4c026d"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-performance-optimizer.md",
+      "sha256": "0a5620615818a199e3c03516206d61882fab2a1b3a6a6b38f5cde683f97deabf"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-pr-test-analyzer.md",
+      "sha256": "d262c55cba3ce523a82a156e2317c4d03831c364715d2d81a0e44fa3274c1087"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-python-reviewer.md",
+      "sha256": "6b6059901772789fb6fbe9414b703a0c0117d79d4285fc7f9d98b89347c026c2"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-pytorch-build-resolver.md",
+      "sha256": "9a085832567a307e4c0262e36f61f0557a9634fc6176f28686623166a5af8454"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-rag-pipeline-reviewer.md",
+      "sha256": "cce837943d2dd46cf3911bbb1ab149c172a94f56f6a574827355801b3855b756"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-react-build-resolver.md",
+      "sha256": "c627c6515a798fc66a1e9818edfc6a431d93d1f4f54addeed60673af59ac09ca"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-react-reviewer.md",
+      "sha256": "28e2654e6b95b9d860e0d6f24e94f322efa02ac89f6b879c43183f5f20836085"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-rust-build-resolver.md",
+      "sha256": "2184e0c0edea7629ad4ce0a01bf2fdf8e6294f5b521a4bdca3b8805671147bd0"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-rust-reviewer.md",
+      "sha256": "565e9996a1d29abf294667eec4121afd0fce34db4293083cb01fa5162d53387b"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-silent-failure-hunter.md",
+      "sha256": "20d327bdf32f9ff93e04c37f1501af5f2d8494a95977f842e3f6576d3e82eff3"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-spec-miner.md",
+      "sha256": "af79eab67319d6307c5fd78a0d66aee38545a5bae6d7d3b107ae2c6423d8661c"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-type-design-analyzer.md",
+      "sha256": "4871fcc69aac44d95595eb2814df2f91ce934c8cda6af5fa10481270df72dcfc"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-typescript-reviewer.md",
+      "sha256": "792e65630c1c6812f4c4197c5b205144e63c153f8e72cca6a0dccd96133f72ca"
+    },
+    {
+      "path": ".agents/agents/ecc/personas/ecc-vue-reviewer.md",
+      "sha256": "18c2fca5b39ba4dd5cf23304aa8fc5202c25fa938ec125973bc127783137db9f"
+    },
+    {
+      "path": ".agents/ecc/BusinessConnected.json",
+      "sha256": "a43a1cd71b6d0e60afe1a51426e2dd9a7e9c1b13d693c20bd3ac4102c55ae2a3"
+    },
+    {
+      "path": ".agents/ecc/BusinessCore.json",
+      "sha256": "7e9a683577ba116e8eb8e19154d219b46f68f105fbdaced3c346d8b946d8fa73"
+    },
+    {
+      "path": ".agents/ecc/InfraData.json",
+      "sha256": "0f7f6cd271aab3456b5a2fc029d9e1c6b6462ebf0c881b20902a8b7d3519c96e"
+    },
+    {
+      "path": ".agents/ecc/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/ecc/PythonPhp.json",
+      "sha256": "f22409a2297fe65f9e25fcd2dccffbb34d894bf13224d0e0952ed59a8471052e"
+    },
+    {
+      "path": ".agents/ecc/Systems.json",
+      "sha256": "1a1877413e9601a3b7f175023a8aeeb43af558874d71fabb924ca51e8a470760"
+    },
+    {
+      "path": ".agents/ecc/Web.json",
+      "sha256": "bf1bbeb24a9fde175cfaae8bbc7bcbdfc89b718d1f533fb0f66340bc7b55e069"
+    },
+    {
+      "path": ".agents/skills/ecc-a11y-architect/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-a11y-architect/SKILL.md",
+      "sha256": "4b084096cf5c9eb0068b0e2f78cce362d7aaa235b6758e95511ea39708a22144"
+    },
+    {
+      "path": ".agents/skills/ecc-agent-eval/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-agent-eval/SKILL.md",
+      "sha256": "d315a15f508eab40193bcd7fe40c971a0b2e3ded59f3deb1769535e2d022dc1b"
+    },
+    {
+      "path": ".agents/skills/ecc-ai-regression-testing/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-ai-regression-testing/SKILL.md",
+      "sha256": "1cb54ddb085996d03bd424c4f1b7c84782932663a40267ef17679557969bc80d"
+    },
+    {
+      "path": ".agents/skills/ecc-article-writing/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-article-writing/SKILL.md",
+      "sha256": "974a037c9c524bc75a9a71b7ec9b5010ca498f93ed1e36d9a717f32285e03510"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-discovery/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-discovery/SKILL.md",
+      "sha256": "90d03176bd3fd1b74b38ecb858c97d29fe745aa7765bc1b3d017448f22738415"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-discovery/references/10_purpose-why.md",
+      "sha256": "d70beb1dcf73512e235a377c59ca43f544de084dd555701f99a65574b17939ea"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-discovery/references/20_positioning.md",
+      "sha256": "50e2c71b8b4d6a44d59b45609c06aa258f6c16871a4d2a184f68983433e954c4"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-discovery/references/30_audience-niche.md",
+      "sha256": "189e8d41d08df421fa5bad5d15e814334dc8fe706255701b277e258100b6007d"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-discovery/references/40_personality-archetype.md",
+      "sha256": "58b04b09cf1e206d1240fc01d8c77c22fcc9b9c0d8ef326ad418476589072182"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-discovery/references/50_voice-tone.md",
+      "sha256": "cf69dc9573ed00561cfb8e7e489450ae644b90703a2d9315b77d8629af69bde3"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-discovery/references/60_narrative-story.md",
+      "sha256": "46a6184f00ffa8d6900d59d58164f5e767012bc12dd67dc2b2ba53976d6811b9"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-discovery/references/70_founder-tension.md",
+      "sha256": "88e7149f2ace5d3f726d33e5fb7ca2caddb7e3301574e849517e16277590ab39"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-discovery/references/90_SYNTHESIS.md",
+      "sha256": "04d0215bb054685ab8f6956f8369a7eb9d39e16acd1f7ae5ffe46725f2c00c61"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-voice/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-voice/SKILL.md",
+      "sha256": "a84415513f1fdba3140b35cedb7e38872944fc830e0f0e4e82ca8a1db49bfe1a"
+    },
+    {
+      "path": ".agents/skills/ecc-brand-voice/references/voice-profile-schema.md",
+      "sha256": "3c5c2b04fd4b68642d2d3279829541bc56d211fdefc3498e86c1486abee8261b"
+    },
+    {
+      "path": ".agents/skills/ecc-bun-runtime/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-bun-runtime/SKILL.md",
+      "sha256": "4907ab4a5dc6e28f17e59c9237ff61596ab241248fb3ef4241845a90bb6aa826"
+    },
+    {
+      "path": ".agents/skills/ecc-cisco-ios-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-cisco-ios-patterns/SKILL.md",
+      "sha256": "492cd96279067c153a7a633500a47136f8fb7369f4652720cfc3d19a809e693f"
+    },
+    {
+      "path": ".agents/skills/ecc-clickhouse-io/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-clickhouse-io/SKILL.md",
+      "sha256": "bd0d34d40bf4317c843188d0c7c1af948258aff6f1afbfa02166c160c57accf8"
+    },
+    {
+      "path": ".agents/skills/ecc-comment-analyzer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-comment-analyzer/SKILL.md",
+      "sha256": "ada00dbea0ff1c9ba1bbf86e9bd1d2b3bae8cfa597708540bdce7f3bd3905a59"
+    },
+    {
+      "path": ".agents/skills/ecc-content-engine/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-content-engine/SKILL.md",
+      "sha256": "f6b58808a0fdf15f1cdd8cd6c8f37abf8732f5275feb69d3f230ced8948381de"
+    },
+    {
+      "path": ".agents/skills/ecc-content-hash-cache-pattern/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-content-hash-cache-pattern/SKILL.md",
+      "sha256": "428a713c27a98c1b8f69d888a8e7095d38f3602b0cb6a017d9547bd73592ae85"
+    },
+    {
+      "path": ".agents/skills/ecc-cost-aware-llm-pipeline/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-cost-aware-llm-pipeline/SKILL.md",
+      "sha256": "fbf0218add153bf8b916a6c9a8857fbd65e2fe8effd24d0bb119e564c6b6c501"
+    },
+    {
+      "path": ".agents/skills/ecc-crosspost/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-crosspost/SKILL.md",
+      "sha256": "386aeb95e2847f109cf96a230b71052a0c54834fb941ab7fc69e85897c046bee"
+    },
+    {
+      "path": ".agents/skills/ecc-customer-billing-ops/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-customer-billing-ops/SKILL.md",
+      "sha256": "d4a7a2ef477d3d28927706d9fc86b35ffa3c28da9db124b70b59af7a0d3d194b"
+    },
+    {
+      "path": ".agents/skills/ecc-data-throughput-accelerator/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-data-throughput-accelerator/SKILL.md",
+      "sha256": "c7531ad6bdb97ad7a6b7c871a219bcb1f89ab1f6241f68e85cf8428471bf15d9"
+    },
+    {
+      "path": ".agents/skills/ecc-database-migrations/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-database-migrations/SKILL.md",
+      "sha256": "f820e550b0cae071c8370f34ccb4f25fd95074c60f0a22c29609e35eca8658e1"
+    },
+    {
+      "path": ".agents/skills/ecc-database-reviewer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-database-reviewer/SKILL.md",
+      "sha256": "81bdfd53502ea2b4f5df446d1989e22ab359dc719547d2f8f77a980b1dd18f03"
+    },
+    {
+      "path": ".agents/skills/ecc-deep-research/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-deep-research/SKILL.md",
+      "sha256": "ae148d607244667c70e86b19d345db95e8d92fdf6a1f11ce3b493d5b5532c655"
+    },
+    {
+      "path": ".agents/skills/ecc-design-system/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-design-system/SKILL.md",
+      "sha256": "65b7da404bc694b485d8e683bf9feef8f21afcebe0ebe3c55e8c60d072d75cfd"
+    },
+    {
+      "path": ".agents/skills/ecc-docker-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-docker-patterns/SKILL.md",
+      "sha256": "a60c111f64163bffea0f5a1957c5a211c6f9fcc999b4e9261dd08a0fbbb00b21"
+    },
+    {
+      "path": ".agents/skills/ecc-docs-lookup/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-docs-lookup/SKILL.md",
+      "sha256": "1dc90ad49adf51a53726b9f798bec2f742d4db4c1fc9d9329a49f9bc75268f25"
+    },
+    {
+      "path": ".agents/skills/ecc-e2e-runner/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-e2e-runner/SKILL.md",
+      "sha256": "53ec0120151c9fb473e49b994e331f73a71d21e630f5e422068557d84ba7cb87"
+    },
+    {
+      "path": ".agents/skills/ecc-e2e-testing/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-e2e-testing/SKILL.md",
+      "sha256": "8ae12048affc3a81fa4148fcf7a56e98da312a903d990688ded8c1a24de1370c"
+    },
+    {
+      "path": ".agents/skills/ecc-email-ops/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-email-ops/SKILL.md",
+      "sha256": "adb751599063034a038e9a0bd2c20f9d1d4d2b40f6484efcfcbbdf8ac8170551"
+    },
+    {
+      "path": ".agents/skills/ecc-error-handling/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-error-handling/SKILL.md",
+      "sha256": "4b8037f9fc843fd7c3d3de0441ddbe8e5f85dfc3a089733389db7d9bac9e6ebe"
+    },
+    {
+      "path": ".agents/skills/ecc-fastapi-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-fastapi-patterns/SKILL.md",
+      "sha256": "e8d32ea79025e7c1e216839c3f2e7c898ce2fa4c5dbaac885f753f6a4dd53616"
+    },
+    {
+      "path": ".agents/skills/ecc-fastapi-reviewer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-fastapi-reviewer/SKILL.md",
+      "sha256": "41a5b8cda23dbb27623a80d9c091a1111679f1d3379e1cd6a9c3f53bbb66bfe5"
+    },
+    {
+      "path": ".agents/skills/ecc-finance-billing-ops/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-finance-billing-ops/SKILL.md",
+      "sha256": "dc4ab91b118a6b0b0418542944708d6c7129aaab3bc4a331421bd855f3d05ef7"
+    },
+    {
+      "path": ".agents/skills/ecc-frontend-a11y/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-frontend-a11y/SKILL.md",
+      "sha256": "50e96142eca5fb8ca1efe50b55a15691995cf737e5cf0a32049dbda526305720"
+    },
+    {
+      "path": ".agents/skills/ecc-frontend-slides/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-frontend-slides/SKILL.md",
+      "sha256": "8bbd4e93fd6d6584d8924d9564e5e9681ce9af4fa1b09e56fc68deb4f7249692"
+    },
+    {
+      "path": ".agents/skills/ecc-frontend-slides/STYLE_PRESETS.md",
+      "sha256": "b37f30b377b439a7580b38eab4e276928d80ea56e76215619d18a505653ac9c6"
+    },
+    {
+      "path": ".agents/skills/ecc-frontend-slides/animation-patterns.md",
+      "sha256": "152ac81e87eba92dea96ef5ac488e3e0a341836aca034e908b0c1b6d60bff204"
+    },
+    {
+      "path": ".agents/skills/ecc-frontend-slides/html-template.md",
+      "sha256": "22afc86e18ee7e98b14490577d2f6058d2c0c0f932c9b42d134993fec24554f6"
+    },
+    {
+      "path": ".agents/skills/ecc-frontend-slides/references/upstream-export-pdf.sh.txt",
+      "sha256": "d1a45b2516883dc761ecf2a5d838ec515974c8d7660753b5c4945a1825cbdc77"
+    },
+    {
+      "path": ".agents/skills/ecc-frontend-slides/scripts/extract-pptx.py",
+      "sha256": "4f5e7603c99b8b53e20c5b2a65abdf5edf9422b4c490dca9f2b872a752c17d2a"
+    },
+    {
+      "path": ".agents/skills/ecc-frontend-slides/viewport-base.css",
+      "sha256": "dab42c1a556a0fa51d3c39f7edfb93d8303e5c29625ade479a18ba97f2640734"
+    },
+    {
+      "path": ".agents/skills/ecc-go-build-resolver/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-go-build-resolver/SKILL.md",
+      "sha256": "938fd0bc9044cb6129488c7326c34571f7805fb3c93d699abc6a28839d13ba45"
+    },
+    {
+      "path": ".agents/skills/ecc-go-reviewer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-go-reviewer/SKILL.md",
+      "sha256": "806e52e0e6690a2389f7384f278de9e370648f8f998442c299221a674c928b62"
+    },
+    {
+      "path": ".agents/skills/ecc-golang-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-golang-patterns/SKILL.md",
+      "sha256": "37e10cf06a37c2bfe06501cad1f0a94289b748d263969e21b78a8924e383162f"
+    },
+    {
+      "path": ".agents/skills/ecc-golang-testing/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-golang-testing/SKILL.md",
+      "sha256": "9dd7e7a355a519ed2a283c4e0aa1342af4c3851dc7d0058f2b1abcc68e0d7cef"
+    },
+    {
+      "path": ".agents/skills/ecc-google-workspace-ops/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-google-workspace-ops/SKILL.md",
+      "sha256": "69dc7c9c3a5c066d032c5a64831f9b706ec9135d9fca3436749495de0aaf53b1"
+    },
+    {
+      "path": ".agents/skills/ecc-homelab-architect/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-homelab-architect/SKILL.md",
+      "sha256": "fceb0a76f60f45f2de488205beb4f1ea5afa6df8593978d69ebc04124869f6cc"
+    },
+    {
+      "path": ".agents/skills/ecc-homelab-network-readiness/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-homelab-network-readiness/SKILL.md",
+      "sha256": "32713c33552794c5d112f229aad921befbb5e1ac6e17f94bace899d88c464e2b"
+    },
+    {
+      "path": ".agents/skills/ecc-homelab-network-setup/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-homelab-network-setup/SKILL.md",
+      "sha256": "90d2b198e68fcdbad8e7044948cdf2a8c8d3515f773bb4086f6bc10027042506"
+    },
+    {
+      "path": ".agents/skills/ecc-homelab-pihole-dns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-homelab-pihole-dns/SKILL.md",
+      "sha256": "a23d52d62219dbe3cc051f1d95e6588be0ebc14770fd47534a5d06744f419544"
+    },
+    {
+      "path": ".agents/skills/ecc-homelab-vlan-segmentation/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-homelab-vlan-segmentation/SKILL.md",
+      "sha256": "ef869593de1304552214ce506dcc0e841df03c250510428f83ee8aa1eac86820"
+    },
+    {
+      "path": ".agents/skills/ecc-homelab-wireguard-vpn/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-homelab-wireguard-vpn/SKILL.md",
+      "sha256": "c985080569454c811eaac5cc73b2773081a3d4c36e458f6a561975c4738156c0"
+    },
+    {
+      "path": ".agents/skills/ecc-investor-materials/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-investor-materials/SKILL.md",
+      "sha256": "67ddd7068e3fd944d792b106d4484e2479a68200637198bbbafba94ef7b59195"
+    },
+    {
+      "path": ".agents/skills/ecc-investor-outreach/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-investor-outreach/SKILL.md",
+      "sha256": "c985be47d66923a9234398e6020ae8f24a12f4f00fd9ccb2125282cdef9e0e84"
+    },
+    {
+      "path": ".agents/skills/ecc-knowledge-ops/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-knowledge-ops/SKILL.md",
+      "sha256": "c5e0c61d69ac24514f84eb0fa31a1f2e57912bbc915e721e3530a03ffadf4d3f"
+    },
+    {
+      "path": ".agents/skills/ecc-kubernetes-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-kubernetes-patterns/SKILL.md",
+      "sha256": "bf5f7637533378d897597c100de08ce1c9ef2a81b204d968815aa538e7f6b62b"
+    },
+    {
+      "path": ".agents/skills/ecc-latency-critical-systems/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-latency-critical-systems/SKILL.md",
+      "sha256": "ba945c4a4f8fe5a77c5ea464576db59d7b4c1283ab5b3b8a969dbcfe14e294b5"
+    },
+    {
+      "path": ".agents/skills/ecc-lead-intelligence/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-lead-intelligence/SKILL.md",
+      "sha256": "71f68b7f85edf0407564b9263ba8d9b497128477029b9fe03ed502e0a9fb749f"
+    },
+    {
+      "path": ".agents/skills/ecc-lead-intelligence/references/enrichment-agent.md",
+      "sha256": "a150a0687199835913904ce9c7548a7de5e02679757ff0d6c9ec39307f5a469c"
+    },
+    {
+      "path": ".agents/skills/ecc-lead-intelligence/references/mutual-mapper.md",
+      "sha256": "b163686957a6d005116f0edd03bd8ec78f94dd7033fc518e8ac06eabfb39d617"
+    },
+    {
+      "path": ".agents/skills/ecc-lead-intelligence/references/outreach-drafter.md",
+      "sha256": "0540ed57ba537c2c468c576167cf94e2f82ceb916db8e9b29a804a2ec66b8c90"
+    },
+    {
+      "path": ".agents/skills/ecc-lead-intelligence/references/signal-scorer.md",
+      "sha256": "0aead985ba28bb7f0f3f12588d1309ce8f8c4f481cf218586fc3938b51d0de86"
+    },
+    {
+      "path": ".agents/skills/ecc-market-research/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-market-research/SKILL.md",
+      "sha256": "83dd7c93b9aec337ae48afebb9ea913c78edfe6e4e77555fb05c41a3ee8b553e"
+    },
+    {
+      "path": ".agents/skills/ecc-marketing-campaign/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-marketing-campaign/SKILL.md",
+      "sha256": "6326f9aff87d087e7f361380ae17ebcbb6f833e8e05f602c85ed0495e9c39c10"
+    },
+    {
+      "path": ".agents/skills/ecc-mcp-server-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-mcp-server-patterns/SKILL.md",
+      "sha256": "53e6d9506e56e50200e5ab791ce90505303d7a809c7ccac923074563bb8dc2b4"
+    },
+    {
+      "path": ".agents/skills/ecc-mle-reviewer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-mle-reviewer/SKILL.md",
+      "sha256": "8a23eee616040ec58d36b9aa08279d431714255eef0d41a9d738e444fb95e9f1"
+    },
+    {
+      "path": ".agents/skills/ecc-mle-workflow/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-mle-workflow/SKILL.md",
+      "sha256": "c188079e6dfc38ca2c4117ab9d39418af43e70b19998f4909ee7c4543052c39f"
+    },
+    {
+      "path": ".agents/skills/ecc-motion-advanced/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-motion-advanced/SKILL.md",
+      "sha256": "962712603c3a8bc3170240b14ac6ea28002b6f1a7977e5f39b3378e74ced7201"
+    },
+    {
+      "path": ".agents/skills/ecc-motion-advanced/examples/motion-tokens.ts",
+      "sha256": "9bc00519d8b755c9cea416294cdc519fec0d4f8240407a04fe4fe19a0a76c69c"
+    },
+    {
+      "path": ".agents/skills/ecc-motion-advanced/references/motion-foundations.md",
+      "sha256": "fe15a8e867529e0b8f027a331cc114dea84dca743ac3dfe1916bddc4d243dca3"
+    },
+    {
+      "path": ".agents/skills/ecc-motion-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-motion-patterns/SKILL.md",
+      "sha256": "482596b5d39b3d1913293de3cbb2b0fa764d960c8dc5e9a32df607d83057eec7"
+    },
+    {
+      "path": ".agents/skills/ecc-motion-patterns/examples/motion-tokens.ts",
+      "sha256": "9bc00519d8b755c9cea416294cdc519fec0d4f8240407a04fe4fe19a0a76c69c"
+    },
+    {
+      "path": ".agents/skills/ecc-motion-patterns/references/motion-foundations.md",
+      "sha256": "fe15a8e867529e0b8f027a331cc114dea84dca743ac3dfe1916bddc4d243dca3"
+    },
+    {
+      "path": ".agents/skills/ecc-mysql-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-mysql-patterns/SKILL.md",
+      "sha256": "07a0215a2b93d3e6217f27b9db3c7a27dbf2b90d649849773de3ac79863176de"
+    },
+    {
+      "path": ".agents/skills/ecc-netmiko-ssh-automation/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-netmiko-ssh-automation/SKILL.md",
+      "sha256": "cdfadf556aa4628659e194b0aff47c84a6492a8e50296a6a1920d49f3b858a7a"
+    },
+    {
+      "path": ".agents/skills/ecc-network-architect/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-network-architect/SKILL.md",
+      "sha256": "4575a1c9c21a0396ca4cc2ae33bcffd92c2ecb08976bc01dabfcc1068f355a4a"
+    },
+    {
+      "path": ".agents/skills/ecc-network-bgp-diagnostics/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-network-bgp-diagnostics/SKILL.md",
+      "sha256": "2e58ca021c4d91e515b41768ca3bf7f38f43cda225560a42490fb99c3bf952dc"
+    },
+    {
+      "path": ".agents/skills/ecc-network-config-reviewer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-network-config-reviewer/SKILL.md",
+      "sha256": "0d3f7f5b965128d9c6992a3255ff4bab816ed446af1b94626b598f3a71e84944"
+    },
+    {
+      "path": ".agents/skills/ecc-network-config-validation/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-network-config-validation/SKILL.md",
+      "sha256": "c709183f93d607bf8a2e4b73e40110ab15b4bf98ebc6995718505e2cbe98bd6f"
+    },
+    {
+      "path": ".agents/skills/ecc-network-interface-health/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-network-interface-health/SKILL.md",
+      "sha256": "7419568183f665b0ada21450d6d885f777cacddb12fa1aaa28d6c2d2a51a602f"
+    },
+    {
+      "path": ".agents/skills/ecc-network-troubleshooter/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-network-troubleshooter/SKILL.md",
+      "sha256": "18803c82c999022f7ce1a2f1047f5e0425a1c555b100a56f5c5a80b56cc47f37"
+    },
+    {
+      "path": ".agents/skills/ecc-nextjs-turbopack/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-nextjs-turbopack/SKILL.md",
+      "sha256": "3aa00f4b0f01d124b9db0d4694d5a416ebbd39ed02978858edafaa8334181ea9"
+    },
+    {
+      "path": ".agents/skills/ecc-performance-optimizer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-performance-optimizer/SKILL.md",
+      "sha256": "7b242baab8e09feff8cc0de2f4c5de69160741e6e21714512f17ff90be829eff"
+    },
+    {
+      "path": ".agents/skills/ecc-postgres-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-postgres-patterns/SKILL.md",
+      "sha256": "a9e6068ab12999f18118d896c8fa3b9e82c9240bed69563e7dcd817501384db3"
+    },
+    {
+      "path": ".agents/skills/ecc-pr-test-analyzer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-pr-test-analyzer/SKILL.md",
+      "sha256": "8358f9729d35e796f4ebf510f979310da7455a3a8c2858506c1a75abc8312960"
+    },
+    {
+      "path": ".agents/skills/ecc-prisma-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-prisma-patterns/SKILL.md",
+      "sha256": "32ff041df4aa491883c5984e74f7ef7b5e30d6fc29137dabf9a760c377cc63d5"
+    },
+    {
+      "path": ".agents/skills/ecc-product-capability/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-product-capability/SKILL.md",
+      "sha256": "1e5f1230814f7ddabf042714715f996d9c0597e414d45109f889984a2bd8aed0"
+    },
+    {
+      "path": ".agents/skills/ecc-product-capability/references/product-capability-template.md",
+      "sha256": "ce90814cfd83c2267e2c55e23d5462ed8a3cbb71fa3a18c0f9bc8794f4d0c631"
+    },
+    {
+      "path": ".agents/skills/ecc-product-lens/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-product-lens/SKILL.md",
+      "sha256": "baa8578becf94852ed0175df3940fd4be26b231ffb2102d53aa31cdd137a9143"
+    },
+    {
+      "path": ".agents/skills/ecc-python-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-python-patterns/SKILL.md",
+      "sha256": "7748ae7f4941be2fa93f81f2220b2bbf693d9bbb639450c81f2ac347d4d9f7bd"
+    },
+    {
+      "path": ".agents/skills/ecc-python-reviewer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-python-reviewer/SKILL.md",
+      "sha256": "f00b0e941f53c5e46ff5937e0876afac9e24c63a024b49b103458b26af740084"
+    },
+    {
+      "path": ".agents/skills/ecc-python-testing/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-python-testing/SKILL.md",
+      "sha256": "19edf97603ca980d758bd81849d8a43cbc1826bf9cfca56ebaf30467c90c4314"
+    },
+    {
+      "path": ".agents/skills/ecc-pytorch-build-resolver/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-pytorch-build-resolver/SKILL.md",
+      "sha256": "59efa9ccace4c374cac0859e87cca6a9c6a38f3bf2c796c7c3f901ff540cb5f4"
+    },
+    {
+      "path": ".agents/skills/ecc-pytorch-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-pytorch-patterns/SKILL.md",
+      "sha256": "e5db33280e325708570c4115bead9cfa00bdcfd4837705fe4daeb27d7729e88c"
+    },
+    {
+      "path": ".agents/skills/ecc-rag-pipeline-reviewer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-rag-pipeline-reviewer/SKILL.md",
+      "sha256": "d73caf285df0ba0d327f8ecc0f442a2307821b371e4b792f2195f64148113883"
+    },
+    {
+      "path": ".agents/skills/ecc-react-build-resolver/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-react-build-resolver/SKILL.md",
+      "sha256": "8857b42cb28ffe4e8667428e392157590fe2a26378c366a33f62f1c7f754343d"
+    },
+    {
+      "path": ".agents/skills/ecc-react-native-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-react-native-patterns/SKILL.md",
+      "sha256": "0a78940cc53bdc1d3d0de6406f697c39b48201b848bbdd53ea0f1dbc9a1c25fd"
+    },
+    {
+      "path": ".agents/skills/ecc-react-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-react-patterns/SKILL.md",
+      "sha256": "87db1c2f5a83ab5cebbbdc9e5bdc4578e2f2ddfe5448caaff9750725376a781d"
+    },
+    {
+      "path": ".agents/skills/ecc-react-performance/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-react-performance/SKILL.md",
+      "sha256": "60ea07aa21b201173b1f4cd487699d26d88fb91a17265ebb784e02caa7060e40"
+    },
+    {
+      "path": ".agents/skills/ecc-react-reviewer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-react-reviewer/SKILL.md",
+      "sha256": "aa7d08481111db64dffb7462f288b24121068554329ac9a13a7b8f091ae7421a"
+    },
+    {
+      "path": ".agents/skills/ecc-react-testing/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-react-testing/SKILL.md",
+      "sha256": "df37552edfdcdbf60106643017545fa77a3c9008ad420bd29366d6d1cf9411e4"
+    },
+    {
+      "path": ".agents/skills/ecc-redis-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-redis-patterns/SKILL.md",
+      "sha256": "d344983ed90c8557333dc0db5c6a0fd92b6d454b0a4716731efd05b05bb266de"
+    },
+    {
+      "path": ".agents/skills/ecc-regex-vs-llm-structured-text/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-regex-vs-llm-structured-text/SKILL.md",
+      "sha256": "24835b58a591f8f57d1b2f16ad5a276992d9f49c9c7deae906b46cb1a7656e70"
+    },
+    {
+      "path": ".agents/skills/ecc-rust-build-resolver/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-rust-build-resolver/SKILL.md",
+      "sha256": "6c03de768303a097067814f6f34f12ef53639bb355a2322f0aab0a67d5388e8a"
+    },
+    {
+      "path": ".agents/skills/ecc-rust-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-rust-patterns/SKILL.md",
+      "sha256": "4ae58813ea2c1b2039b24c65cd47ad60bf61db88bd913afeda7089fee1caa206"
+    },
+    {
+      "path": ".agents/skills/ecc-rust-reviewer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-rust-reviewer/SKILL.md",
+      "sha256": "d8e5fa8248ad7c019fc6d04e27f6844436bec6f36283313d6c542a880222f179"
+    },
+    {
+      "path": ".agents/skills/ecc-rust-testing/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-rust-testing/SKILL.md",
+      "sha256": "4640ba980e07a477fe6d9723b6ff1d8121069dd33972f5dda5497af7a2c5e0aa"
+    },
+    {
+      "path": ".agents/skills/ecc-seo/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-seo/SKILL.md",
+      "sha256": "b1791259033aff9f9d370d5934536c90101626af8f5e47e8a491d0a7151519d6"
+    },
+    {
+      "path": ".agents/skills/ecc-silent-failure-hunter/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-silent-failure-hunter/SKILL.md",
+      "sha256": "3ec2a9d3c8cffb39f3b249013c852996fbfa436cb288766a244a448e4f2baa46"
+    },
+    {
+      "path": ".agents/skills/ecc-skill-stocktake/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-skill-stocktake/SKILL.md",
+      "sha256": "751dbfc71dd66dd23904d7876d3dd8b4a3f30916778c8dbd4c160b6bc65d6525"
+    },
+    {
+      "path": ".agents/skills/ecc-social-publisher/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-social-publisher/SKILL.md",
+      "sha256": "bb5aef096de1e11c921d1472e879574f02abe63ed0a2fb161c3915b5db8a5943"
+    },
+    {
+      "path": ".agents/skills/ecc-spec-miner/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-spec-miner/SKILL.md",
+      "sha256": "606d6f986765f00bdda25dcce63c0586015d76a36c28b9b1ec807167c5a3f36d"
+    },
+    {
+      "path": ".agents/skills/ecc-type-design-analyzer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-type-design-analyzer/SKILL.md",
+      "sha256": "3645a0876b99c7b8ffee1680674e2dc34b7490460b55154153e4b7fbe39866ac"
+    },
+    {
+      "path": ".agents/skills/ecc-typescript-reviewer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-typescript-reviewer/SKILL.md",
+      "sha256": "d24cd4d42b9f9f2923c8945d6da90d355154146fb8f0cc2d287d26682c6239a2"
+    },
+    {
+      "path": ".agents/skills/ecc-vite-patterns/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-vite-patterns/SKILL.md",
+      "sha256": "49826593f083029522ac3cf65b3f49958bdfdc411a6caf1cbccd163d4f61c88a"
+    },
+    {
+      "path": ".agents/skills/ecc-vue-reviewer/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-vue-reviewer/SKILL.md",
+      "sha256": "9717dff47cecbbedd43c6a1a429af10930484045223f5fedec6a405297032575"
+    },
+    {
+      "path": ".agents/skills/ecc-x-api/LICENSE",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    },
+    {
+      "path": ".agents/skills/ecc-x-api/SKILL.md",
+      "sha256": "e22437026474884dff70b60f1e437cea75f9ca4ae871f652ebbc301150fe94f3"
+    }
+  ],
+  "symlinks": [
+    {
+      "path": ".claude/agents/ecc-a11y-architect.md",
+      "target": ".agents/agents/ecc/claude/ecc-a11y-architect.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-a11y-architect.md"
+    },
+    {
+      "path": ".claude/agents/ecc-comment-analyzer.md",
+      "target": ".agents/agents/ecc/claude/ecc-comment-analyzer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-comment-analyzer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-database-reviewer.md",
+      "target": ".agents/agents/ecc/claude/ecc-database-reviewer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-database-reviewer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-docs-lookup.md",
+      "target": ".agents/agents/ecc/claude/ecc-docs-lookup.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-docs-lookup.md"
+    },
+    {
+      "path": ".claude/agents/ecc-e2e-runner.md",
+      "target": ".agents/agents/ecc/claude/ecc-e2e-runner.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-e2e-runner.md"
+    },
+    {
+      "path": ".claude/agents/ecc-fastapi-reviewer.md",
+      "target": ".agents/agents/ecc/claude/ecc-fastapi-reviewer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-fastapi-reviewer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-go-build-resolver.md",
+      "target": ".agents/agents/ecc/claude/ecc-go-build-resolver.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-go-build-resolver.md"
+    },
+    {
+      "path": ".claude/agents/ecc-go-reviewer.md",
+      "target": ".agents/agents/ecc/claude/ecc-go-reviewer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-go-reviewer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-homelab-architect.md",
+      "target": ".agents/agents/ecc/claude/ecc-homelab-architect.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-homelab-architect.md"
+    },
+    {
+      "path": ".claude/agents/ecc-mle-reviewer.md",
+      "target": ".agents/agents/ecc/claude/ecc-mle-reviewer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-mle-reviewer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-network-architect.md",
+      "target": ".agents/agents/ecc/claude/ecc-network-architect.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-network-architect.md"
+    },
+    {
+      "path": ".claude/agents/ecc-network-config-reviewer.md",
+      "target": ".agents/agents/ecc/claude/ecc-network-config-reviewer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-network-config-reviewer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-network-troubleshooter.md",
+      "target": ".agents/agents/ecc/claude/ecc-network-troubleshooter.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-network-troubleshooter.md"
+    },
+    {
+      "path": ".claude/agents/ecc-performance-optimizer.md",
+      "target": ".agents/agents/ecc/claude/ecc-performance-optimizer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-performance-optimizer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-pr-test-analyzer.md",
+      "target": ".agents/agents/ecc/claude/ecc-pr-test-analyzer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-pr-test-analyzer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-python-reviewer.md",
+      "target": ".agents/agents/ecc/claude/ecc-python-reviewer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-python-reviewer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-pytorch-build-resolver.md",
+      "target": ".agents/agents/ecc/claude/ecc-pytorch-build-resolver.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-pytorch-build-resolver.md"
+    },
+    {
+      "path": ".claude/agents/ecc-rag-pipeline-reviewer.md",
+      "target": ".agents/agents/ecc/claude/ecc-rag-pipeline-reviewer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-rag-pipeline-reviewer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-react-build-resolver.md",
+      "target": ".agents/agents/ecc/claude/ecc-react-build-resolver.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-react-build-resolver.md"
+    },
+    {
+      "path": ".claude/agents/ecc-react-reviewer.md",
+      "target": ".agents/agents/ecc/claude/ecc-react-reviewer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-react-reviewer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-rust-build-resolver.md",
+      "target": ".agents/agents/ecc/claude/ecc-rust-build-resolver.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-rust-build-resolver.md"
+    },
+    {
+      "path": ".claude/agents/ecc-rust-reviewer.md",
+      "target": ".agents/agents/ecc/claude/ecc-rust-reviewer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-rust-reviewer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-silent-failure-hunter.md",
+      "target": ".agents/agents/ecc/claude/ecc-silent-failure-hunter.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-silent-failure-hunter.md"
+    },
+    {
+      "path": ".claude/agents/ecc-spec-miner.md",
+      "target": ".agents/agents/ecc/claude/ecc-spec-miner.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-spec-miner.md"
+    },
+    {
+      "path": ".claude/agents/ecc-type-design-analyzer.md",
+      "target": ".agents/agents/ecc/claude/ecc-type-design-analyzer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-type-design-analyzer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-typescript-reviewer.md",
+      "target": ".agents/agents/ecc/claude/ecc-typescript-reviewer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-typescript-reviewer.md"
+    },
+    {
+      "path": ".claude/agents/ecc-vue-reviewer.md",
+      "target": ".agents/agents/ecc/claude/ecc-vue-reviewer.md",
+      "link_text": "../../.agents/agents/ecc/claude/ecc-vue-reviewer.md"
+    },
+    {
+      "path": ".claude/skills/ecc-a11y-architect",
+      "target": ".agents/skills/ecc-a11y-architect",
+      "link_text": "../../.agents/skills/ecc-a11y-architect"
+    },
+    {
+      "path": ".claude/skills/ecc-agent-eval",
+      "target": ".agents/skills/ecc-agent-eval",
+      "link_text": "../../.agents/skills/ecc-agent-eval"
+    },
+    {
+      "path": ".claude/skills/ecc-ai-regression-testing",
+      "target": ".agents/skills/ecc-ai-regression-testing",
+      "link_text": "../../.agents/skills/ecc-ai-regression-testing"
+    },
+    {
+      "path": ".claude/skills/ecc-article-writing",
+      "target": ".agents/skills/ecc-article-writing",
+      "link_text": "../../.agents/skills/ecc-article-writing"
+    },
+    {
+      "path": ".claude/skills/ecc-brand-discovery",
+      "target": ".agents/skills/ecc-brand-discovery",
+      "link_text": "../../.agents/skills/ecc-brand-discovery"
+    },
+    {
+      "path": ".claude/skills/ecc-brand-voice",
+      "target": ".agents/skills/ecc-brand-voice",
+      "link_text": "../../.agents/skills/ecc-brand-voice"
+    },
+    {
+      "path": ".claude/skills/ecc-bun-runtime",
+      "target": ".agents/skills/ecc-bun-runtime",
+      "link_text": "../../.agents/skills/ecc-bun-runtime"
+    },
+    {
+      "path": ".claude/skills/ecc-cisco-ios-patterns",
+      "target": ".agents/skills/ecc-cisco-ios-patterns",
+      "link_text": "../../.agents/skills/ecc-cisco-ios-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-clickhouse-io",
+      "target": ".agents/skills/ecc-clickhouse-io",
+      "link_text": "../../.agents/skills/ecc-clickhouse-io"
+    },
+    {
+      "path": ".claude/skills/ecc-comment-analyzer",
+      "target": ".agents/skills/ecc-comment-analyzer",
+      "link_text": "../../.agents/skills/ecc-comment-analyzer"
+    },
+    {
+      "path": ".claude/skills/ecc-content-engine",
+      "target": ".agents/skills/ecc-content-engine",
+      "link_text": "../../.agents/skills/ecc-content-engine"
+    },
+    {
+      "path": ".claude/skills/ecc-content-hash-cache-pattern",
+      "target": ".agents/skills/ecc-content-hash-cache-pattern",
+      "link_text": "../../.agents/skills/ecc-content-hash-cache-pattern"
+    },
+    {
+      "path": ".claude/skills/ecc-cost-aware-llm-pipeline",
+      "target": ".agents/skills/ecc-cost-aware-llm-pipeline",
+      "link_text": "../../.agents/skills/ecc-cost-aware-llm-pipeline"
+    },
+    {
+      "path": ".claude/skills/ecc-crosspost",
+      "target": ".agents/skills/ecc-crosspost",
+      "link_text": "../../.agents/skills/ecc-crosspost"
+    },
+    {
+      "path": ".claude/skills/ecc-customer-billing-ops",
+      "target": ".agents/skills/ecc-customer-billing-ops",
+      "link_text": "../../.agents/skills/ecc-customer-billing-ops"
+    },
+    {
+      "path": ".claude/skills/ecc-data-throughput-accelerator",
+      "target": ".agents/skills/ecc-data-throughput-accelerator",
+      "link_text": "../../.agents/skills/ecc-data-throughput-accelerator"
+    },
+    {
+      "path": ".claude/skills/ecc-database-migrations",
+      "target": ".agents/skills/ecc-database-migrations",
+      "link_text": "../../.agents/skills/ecc-database-migrations"
+    },
+    {
+      "path": ".claude/skills/ecc-database-reviewer",
+      "target": ".agents/skills/ecc-database-reviewer",
+      "link_text": "../../.agents/skills/ecc-database-reviewer"
+    },
+    {
+      "path": ".claude/skills/ecc-deep-research",
+      "target": ".agents/skills/ecc-deep-research",
+      "link_text": "../../.agents/skills/ecc-deep-research"
+    },
+    {
+      "path": ".claude/skills/ecc-design-system",
+      "target": ".agents/skills/ecc-design-system",
+      "link_text": "../../.agents/skills/ecc-design-system"
+    },
+    {
+      "path": ".claude/skills/ecc-docker-patterns",
+      "target": ".agents/skills/ecc-docker-patterns",
+      "link_text": "../../.agents/skills/ecc-docker-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-docs-lookup",
+      "target": ".agents/skills/ecc-docs-lookup",
+      "link_text": "../../.agents/skills/ecc-docs-lookup"
+    },
+    {
+      "path": ".claude/skills/ecc-e2e-runner",
+      "target": ".agents/skills/ecc-e2e-runner",
+      "link_text": "../../.agents/skills/ecc-e2e-runner"
+    },
+    {
+      "path": ".claude/skills/ecc-e2e-testing",
+      "target": ".agents/skills/ecc-e2e-testing",
+      "link_text": "../../.agents/skills/ecc-e2e-testing"
+    },
+    {
+      "path": ".claude/skills/ecc-email-ops",
+      "target": ".agents/skills/ecc-email-ops",
+      "link_text": "../../.agents/skills/ecc-email-ops"
+    },
+    {
+      "path": ".claude/skills/ecc-error-handling",
+      "target": ".agents/skills/ecc-error-handling",
+      "link_text": "../../.agents/skills/ecc-error-handling"
+    },
+    {
+      "path": ".claude/skills/ecc-fastapi-patterns",
+      "target": ".agents/skills/ecc-fastapi-patterns",
+      "link_text": "../../.agents/skills/ecc-fastapi-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-fastapi-reviewer",
+      "target": ".agents/skills/ecc-fastapi-reviewer",
+      "link_text": "../../.agents/skills/ecc-fastapi-reviewer"
+    },
+    {
+      "path": ".claude/skills/ecc-finance-billing-ops",
+      "target": ".agents/skills/ecc-finance-billing-ops",
+      "link_text": "../../.agents/skills/ecc-finance-billing-ops"
+    },
+    {
+      "path": ".claude/skills/ecc-frontend-a11y",
+      "target": ".agents/skills/ecc-frontend-a11y",
+      "link_text": "../../.agents/skills/ecc-frontend-a11y"
+    },
+    {
+      "path": ".claude/skills/ecc-frontend-slides",
+      "target": ".agents/skills/ecc-frontend-slides",
+      "link_text": "../../.agents/skills/ecc-frontend-slides"
+    },
+    {
+      "path": ".claude/skills/ecc-go-build-resolver",
+      "target": ".agents/skills/ecc-go-build-resolver",
+      "link_text": "../../.agents/skills/ecc-go-build-resolver"
+    },
+    {
+      "path": ".claude/skills/ecc-go-reviewer",
+      "target": ".agents/skills/ecc-go-reviewer",
+      "link_text": "../../.agents/skills/ecc-go-reviewer"
+    },
+    {
+      "path": ".claude/skills/ecc-golang-patterns",
+      "target": ".agents/skills/ecc-golang-patterns",
+      "link_text": "../../.agents/skills/ecc-golang-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-golang-testing",
+      "target": ".agents/skills/ecc-golang-testing",
+      "link_text": "../../.agents/skills/ecc-golang-testing"
+    },
+    {
+      "path": ".claude/skills/ecc-google-workspace-ops",
+      "target": ".agents/skills/ecc-google-workspace-ops",
+      "link_text": "../../.agents/skills/ecc-google-workspace-ops"
+    },
+    {
+      "path": ".claude/skills/ecc-homelab-architect",
+      "target": ".agents/skills/ecc-homelab-architect",
+      "link_text": "../../.agents/skills/ecc-homelab-architect"
+    },
+    {
+      "path": ".claude/skills/ecc-homelab-network-readiness",
+      "target": ".agents/skills/ecc-homelab-network-readiness",
+      "link_text": "../../.agents/skills/ecc-homelab-network-readiness"
+    },
+    {
+      "path": ".claude/skills/ecc-homelab-network-setup",
+      "target": ".agents/skills/ecc-homelab-network-setup",
+      "link_text": "../../.agents/skills/ecc-homelab-network-setup"
+    },
+    {
+      "path": ".claude/skills/ecc-homelab-pihole-dns",
+      "target": ".agents/skills/ecc-homelab-pihole-dns",
+      "link_text": "../../.agents/skills/ecc-homelab-pihole-dns"
+    },
+    {
+      "path": ".claude/skills/ecc-homelab-vlan-segmentation",
+      "target": ".agents/skills/ecc-homelab-vlan-segmentation",
+      "link_text": "../../.agents/skills/ecc-homelab-vlan-segmentation"
+    },
+    {
+      "path": ".claude/skills/ecc-homelab-wireguard-vpn",
+      "target": ".agents/skills/ecc-homelab-wireguard-vpn",
+      "link_text": "../../.agents/skills/ecc-homelab-wireguard-vpn"
+    },
+    {
+      "path": ".claude/skills/ecc-investor-materials",
+      "target": ".agents/skills/ecc-investor-materials",
+      "link_text": "../../.agents/skills/ecc-investor-materials"
+    },
+    {
+      "path": ".claude/skills/ecc-investor-outreach",
+      "target": ".agents/skills/ecc-investor-outreach",
+      "link_text": "../../.agents/skills/ecc-investor-outreach"
+    },
+    {
+      "path": ".claude/skills/ecc-knowledge-ops",
+      "target": ".agents/skills/ecc-knowledge-ops",
+      "link_text": "../../.agents/skills/ecc-knowledge-ops"
+    },
+    {
+      "path": ".claude/skills/ecc-kubernetes-patterns",
+      "target": ".agents/skills/ecc-kubernetes-patterns",
+      "link_text": "../../.agents/skills/ecc-kubernetes-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-latency-critical-systems",
+      "target": ".agents/skills/ecc-latency-critical-systems",
+      "link_text": "../../.agents/skills/ecc-latency-critical-systems"
+    },
+    {
+      "path": ".claude/skills/ecc-lead-intelligence",
+      "target": ".agents/skills/ecc-lead-intelligence",
+      "link_text": "../../.agents/skills/ecc-lead-intelligence"
+    },
+    {
+      "path": ".claude/skills/ecc-market-research",
+      "target": ".agents/skills/ecc-market-research",
+      "link_text": "../../.agents/skills/ecc-market-research"
+    },
+    {
+      "path": ".claude/skills/ecc-marketing-campaign",
+      "target": ".agents/skills/ecc-marketing-campaign",
+      "link_text": "../../.agents/skills/ecc-marketing-campaign"
+    },
+    {
+      "path": ".claude/skills/ecc-mcp-server-patterns",
+      "target": ".agents/skills/ecc-mcp-server-patterns",
+      "link_text": "../../.agents/skills/ecc-mcp-server-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-mle-reviewer",
+      "target": ".agents/skills/ecc-mle-reviewer",
+      "link_text": "../../.agents/skills/ecc-mle-reviewer"
+    },
+    {
+      "path": ".claude/skills/ecc-mle-workflow",
+      "target": ".agents/skills/ecc-mle-workflow",
+      "link_text": "../../.agents/skills/ecc-mle-workflow"
+    },
+    {
+      "path": ".claude/skills/ecc-motion-advanced",
+      "target": ".agents/skills/ecc-motion-advanced",
+      "link_text": "../../.agents/skills/ecc-motion-advanced"
+    },
+    {
+      "path": ".claude/skills/ecc-motion-patterns",
+      "target": ".agents/skills/ecc-motion-patterns",
+      "link_text": "../../.agents/skills/ecc-motion-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-mysql-patterns",
+      "target": ".agents/skills/ecc-mysql-patterns",
+      "link_text": "../../.agents/skills/ecc-mysql-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-netmiko-ssh-automation",
+      "target": ".agents/skills/ecc-netmiko-ssh-automation",
+      "link_text": "../../.agents/skills/ecc-netmiko-ssh-automation"
+    },
+    {
+      "path": ".claude/skills/ecc-network-architect",
+      "target": ".agents/skills/ecc-network-architect",
+      "link_text": "../../.agents/skills/ecc-network-architect"
+    },
+    {
+      "path": ".claude/skills/ecc-network-bgp-diagnostics",
+      "target": ".agents/skills/ecc-network-bgp-diagnostics",
+      "link_text": "../../.agents/skills/ecc-network-bgp-diagnostics"
+    },
+    {
+      "path": ".claude/skills/ecc-network-config-reviewer",
+      "target": ".agents/skills/ecc-network-config-reviewer",
+      "link_text": "../../.agents/skills/ecc-network-config-reviewer"
+    },
+    {
+      "path": ".claude/skills/ecc-network-config-validation",
+      "target": ".agents/skills/ecc-network-config-validation",
+      "link_text": "../../.agents/skills/ecc-network-config-validation"
+    },
+    {
+      "path": ".claude/skills/ecc-network-interface-health",
+      "target": ".agents/skills/ecc-network-interface-health",
+      "link_text": "../../.agents/skills/ecc-network-interface-health"
+    },
+    {
+      "path": ".claude/skills/ecc-network-troubleshooter",
+      "target": ".agents/skills/ecc-network-troubleshooter",
+      "link_text": "../../.agents/skills/ecc-network-troubleshooter"
+    },
+    {
+      "path": ".claude/skills/ecc-nextjs-turbopack",
+      "target": ".agents/skills/ecc-nextjs-turbopack",
+      "link_text": "../../.agents/skills/ecc-nextjs-turbopack"
+    },
+    {
+      "path": ".claude/skills/ecc-performance-optimizer",
+      "target": ".agents/skills/ecc-performance-optimizer",
+      "link_text": "../../.agents/skills/ecc-performance-optimizer"
+    },
+    {
+      "path": ".claude/skills/ecc-postgres-patterns",
+      "target": ".agents/skills/ecc-postgres-patterns",
+      "link_text": "../../.agents/skills/ecc-postgres-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-pr-test-analyzer",
+      "target": ".agents/skills/ecc-pr-test-analyzer",
+      "link_text": "../../.agents/skills/ecc-pr-test-analyzer"
+    },
+    {
+      "path": ".claude/skills/ecc-prisma-patterns",
+      "target": ".agents/skills/ecc-prisma-patterns",
+      "link_text": "../../.agents/skills/ecc-prisma-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-product-capability",
+      "target": ".agents/skills/ecc-product-capability",
+      "link_text": "../../.agents/skills/ecc-product-capability"
+    },
+    {
+      "path": ".claude/skills/ecc-product-lens",
+      "target": ".agents/skills/ecc-product-lens",
+      "link_text": "../../.agents/skills/ecc-product-lens"
+    },
+    {
+      "path": ".claude/skills/ecc-python-patterns",
+      "target": ".agents/skills/ecc-python-patterns",
+      "link_text": "../../.agents/skills/ecc-python-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-python-reviewer",
+      "target": ".agents/skills/ecc-python-reviewer",
+      "link_text": "../../.agents/skills/ecc-python-reviewer"
+    },
+    {
+      "path": ".claude/skills/ecc-python-testing",
+      "target": ".agents/skills/ecc-python-testing",
+      "link_text": "../../.agents/skills/ecc-python-testing"
+    },
+    {
+      "path": ".claude/skills/ecc-pytorch-build-resolver",
+      "target": ".agents/skills/ecc-pytorch-build-resolver",
+      "link_text": "../../.agents/skills/ecc-pytorch-build-resolver"
+    },
+    {
+      "path": ".claude/skills/ecc-pytorch-patterns",
+      "target": ".agents/skills/ecc-pytorch-patterns",
+      "link_text": "../../.agents/skills/ecc-pytorch-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-rag-pipeline-reviewer",
+      "target": ".agents/skills/ecc-rag-pipeline-reviewer",
+      "link_text": "../../.agents/skills/ecc-rag-pipeline-reviewer"
+    },
+    {
+      "path": ".claude/skills/ecc-react-build-resolver",
+      "target": ".agents/skills/ecc-react-build-resolver",
+      "link_text": "../../.agents/skills/ecc-react-build-resolver"
+    },
+    {
+      "path": ".claude/skills/ecc-react-native-patterns",
+      "target": ".agents/skills/ecc-react-native-patterns",
+      "link_text": "../../.agents/skills/ecc-react-native-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-react-patterns",
+      "target": ".agents/skills/ecc-react-patterns",
+      "link_text": "../../.agents/skills/ecc-react-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-react-performance",
+      "target": ".agents/skills/ecc-react-performance",
+      "link_text": "../../.agents/skills/ecc-react-performance"
+    },
+    {
+      "path": ".claude/skills/ecc-react-reviewer",
+      "target": ".agents/skills/ecc-react-reviewer",
+      "link_text": "../../.agents/skills/ecc-react-reviewer"
+    },
+    {
+      "path": ".claude/skills/ecc-react-testing",
+      "target": ".agents/skills/ecc-react-testing",
+      "link_text": "../../.agents/skills/ecc-react-testing"
+    },
+    {
+      "path": ".claude/skills/ecc-redis-patterns",
+      "target": ".agents/skills/ecc-redis-patterns",
+      "link_text": "../../.agents/skills/ecc-redis-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-regex-vs-llm-structured-text",
+      "target": ".agents/skills/ecc-regex-vs-llm-structured-text",
+      "link_text": "../../.agents/skills/ecc-regex-vs-llm-structured-text"
+    },
+    {
+      "path": ".claude/skills/ecc-rust-build-resolver",
+      "target": ".agents/skills/ecc-rust-build-resolver",
+      "link_text": "../../.agents/skills/ecc-rust-build-resolver"
+    },
+    {
+      "path": ".claude/skills/ecc-rust-patterns",
+      "target": ".agents/skills/ecc-rust-patterns",
+      "link_text": "../../.agents/skills/ecc-rust-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-rust-reviewer",
+      "target": ".agents/skills/ecc-rust-reviewer",
+      "link_text": "../../.agents/skills/ecc-rust-reviewer"
+    },
+    {
+      "path": ".claude/skills/ecc-rust-testing",
+      "target": ".agents/skills/ecc-rust-testing",
+      "link_text": "../../.agents/skills/ecc-rust-testing"
+    },
+    {
+      "path": ".claude/skills/ecc-seo",
+      "target": ".agents/skills/ecc-seo",
+      "link_text": "../../.agents/skills/ecc-seo"
+    },
+    {
+      "path": ".claude/skills/ecc-silent-failure-hunter",
+      "target": ".agents/skills/ecc-silent-failure-hunter",
+      "link_text": "../../.agents/skills/ecc-silent-failure-hunter"
+    },
+    {
+      "path": ".claude/skills/ecc-skill-stocktake",
+      "target": ".agents/skills/ecc-skill-stocktake",
+      "link_text": "../../.agents/skills/ecc-skill-stocktake"
+    },
+    {
+      "path": ".claude/skills/ecc-social-publisher",
+      "target": ".agents/skills/ecc-social-publisher",
+      "link_text": "../../.agents/skills/ecc-social-publisher"
+    },
+    {
+      "path": ".claude/skills/ecc-spec-miner",
+      "target": ".agents/skills/ecc-spec-miner",
+      "link_text": "../../.agents/skills/ecc-spec-miner"
+    },
+    {
+      "path": ".claude/skills/ecc-type-design-analyzer",
+      "target": ".agents/skills/ecc-type-design-analyzer",
+      "link_text": "../../.agents/skills/ecc-type-design-analyzer"
+    },
+    {
+      "path": ".claude/skills/ecc-typescript-reviewer",
+      "target": ".agents/skills/ecc-typescript-reviewer",
+      "link_text": "../../.agents/skills/ecc-typescript-reviewer"
+    },
+    {
+      "path": ".claude/skills/ecc-vite-patterns",
+      "target": ".agents/skills/ecc-vite-patterns",
+      "link_text": "../../.agents/skills/ecc-vite-patterns"
+    },
+    {
+      "path": ".claude/skills/ecc-vue-reviewer",
+      "target": ".agents/skills/ecc-vue-reviewer",
+      "link_text": "../../.agents/skills/ecc-vue-reviewer"
+    },
+    {
+      "path": ".claude/skills/ecc-x-api",
+      "target": ".agents/skills/ecc-x-api",
+      "link_text": "../../.agents/skills/ecc-x-api"
+    },
+    {
+      "path": ".codex/agents/ecc-a11y-architect.toml",
+      "target": ".agents/agents/ecc/codex/ecc-a11y-architect.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-a11y-architect.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-comment-analyzer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-comment-analyzer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-comment-analyzer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-database-reviewer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-database-reviewer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-database-reviewer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-docs-lookup.toml",
+      "target": ".agents/agents/ecc/codex/ecc-docs-lookup.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-docs-lookup.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-e2e-runner.toml",
+      "target": ".agents/agents/ecc/codex/ecc-e2e-runner.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-e2e-runner.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-fastapi-reviewer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-fastapi-reviewer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-fastapi-reviewer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-go-build-resolver.toml",
+      "target": ".agents/agents/ecc/codex/ecc-go-build-resolver.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-go-build-resolver.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-go-reviewer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-go-reviewer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-go-reviewer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-homelab-architect.toml",
+      "target": ".agents/agents/ecc/codex/ecc-homelab-architect.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-homelab-architect.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-mle-reviewer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-mle-reviewer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-mle-reviewer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-network-architect.toml",
+      "target": ".agents/agents/ecc/codex/ecc-network-architect.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-network-architect.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-network-config-reviewer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-network-config-reviewer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-network-config-reviewer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-network-troubleshooter.toml",
+      "target": ".agents/agents/ecc/codex/ecc-network-troubleshooter.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-network-troubleshooter.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-performance-optimizer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-performance-optimizer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-performance-optimizer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-pr-test-analyzer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-pr-test-analyzer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-pr-test-analyzer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-python-reviewer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-python-reviewer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-python-reviewer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-pytorch-build-resolver.toml",
+      "target": ".agents/agents/ecc/codex/ecc-pytorch-build-resolver.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-pytorch-build-resolver.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-rag-pipeline-reviewer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-rag-pipeline-reviewer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-rag-pipeline-reviewer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-react-build-resolver.toml",
+      "target": ".agents/agents/ecc/codex/ecc-react-build-resolver.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-react-build-resolver.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-react-reviewer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-react-reviewer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-react-reviewer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-rust-build-resolver.toml",
+      "target": ".agents/agents/ecc/codex/ecc-rust-build-resolver.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-rust-build-resolver.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-rust-reviewer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-rust-reviewer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-rust-reviewer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-silent-failure-hunter.toml",
+      "target": ".agents/agents/ecc/codex/ecc-silent-failure-hunter.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-silent-failure-hunter.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-spec-miner.toml",
+      "target": ".agents/agents/ecc/codex/ecc-spec-miner.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-spec-miner.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-type-design-analyzer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-type-design-analyzer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-type-design-analyzer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-typescript-reviewer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-typescript-reviewer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-typescript-reviewer.toml"
+    },
+    {
+      "path": ".codex/agents/ecc-vue-reviewer.toml",
+      "target": ".agents/agents/ecc/codex/ecc-vue-reviewer.toml",
+      "link_text": "../../.agents/agents/ecc/codex/ecc-vue-reviewer.toml"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-a11y-architect.md",
+      "target": ".agents/agents/ecc/opencode/ecc-a11y-architect.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-a11y-architect.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-comment-analyzer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-comment-analyzer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-comment-analyzer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-database-reviewer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-database-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-database-reviewer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-docs-lookup.md",
+      "target": ".agents/agents/ecc/opencode/ecc-docs-lookup.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-docs-lookup.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-e2e-runner.md",
+      "target": ".agents/agents/ecc/opencode/ecc-e2e-runner.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-e2e-runner.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-fastapi-reviewer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-fastapi-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-fastapi-reviewer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-go-build-resolver.md",
+      "target": ".agents/agents/ecc/opencode/ecc-go-build-resolver.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-go-build-resolver.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-go-reviewer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-go-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-go-reviewer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-homelab-architect.md",
+      "target": ".agents/agents/ecc/opencode/ecc-homelab-architect.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-homelab-architect.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-mle-reviewer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-mle-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-mle-reviewer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-network-architect.md",
+      "target": ".agents/agents/ecc/opencode/ecc-network-architect.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-network-architect.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-network-config-reviewer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-network-config-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-network-config-reviewer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-network-troubleshooter.md",
+      "target": ".agents/agents/ecc/opencode/ecc-network-troubleshooter.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-network-troubleshooter.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-performance-optimizer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-performance-optimizer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-performance-optimizer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-pr-test-analyzer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-pr-test-analyzer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-pr-test-analyzer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-python-reviewer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-python-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-python-reviewer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-pytorch-build-resolver.md",
+      "target": ".agents/agents/ecc/opencode/ecc-pytorch-build-resolver.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-pytorch-build-resolver.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-rag-pipeline-reviewer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-rag-pipeline-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-rag-pipeline-reviewer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-react-build-resolver.md",
+      "target": ".agents/agents/ecc/opencode/ecc-react-build-resolver.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-react-build-resolver.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-react-reviewer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-react-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-react-reviewer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-rust-build-resolver.md",
+      "target": ".agents/agents/ecc/opencode/ecc-rust-build-resolver.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-rust-build-resolver.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-rust-reviewer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-rust-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-rust-reviewer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-silent-failure-hunter.md",
+      "target": ".agents/agents/ecc/opencode/ecc-silent-failure-hunter.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-silent-failure-hunter.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-spec-miner.md",
+      "target": ".agents/agents/ecc/opencode/ecc-spec-miner.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-spec-miner.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-type-design-analyzer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-type-design-analyzer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-type-design-analyzer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-typescript-reviewer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-typescript-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-typescript-reviewer.md"
+    },
+    {
+      "path": ".config/opencode/agents/ecc-vue-reviewer.md",
+      "target": ".agents/agents/ecc/opencode/ecc-vue-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/opencode/ecc-vue-reviewer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-a11y-architect.md",
+      "target": ".agents/agents/ecc/omp/ecc-a11y-architect.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-a11y-architect.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-comment-analyzer.md",
+      "target": ".agents/agents/ecc/omp/ecc-comment-analyzer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-comment-analyzer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-database-reviewer.md",
+      "target": ".agents/agents/ecc/omp/ecc-database-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-database-reviewer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-docs-lookup.md",
+      "target": ".agents/agents/ecc/omp/ecc-docs-lookup.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-docs-lookup.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-e2e-runner.md",
+      "target": ".agents/agents/ecc/omp/ecc-e2e-runner.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-e2e-runner.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-fastapi-reviewer.md",
+      "target": ".agents/agents/ecc/omp/ecc-fastapi-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-fastapi-reviewer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-go-build-resolver.md",
+      "target": ".agents/agents/ecc/omp/ecc-go-build-resolver.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-go-build-resolver.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-go-reviewer.md",
+      "target": ".agents/agents/ecc/omp/ecc-go-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-go-reviewer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-homelab-architect.md",
+      "target": ".agents/agents/ecc/omp/ecc-homelab-architect.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-homelab-architect.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-mle-reviewer.md",
+      "target": ".agents/agents/ecc/omp/ecc-mle-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-mle-reviewer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-network-architect.md",
+      "target": ".agents/agents/ecc/omp/ecc-network-architect.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-network-architect.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-network-config-reviewer.md",
+      "target": ".agents/agents/ecc/omp/ecc-network-config-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-network-config-reviewer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-network-troubleshooter.md",
+      "target": ".agents/agents/ecc/omp/ecc-network-troubleshooter.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-network-troubleshooter.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-performance-optimizer.md",
+      "target": ".agents/agents/ecc/omp/ecc-performance-optimizer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-performance-optimizer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-pr-test-analyzer.md",
+      "target": ".agents/agents/ecc/omp/ecc-pr-test-analyzer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-pr-test-analyzer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-python-reviewer.md",
+      "target": ".agents/agents/ecc/omp/ecc-python-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-python-reviewer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-pytorch-build-resolver.md",
+      "target": ".agents/agents/ecc/omp/ecc-pytorch-build-resolver.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-pytorch-build-resolver.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-rag-pipeline-reviewer.md",
+      "target": ".agents/agents/ecc/omp/ecc-rag-pipeline-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-rag-pipeline-reviewer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-react-build-resolver.md",
+      "target": ".agents/agents/ecc/omp/ecc-react-build-resolver.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-react-build-resolver.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-react-reviewer.md",
+      "target": ".agents/agents/ecc/omp/ecc-react-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-react-reviewer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-rust-build-resolver.md",
+      "target": ".agents/agents/ecc/omp/ecc-rust-build-resolver.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-rust-build-resolver.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-rust-reviewer.md",
+      "target": ".agents/agents/ecc/omp/ecc-rust-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-rust-reviewer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-silent-failure-hunter.md",
+      "target": ".agents/agents/ecc/omp/ecc-silent-failure-hunter.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-silent-failure-hunter.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-spec-miner.md",
+      "target": ".agents/agents/ecc/omp/ecc-spec-miner.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-spec-miner.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-type-design-analyzer.md",
+      "target": ".agents/agents/ecc/omp/ecc-type-design-analyzer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-type-design-analyzer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-typescript-reviewer.md",
+      "target": ".agents/agents/ecc/omp/ecc-typescript-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-typescript-reviewer.md"
+    },
+    {
+      "path": ".omp/agent/agents/ecc-vue-reviewer.md",
+      "target": ".agents/agents/ecc/omp/ecc-vue-reviewer.md",
+      "link_text": "../../../.agents/agents/ecc/omp/ecc-vue-reviewer.md"
+    }
+  ],
+  "layout": {
+    "skills": ".agents/skills/ecc-*",
+    "personas": ".agents/agents/ecc/personas",
+    "native_wrappers": ".agents/agents/ecc/{claude,codex,omp,opencode}",
+    "metadata": ".agents/ecc",
+    "claude_skills": ".claude/skills/ecc-* symlinks; OpenCode, OMP, Codex, and Pi use the shared skill root"
+  },
+  "verification_scope": "This is portable desired-state provenance, not proof of discovery on a new machine. Run native discovery after applying on each machine. Live integration authorization is machine-local.",
+  "removal_policy": "Remove only recorded paths whose normalized hashes or symlink text still match. Never remove an entire harness configuration directory or unrelated skills."
+}

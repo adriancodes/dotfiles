@@ -1,0 +1,394 @@
+{
+  "agents": [],
+  "skills": [
+    {
+      "name": "ecc-market-research",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/market-research/SKILL.md",
+      "adaptations": [
+        "Preserved research standards, untrusted-source safeguards, four research modes, output structure, and quality gate.",
+        "Added namespaced identity, pinned provenance, attribution, per-directory MIT license, and source-access prerequisites without granting external permissions."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "research: both investigate sourced questions; this guide adds TAM/SAM/SOM, fund diligence, competitor and vendor decision formats rather than requiring background-agent delegation.",
+        "obviously-awesome and one-page-marketing: competitive alternatives and audience intelligence overlap; this guide supplies evidence rather than selecting the full positioning or marketing strategy."
+      ],
+      "readiness": {
+        "requirements": [
+          "User-defined decision and scope plus public-source reading/search capability or supplied evidence.",
+          "Current or paid datasets may be unavailable; label stale data, estimates, and unresolved evidence instead of inventing results."
+        ],
+        "side_effects": [
+          "Invocation may read public URLs and write a requested research artifact; no submissions, account connections, or paid-data access are enabled by installation."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-brand-discovery",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/brand-discovery/SKILL.md",
+      "adaptations": [
+        "Preserved all eight full module references, one-question interview discipline, laddering, saturation, checkpoint schema, terminal-state protocol, and multi-founder reconciliation.",
+        "Linked each module to its bundled reference and distinguished installed templates from requested project output files.",
+        "Namespaced optional ecc-brand-voice reference with a Module 50 fallback; replaced the unselected competitive-platform-analysis dependency with direct sourced competitor categorization.",
+        "Added pinned provenance, attribution, per-directory MIT license, and explicit persistence prerequisites."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "obviously-awesome: Module 20 uses competitive framing and positioning; the ECC guide additionally covers purpose, personality, voice, narrative, founder boundaries, and resumable reconciliation.",
+        "storybrand-messaging: narrative and verbal identity overlap; the ECC guide is an eight-module multi-session identity interview rather than a StoryBrand messaging pass.",
+        "create-website: overlaps the positioning and messaging inputs before site design, but does not replace website creation."
+      ],
+      "readiness": {
+        "requirements": [
+          "Brand name, participants, real answers, and a confirmed project output location.",
+          "File read/write capability for automatic checkpoint resumption; without it return complete module/checkpoint contents for the user to save.",
+          "No competitive-platform-analysis companion or external storage service is required."
+        ],
+        "side_effects": [
+          "A requested interview persists sensitive raw quotes, founder files, module synthesis, state.json, and the final brandbook within the confirmed project directory.",
+          "Installation copies blank templates only; it creates no brand state, memory settings, or external storage connection."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-brand-voice",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/brand-voice/SKILL.md",
+      "adaptations": [
+        "Retained source priority, collection/extraction workflow, complete VOICE PROFILE schema, source-specific ECC defaults, banned patterns, and persistence rules.",
+        "Generalized site sourcing to the requested brand rather than always using ECC's landing page.",
+        "Namespaced optional ecc-x-api, ecc-content-engine, ecc-crosspost, and ecc-lead-intelligence references and supplied sample-based or direct drafting fallbacks.",
+        "Scoped canonical-profile language to these ECC writing workflows rather than overriding native skills or user guidance; added provenance, attribution, and MIT license."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "storybrand-messaging: both improve consistent brand communication; this guide derives reusable sentence-level style from real samples rather than defining the customer-as-hero narrative.",
+        "made-to-stick: both discourage vague claims and sharpen communication; voice profiling is distinct from the SUCCESs memorability framework."
+      ],
+      "readiness": {
+        "requirements": [
+          "Representative user-authorized writing samples, ideally 5 to 20; report low confidence when the source set is thin.",
+          "Optional live X collection needs a separately available authorized X API and account; supplied posts or exports are the honest offline fallback."
+        ],
+        "side_effects": [
+          "May read authorized posts or supplied private correspondence; a durable personal voice profile is saved only when explicitly requested.",
+          "Installation creates no voice fingerprint, account connection, or publishing capability."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-marketing-campaign",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/marketing-campaign/SKILL.md",
+      "adaptations": [
+        "Preserved all four phases, positioning approval, ordered nine-part deliverable contract, quality gate, and hard bans.",
+        "Namespaced optional ecc-market-research, ecc-brand-voice, ecc-content-engine, ecc-crosspost, and ecc-seo references with direct research/profile/platform/on-page fallbacks.",
+        "Separated campaign drafts and calendars from external sending, publishing, advertising spend, and scheduled jobs; added provenance, attribution, and MIT license."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "one-page-marketing: audience, positioning, channels, and nurture overlap; this guide produces a bounded launch content suite instead of the entire business marketing system.",
+        "storybrand-messaging and create-website: landing-page and email copy overlap; this guide coordinates those assets with social, video, ads, and a proposed calendar."
+      ],
+      "readiness": {
+        "requirements": [
+          "Product brief, audience evidence, verified proof points, channel selection, and user approval of positioning and angle.",
+          "Research may use public-source tools or supplied evidence; missing live evidence must be stated.",
+          "Real sending, publishing, ad buying, and scheduling require separate authorization and already-available integrations; no companion skill supplies those permissions."
+        ],
+        "side_effects": [
+          "Requested local campaign drafts and calendar artifacts; external messages, ads, spend, and scheduler changes are not performed by installation."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-content-engine",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/content-engine/SKILL.md",
+      "adaptations": [
+        "Preserved source-first voice handling, all five platform lanes, seven-step repurposing flow, deliverables, hard bans, and quality gate.",
+        "Namespaced optional ecc-brand-voice, ecc-crosspost, and ecc-x-api references with an inline sample-derived profile and platform-adaptation fallback.",
+        "Clarified that drafts and posting order are not account connections, publishing, or scheduled jobs; added provenance, attribution, and MIT license."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "contagious: shareable social content and campaign ideas overlap; this guide adapts source assets natively by platform rather than designing STEPPS virality.",
+        "made-to-stick and storybrand-messaging: concrete claims and consistent messaging overlap; this guide focuses on format, author voice, and repurposing across channels."
+      ],
+      "readiness": {
+        "requirements": [
+          "Real anchor assets, intended platforms, supported claims, and author samples when voice matching matters.",
+          "Optional live X sources require authorized API access; without it use supplied samples and do not invent post metrics or publishing receipts."
+        ],
+        "side_effects": [
+          "May create requested drafts, scripts, or content calendars; repurposing private source material into public copy needs user review before publication.",
+          "No platform publishing, account connection, upload, or recurring content job is enabled by installation."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-article-writing",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/article-writing/SKILL.md",
+      "adaptations": [
+        "Preserved proof-first writing rules, voice handling, banned patterns, five-step process, technical/essay/newsletter structures, and quality gate.",
+        "Namespaced the optional ecc-brand-voice reference and supplied a direct sample-derived profile fallback.",
+        "Added provenance, attribution, MIT license, and explicit distinction between requested drafting and publishing or durable voice storage."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "made-to-stick: concrete, memorable, credible writing overlaps; this guide adds long-form structure, pacing, and source-derived voice.",
+        "storybrand-messaging: narrative clarity overlaps, but this guide writes articles, tutorials, essays, and newsletters rather than a brand script."
+      ],
+      "readiness": {
+        "requirements": [
+          "Audience, purpose, source notes or research, factual evidence, and optional voice samples.",
+          "Available source-reading tools or supplied references; unresolved evidence must remain a stated gap."
+        ],
+        "side_effects": [
+          "Requested article output or workspace artifact; publishing, external account connections, and personal voice storage are not authorized by installation."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-crosspost",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/crosspost/SKILL.md",
+      "adaptations": [
+        "Preserved untrusted-source safeguards, voice reuse, X/LinkedIn/Threads/Bluesky rules, posting order, output format, bans, and quality gate.",
+        "Namespaced optional ecc-content-engine, ecc-brand-voice, and ecc-x-api references with direct source-shaping and voice-profile fallbacks.",
+        "Required explicit destination/content/timing authorization and real platform tooling for posting; missing APIs yield drafts and reported blockers, not fake receipts. Added provenance, attribution, and MIT license."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "contagious and one-page-marketing: social distribution and channel planning overlap; this guide's specific job is preserving one author's voice in distinct platform-native variants."
+      ],
+      "readiness": {
+        "requirements": [
+          "Primary source content and user-selected platforms; drafting requires no platform account.",
+          "Live posting requires an authorized account and available integration for each destination, plus approval of content, accounts, platforms, and timing.",
+          "An X API does not supply LinkedIn, Threads, or Bluesky access; unavailable destinations remain explicit publishing prerequisites."
+        ],
+        "side_effects": [
+          "Publication, if separately authorized and available, sends public content through the user's accounts; sequencing is not a scheduled job unless separately requested.",
+          "Installation does not connect, authenticate, publish, or schedule."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-seo",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/seo/SKILL.md",
+      "adaptations": [
+        "Preserved technical/on-page checklists, keyword mapping, internal linking, complete JSON-LD example, audit format, and anti-patterns.",
+        "Replaced required-looking seo-specialist and frontend-patterns references with optional specialist/project-pattern guidance and direct checklist fallbacks; namespaced optional ecc-brand-voice and ecc-market-research.",
+        "Distinguished page evidence, local implementation requests, deployment, and live analytics prerequisites; added provenance, attribution, and MIT license."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "improve-website and create-website: website content, performance, and discoverability overlap; this guide isolates technical SEO, indexing, structured data, and keyword-to-URL mapping.",
+        "high-perf-browser: Core Web Vitals overlap; this guide treats performance as one SEO audit lane rather than a browser/network performance deep dive."
+      ],
+      "readiness": {
+        "requirements": [
+          "Actual page/URL or supplied page source and the intended public/search surface.",
+          "Crawl tools, field metrics, search-console data, and keyword datasets are optional evidence inputs requiring their own access; absent evidence remains unverified.",
+          "Local edits require a requested implementation task; no SEO agent, search-console connection, deployment integration, or extra companion skill is required for an evidence-limited audit."
+        ],
+        "side_effects": [
+          "Reading pages may make network requests; authorized local implementation can alter metadata, schema, links, robots, or sitemaps.",
+          "Installation performs no deployment, external index submission, analytics connection, or website mutation."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-product-lens",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/product-lens/SKILL.md",
+      "adaptations": [
+        "Preserved product diagnostic, founder review, user-journey audit, ICE prioritization, and actionable-brief outcomes.",
+        "Namespaced optional ecc-product-capability references with a direct contract fallback; replaced browser-qa, design-system audit, and canary-watch commands with optional capability-based work.",
+        "Generalized CLAUDE.md/package.json to project instructions and manifests, qualified clone/install as task-authorized, and distinguished code signals from actual usage/revenue evidence.",
+        "Added provenance, attribution, MIT license, and no-automatic-review/monitoring prerequisites."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "lean-startup and inspired-product: validating why to build, MVP scope, evidence, and prioritization overlap; this guide offers four compact diagnostic modes.",
+        "create-spec: pressure-testing a vague request overlaps at entry, but this guide stops at a product brief rather than an implementation contract."
+      ],
+      "readiness": {
+        "requirements": [
+          "Product context and real usage, retention, revenue, or supplied journey evidence; mark inferred scores and unavailable data.",
+          "Actual onboarding verification needs a separately authorized runnable product and browser/manual access; otherwise report that the journey was not exercised.",
+          "No weekly scheduler, monitoring service, browser-qa, or canary-watch companion is installed or required."
+        ],
+        "side_effects": [
+          "Requested PRODUCT-BRIEF.md or prioritization artifact; a separately authorized real onboarding exercise may install/run a product or create test state.",
+          "Installation starts no reviews, onboarding, monitoring, or implementation."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-product-capability",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/product-capability/SKILL.md",
+      "adaptations": [
+        "Preserved capability constraints, implementation-facing contract, inputs, four-step workflow, output shape, and handoff outcomes.",
+        "Bundled the complete previously out-of-directory template as references/product-capability-template.md; source https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/docs/examples/product-capability-template.md; upstream Git blob SHA-1 1a7a0c84bcf5c43181ce04ed04b075a34b430c86.",
+        "Replaced unselected project-flow-ops, workspace-surface-audit, api-connector-builder, dashboard-builder, tdd-workflow, and verification-loop requirements with concrete optional handoff steps in both guide and template.",
+        "Removed ECC-service-specific portability language; added namespacing, provenance, attribution, MIT license, and requested-artifact scope."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "create-spec: directly overlaps converting vague or discussed requirements into a durable specification; this guide emphasizes capability states, cross-service interfaces, invariants, policy, and explicit implementation handoff.",
+        "inspired-product: product intent overlaps at the input boundary; this guide assumes intent exists and resolves engineering constraints instead of choosing what to build."
+      ],
+      "readiness": {
+        "requirements": [
+          "Actual product intent, relevant architecture/contracts, existing product context, and delivery constraints.",
+          "File-writing capability only when a durable artifact is requested; otherwise return the complete contract for manual saving.",
+          "The required source template is now bundled locally; no ECC planning service or unselected companion is necessary."
+        ],
+        "side_effects": [
+          "A requested planning invocation may update an existing product-context file or create a capability artifact; it does not itself create services, connect APIs, or start implementation."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-investor-materials",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/investor-materials/SKILL.md",
+      "adaptations": [
+        "Preserved canonical-fact consistency, full pitch-deck flow, memo/application guidance, financial modeling cases, red flags, and quality gate.",
+        "Namespaced optional ecc-frontend-slides reference with a complete content-first fallback and explicit rendering prerequisite.",
+        "Added provenance, attribution, MIT license, and clear separation of drafting from financial/account/application operations."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "made-to-stick and storybrand-messaging: persuasive pitch narratives overlap; this guide adds cross-asset fact consistency, financial assumptions, use-of-funds logic, and fundraising-specific formats.",
+        "one-page-marketing: value propositions and audience clarity overlap, but investor-facing metrics and fundraising materials are a distinct deliverable."
+      ],
+      "readiness": {
+        "requirements": [
+          "Confirmed traction, pricing/revenue assumptions, raise terms, use of funds, team facts, milestones, and a single current source of truth.",
+          "Text drafts work without external services; requested spreadsheets, rendered slides, or PDFs need already-available authoring/export tools.",
+          "Missing metrics or format tooling must be reported; optional ecc-frontend-slides does not supply browser/PPT/PDF dependencies."
+        ],
+        "side_effects": [
+          "Requested fundraising documents and financial models may persist sensitive company information locally.",
+          "Installation shares no materials, submits no applications, changes no financing terms, and moves no money."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-investor-outreach",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/investor-outreach/SKILL.md",
+      "adaptations": [
+        "Preserved personalization rules, cold-email structure, follow-up cadence, warm-intro blurbs, post-meeting updates, bans, and quality gate.",
+        "Namespaced optional ecc-brand-voice reference with an inline sample-derived profile fallback.",
+        "Distinguished draft follow-up cadence from actual sending or reminders; added provenance, attribution, MIT license, and evidence prerequisites."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "predictable-revenue: personalized outbound and follow-up sequences overlap; this guide targets angels, VCs, strategic investors, and accelerators rather than a B2B sales-development machine.",
+        "storybrand-messaging: concise audience-specific claims overlap; investor fit, forwardable intros, and fundraising proof points are this guide's distinct focus."
+      ],
+      "readiness": {
+        "requirements": [
+          "Verified company proof points, intended investor/partner, actual thesis or portfolio fit, and a concrete next-step ask.",
+          "Missing personalization remains explicit; sending needs a separately authorized available communication tool/account, and reminders need their own authorized calendar/scheduler."
+        ],
+        "side_effects": [
+          "Produces requested message drafts and a proposed cadence; separately authorized sending would contact real investors.",
+          "Installation sends nothing, creates no reminder/job, and connects no account."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-frontend-slides",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/frontend-slides/SKILL.md",
+      "adaptations": [
+        "Preserved all seven workflow stages, viewport and density requirements, complete style catalog, CSS base, animation patterns, HTML architecture, inline-editing/image examples, and PPTX extractor.",
+        "Relocated scripts/export-pdf.sh byte-for-byte to references/upstream-export-pdf.sh.txt as audit-only source, not a runnable recommendation; PDF export now points to an already-available browser print/export facility or reports missing capability.",
+        "The retained upstream exporter installs Playwright, downloads Chromium, serves files on an unspecified interface without path containment, executes deck scripts/remote requests, creates screenshots/PDF/temp data, removes temp files, and auto-opens output. It was inspected, not executed.",
+        "Added explicit opt-in prerequisites for browser verification, Python/python-pptx, legacy PPT conversion, Pillow, font network access, localStorage editing, output writes, and app opening.",
+        "Clarified that the HTML template is illustrative and requires implemented controller methods, replaced absent Phase 1 opt-in references with content-discovery consent, and made font/image dependencies optional without discarding examples.",
+        "Namespaced the preset reference, replaced unselected frontend-patterns/liquid-glass-design/e2e-testing requirements with direct optional guidance, and retained upstream zarazhangrui credit plus pinned provenance and MIT license."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "top-design: immersive motion, dramatic typography, and visual exploration overlap; this guide creates viewport-fitted local HTML presentation decks rather than websites.",
+        "create-website: visual discovery and responsive browser output overlap, but decks and PPTX conversion are a distinct surface.",
+        "high-perf-browser: browser performance and resource loading overlap as constraints; the ECC guide provides deck-specific CSS, navigation, density, and conversion references."
+      ],
+      "readiness": {
+        "requirements": [
+          "Presentation content, user-selected style, confirmed workspace output location, and file-authoring capability.",
+          "A real browser for rendering/visual verification; automation is optional and manual viewport/navigation checks are a valid fallback. Without a browser, verification remains unavailable.",
+          "Optional PPTX extraction needs existing Python 3 and python-pptx. The bundled extractor handles top-level text, pictures, and notes, not legacy .ppt or complete PowerPoint feature fidelity; legacy .ppt needs a user-supplied .pptx/export from an existing converter.",
+          "Optional image processing needs existing Pillow; use original or user-prepared assets if unavailable. Remote fonts need accepted network access; supplied local fonts or an intentional system-font treatment work offline.",
+          "Requested PDF output requires an already-available browser print/export facility. No bundled PDF installer/exporter is offered as a runnable path; the upstream helper is retained solely for audit.",
+          "Inline editing is opt-in because it stores text in browser localStorage and downloads HTML. No browser service, package, converter, or account is installed by this import."
+        ],
+        "side_effects": [
+          "A requested authoring invocation may write preview HTML, final decks, assets, and delete its own temporary previews; opening a deck executes JavaScript and may request approved remote fonts.",
+          "Explicitly requested PPTX extraction creates assets/ and extracted-slides.json and may overwrite existing same-named output; image processing writes processed assets.",
+          "Optional inline editing persists browser data and downloads files; optional browser PDF export writes a PDF.",
+          "The audit-only upstream exporter has package-download, uncontained HTTP serving, browser execution, filesystem, cleanup, and opener side effects and must not be executed from this guide.",
+          "Installation executes no bundled scripts, starts no server, installs no dependencies, and opens no application."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    }
+  ],
+  "files": [
+    ".agents/skills/ecc-market-research/SKILL.md",
+    ".agents/skills/ecc-market-research/LICENSE",
+    ".agents/skills/ecc-brand-discovery/SKILL.md",
+    ".agents/skills/ecc-brand-discovery/LICENSE",
+    ".agents/skills/ecc-brand-discovery/references/10_purpose-why.md",
+    ".agents/skills/ecc-brand-discovery/references/20_positioning.md",
+    ".agents/skills/ecc-brand-discovery/references/30_audience-niche.md",
+    ".agents/skills/ecc-brand-discovery/references/40_personality-archetype.md",
+    ".agents/skills/ecc-brand-discovery/references/50_voice-tone.md",
+    ".agents/skills/ecc-brand-discovery/references/60_narrative-story.md",
+    ".agents/skills/ecc-brand-discovery/references/70_founder-tension.md",
+    ".agents/skills/ecc-brand-discovery/references/90_SYNTHESIS.md",
+    ".agents/skills/ecc-brand-voice/SKILL.md",
+    ".agents/skills/ecc-brand-voice/LICENSE",
+    ".agents/skills/ecc-brand-voice/references/voice-profile-schema.md",
+    ".agents/skills/ecc-marketing-campaign/SKILL.md",
+    ".agents/skills/ecc-marketing-campaign/LICENSE",
+    ".agents/skills/ecc-content-engine/SKILL.md",
+    ".agents/skills/ecc-content-engine/LICENSE",
+    ".agents/skills/ecc-article-writing/SKILL.md",
+    ".agents/skills/ecc-article-writing/LICENSE",
+    ".agents/skills/ecc-crosspost/SKILL.md",
+    ".agents/skills/ecc-crosspost/LICENSE",
+    ".agents/skills/ecc-seo/SKILL.md",
+    ".agents/skills/ecc-seo/LICENSE",
+    ".agents/skills/ecc-product-lens/SKILL.md",
+    ".agents/skills/ecc-product-lens/LICENSE",
+    ".agents/skills/ecc-product-capability/SKILL.md",
+    ".agents/skills/ecc-product-capability/LICENSE",
+    ".agents/skills/ecc-product-capability/references/product-capability-template.md",
+    ".agents/skills/ecc-investor-materials/SKILL.md",
+    ".agents/skills/ecc-investor-materials/LICENSE",
+    ".agents/skills/ecc-investor-outreach/SKILL.md",
+    ".agents/skills/ecc-investor-outreach/LICENSE",
+    ".agents/skills/ecc-frontend-slides/SKILL.md",
+    ".agents/skills/ecc-frontend-slides/LICENSE",
+    ".agents/skills/ecc-frontend-slides/STYLE_PRESETS.md",
+    ".agents/skills/ecc-frontend-slides/html-template.md",
+    ".agents/skills/ecc-frontend-slides/animation-patterns.md",
+    ".agents/skills/ecc-frontend-slides/viewport-base.css",
+    ".agents/skills/ecc-frontend-slides/scripts/extract-pptx.py",
+    ".agents/skills/ecc-frontend-slides/references/upstream-export-pdf.sh.txt",
+    ".agents/ecc/BusinessCore.json"
+  ],
+  "exclusions": [],
+  "file_paths_relative_to": "home directory"
+}

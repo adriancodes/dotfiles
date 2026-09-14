@@ -1,0 +1,295 @@
+{
+  "agents": [
+    {
+      "name": "ecc-typescript-reviewer",
+      "profile": "read-only",
+      "workflow_skill": "ecc-typescript-reviewer",
+      "description": "Use when reviewing TypeScript or JavaScript changes for unsafe type boundaries, asynchronous failures, injection, or Node.js correctness."
+    },
+    {
+      "name": "ecc-react-reviewer",
+      "profile": "read-only",
+      "workflow_skill": "ecc-react-reviewer",
+      "description": "Use when statically reviewing React components for hook bugs, server/client leaks, rendering defects, or accessibility barriers."
+    },
+    {
+      "name": "ecc-react-build-resolver",
+      "profile": "local-edit",
+      "workflow_skill": "ecc-react-build-resolver",
+      "description": "Use when fixing a local React JSX, bundler, server/client boundary, CSS pipeline, or hydration failure."
+    },
+    {
+      "name": "ecc-vue-reviewer",
+      "profile": "read-only",
+      "workflow_skill": "ecc-vue-reviewer",
+      "description": "Use when statically reviewing Vue components, composables, Pinia, Vue Router, or Nuxt code for reactivity and rendering defects."
+    },
+    {
+      "name": "ecc-a11y-architect",
+      "profile": "read-only",
+      "workflow_skill": "ecc-a11y-architect",
+      "description": "Use when designing or statically reviewing web, iOS, or Android accessibility behavior and mapping barriers to WCAG criteria."
+    },
+    {
+      "name": "ecc-e2e-runner",
+      "profile": "local-edit",
+      "workflow_skill": "ecc-e2e-runner",
+      "description": "Use when creating, maintaining, or investigating local browser end-to-end tests for a specified user journey."
+    },
+    {
+      "name": "ecc-comment-analyzer",
+      "profile": "read-only",
+      "workflow_skill": "ecc-comment-analyzer",
+      "description": "Use when reviewing code comments, API documentation, or TODO notes for inaccurate claims, stale references, and missing behavioral context."
+    }
+  ],
+  "skills": [
+    {
+      "name": "ecc-typescript-reviewer",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/typescript-reviewer.md",
+      "adaptations": [
+        "Moved detailed agent guidance into a workflow skill.",
+        "Removed mandatory execution, CI veto, peer chains, and blanket style/memo rules.",
+        "Corrected path containment, parse handling, N+1, and error-boundary guidance."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-react-reviewer",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/react-reviewer.md",
+      "adaptations": [
+        "Preserved React-specific review lanes while removing peer orchestration and mandatory commands.",
+        "Replaced blanket security, memoization, plugin, and size rules with evidence-based checks.",
+        "Corrected use-hook exceptions, modern noopener behavior, and state-reset guidance."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-vue-reviewer",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/vue-reviewer.md",
+      "adaptations": [
+        "Removed peer invocation, CI veto, and execution requirements.",
+        "Corrected v-if scope, watcher disposal, computed caching, route cancellation, generated keys, and useTemplateRef claims.",
+        "Qualified universal security and style rules."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-react-build-resolver",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/react-build-resolver.md",
+      "adaptations": [
+        "Preserved failure tables and root-cause workflow.",
+        "Removed auto-install, dedupe, stderr suppression, peer chains, and fictional resolver dependency.",
+        "Corrected hydration guards, Server Action misuse, version matching, and Tailwind guidance."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-a11y-architect",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/a11y-architect.md",
+      "adaptations": [
+        "Restricted implementation and validation to static proposals and supplied evidence.",
+        "Corrected WCAG focus criteria, target sizes/units/exceptions, contrast, and reflow mappings.",
+        "Preserved search example, POUR checklist, native mapping, and response-only decision template."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-e2e-runner",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/e2e-runner.md",
+      "adaptations": [
+        "Removed global Agent Browser installation, tool preference mandate, automatic uploads, and quarantine.",
+        "Corrected actionability and network waits; required local/disposable boundaries.",
+        "Kept risk-based journey planning, artifacts, isolation, and reporting."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-comment-analyzer",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/agents/comment-analyzer.md",
+      "adaptations": [
+        "Preserved all four analysis lenses and advisory categories.",
+        "Removed Prompt Defense boilerplate and made evidence/output boundaries explicit."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-react-patterns",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/react-patterns/SKILL.md",
+      "adaptations": [
+        "Retained component recipes and complete examples; replaced missing rules/sibling links with inline guidance.",
+        "Corrected server action module/auth boundary, async params, optimistic identity, and render claims.",
+        "Removed universal list thresholds and acknowledged use-hook exceptions."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-react-performance",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/react-performance/SKILL.md",
+      "adaptations": [
+        "Preserved eight-category catalog, examples, and Vercel attribution.",
+        "Corrected promise ownership, RSC serialization, Activity effects, defer timing, and useEffectEvent guidance.",
+        "Removed quantitative benefit promises and hydration-warning suppression."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-react-testing",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/react-testing/SKILL.md",
+      "adaptations": [
+        "Preserved RTL, MSW, provider, hook, and error/suspense examples.",
+        "Removed blanket coverage percentages and console suppression.",
+        "Corrected JSDOM contrast and skipped-test claims; softened sibling dependencies."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-react-native-patterns",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/react-native-patterns/SKILL.md",
+      "adaptations": [
+        "Preserved Expo, query, form, list, and storage examples.",
+        "Removed missing rules dependencies and universal memoization policy.",
+        "Replaced render-time imperative redirect and handled location API rejections."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-vite-patterns",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/vite-patterns/SKILL.md",
+      "adaptations": [
+        "Preserved full Vite examples and troubleshooting catalog.",
+        "Corrected Vite/Rolldown version split, alias URL conversion, and envPrefix behavior.",
+        "Removed automatic cache resets and universal plugin recommendations; scoped Rollup chunk examples."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-nextjs-turbopack",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/nextjs-turbopack/SKILL.md",
+      "adaptations": [
+        "Preserved framework-specific commands and proxy naming guidance.",
+        "Corrected Next.js 16 bundler defaults and removed unsupported speed promises and flag advice."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-frontend-a11y",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/frontend-a11y/SKILL.md",
+      "adaptations": [
+        "Preserved form, semantic, ARIA, icon, and reduced-motion examples and community credit.",
+        "Replaced incomplete custom dropdown and focus-only modal with complete native equivalents.",
+        "Removed dangling sibling references."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-design-system",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/design-system/SKILL.md",
+      "adaptations": [
+        "Preserved generation, ten-dimension audit, and generic-design pattern lenses.",
+        "Removed fabricated slash commands, compulsory competitor browsing, and automatic documentation creation."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-bun-runtime",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/bun-runtime/SKILL.md",
+      "adaptations": [
+        "Preserved runtime APIs, commands, env handling, and lockfile guidance.",
+        "Removed universal toolchain preference, trivial test, automatic git/deployment instructions.",
+        "Qualified Node compatibility and installation authorization."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-e2e-testing",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/e2e-testing/SKILL.md",
+      "adaptations": [
+        "Retained POM, configuration, reports, wallet and critical-flow examples.",
+        "Corrected pre-action waits, tracing API, video configuration, and actionability claims.",
+        "Removed skip/quarantine defaults, auto-install/upload CI recipe, and real-money environment guard."
+      ],
+      "dependencies": []
+    },
+    {
+      "name": "ecc-motion-patterns",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/motion-patterns/SKILL.md",
+      "adaptations": [
+        "Preserved complete motion recipes and API decision guidance.",
+        "Bundled adapted foundations and its complete token example; made sibling guidance optional.",
+        "Scoped animation rules to project contracts, reduced-motion behavior, and accessible interaction responsibilities."
+      ],
+      "dependencies": [
+        "references/motion-foundations.md",
+        "examples/motion-tokens.ts"
+      ]
+    },
+    {
+      "name": "ecc-motion-advanced",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/motion-advanced/SKILL.md",
+      "adaptations": [
+        "Preserved complete motion recipes and API decision guidance.",
+        "Bundled adapted foundations and its complete token example; made sibling guidance optional.",
+        "Scoped animation rules to project contracts, reduced-motion behavior, and accessible interaction responsibilities."
+      ],
+      "dependencies": [
+        "references/motion-foundations.md",
+        "examples/motion-tokens.ts"
+      ]
+    }
+  ],
+  "files": [
+    ".agents/skills/ecc-typescript-reviewer/SKILL.md",
+    ".agents/skills/ecc-typescript-reviewer/LICENSE",
+    ".agents/skills/ecc-react-reviewer/SKILL.md",
+    ".agents/skills/ecc-react-reviewer/LICENSE",
+    ".agents/skills/ecc-vue-reviewer/SKILL.md",
+    ".agents/skills/ecc-vue-reviewer/LICENSE",
+    ".agents/skills/ecc-react-build-resolver/SKILL.md",
+    ".agents/skills/ecc-react-build-resolver/LICENSE",
+    ".agents/skills/ecc-a11y-architect/SKILL.md",
+    ".agents/skills/ecc-a11y-architect/LICENSE",
+    ".agents/skills/ecc-e2e-runner/SKILL.md",
+    ".agents/skills/ecc-e2e-runner/LICENSE",
+    ".agents/skills/ecc-comment-analyzer/SKILL.md",
+    ".agents/skills/ecc-comment-analyzer/LICENSE",
+    ".agents/agents/ecc/personas/ecc-typescript-reviewer.md",
+    ".agents/agents/ecc/personas/ecc-react-reviewer.md",
+    ".agents/agents/ecc/personas/ecc-react-build-resolver.md",
+    ".agents/agents/ecc/personas/ecc-vue-reviewer.md",
+    ".agents/agents/ecc/personas/ecc-a11y-architect.md",
+    ".agents/agents/ecc/personas/ecc-e2e-runner.md",
+    ".agents/agents/ecc/personas/ecc-comment-analyzer.md",
+    ".agents/skills/ecc-react-patterns/SKILL.md",
+    ".agents/skills/ecc-react-patterns/LICENSE",
+    ".agents/skills/ecc-react-performance/SKILL.md",
+    ".agents/skills/ecc-react-performance/LICENSE",
+    ".agents/skills/ecc-react-testing/SKILL.md",
+    ".agents/skills/ecc-react-testing/LICENSE",
+    ".agents/skills/ecc-react-native-patterns/SKILL.md",
+    ".agents/skills/ecc-react-native-patterns/LICENSE",
+    ".agents/skills/ecc-vite-patterns/SKILL.md",
+    ".agents/skills/ecc-vite-patterns/LICENSE",
+    ".agents/skills/ecc-nextjs-turbopack/SKILL.md",
+    ".agents/skills/ecc-nextjs-turbopack/LICENSE",
+    ".agents/skills/ecc-frontend-a11y/SKILL.md",
+    ".agents/skills/ecc-frontend-a11y/LICENSE",
+    ".agents/skills/ecc-design-system/SKILL.md",
+    ".agents/skills/ecc-design-system/LICENSE",
+    ".agents/skills/ecc-bun-runtime/SKILL.md",
+    ".agents/skills/ecc-bun-runtime/LICENSE",
+    ".agents/skills/ecc-e2e-testing/SKILL.md",
+    ".agents/skills/ecc-e2e-testing/LICENSE",
+    ".agents/skills/ecc-motion-patterns/SKILL.md",
+    ".agents/skills/ecc-motion-patterns/LICENSE",
+    ".agents/skills/ecc-motion-patterns/references/motion-foundations.md",
+    ".agents/skills/ecc-motion-patterns/examples/motion-tokens.ts",
+    ".agents/skills/ecc-motion-advanced/SKILL.md",
+    ".agents/skills/ecc-motion-advanced/LICENSE",
+    ".agents/skills/ecc-motion-advanced/references/motion-foundations.md",
+    ".agents/skills/ecc-motion-advanced/examples/motion-tokens.ts",
+    ".agents/ecc/Web.json"
+  ],
+  "exclusions": [],
+  "file_paths_relative_to": "home directory"
+}

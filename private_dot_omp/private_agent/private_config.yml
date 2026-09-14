@@ -57,7 +57,7 @@ tools:
   approvalMode: write
   approval:
     bash: allow
-    eval: prompt
+    eval: allow
 
 bash:
   patterns:

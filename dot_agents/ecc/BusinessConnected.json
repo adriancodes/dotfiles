@@ -1,0 +1,301 @@
+{
+  "agents": [],
+  "skills": [
+    {
+      "name": "ecc-deep-research",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/deep-research/SKILL.md",
+      "adaptations": [
+        "Preserved research planning, multi-source searches, full-source reading, cited report structure, quality rules, examples, and source-injection protections.",
+        "Made configured Firecrawl/Exa calls illustrative and allowed existing equivalent search/read tools with coverage limitations reported.",
+        "Replaced mandatory harness configuration and named Task-tool usage with existing tools and optional already-permitted delegation or inline stages.",
+        "Added pinned provenance, attribution, MIT license, instruction-only scope, and separate authorization for private-data transmission or report publication."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "ecc-market-research also gathers evidence but ends in a business or market decision; this guide handles broader multi-question research reports.",
+        "ecc-lead-intelligence uses research for person/company qualification; this guide does not require a social graph or create outreach.",
+        "ecc-finance-billing-ops can use current competitor evidence from this workflow but owns billing and entitlement conclusions."
+      ],
+      "readiness": {
+        "requirements": [
+          "An existing permitted web search and full-source reading capability is required for live research; supplied material only supports explicitly limited offline synthesis.",
+          "The full upstream provider path requires configured Firecrawl and/or Exa service access, credentials, quota, and current tool-schema checks; availability was not inspected or verified.",
+          "Broad parallel research can use existing permitted delegation but does not require or register additional agents."
+        ],
+        "side_effects": [
+          "Search queries and crawled URLs are disclosed to external providers and can consume paid quotas.",
+          "Saving reports writes to the requested local destination; uploading or publishing a report is a separate external operation."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-email-ops",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/email-ops/SKILL.md",
+      "adaptations": [
+        "Preserved exact mailbox/account resolution, thread reading, draft-first composition, Sent proof, precise status reporting, and inbound-message injection boundaries.",
+        "Namespaced approved companion references and added inline fallbacks; research-ops and messages-ops remain uninstalled, optional upstream workflows.",
+        "Separated text drafts and triage recommendations from saving drafts, sends, forwarding, archive/move/delete operations, settings, and follow-up automation.",
+        "Added pinned provenance, attribution, MIT license, actual mail-surface prerequisites, and an honest no-live-surface fallback."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "ecc-brand-voice and ecc-investor-outreach support tone and recipient-fit drafting; email-ops owns actual mailbox state and Sent verification.",
+        "ecc-customer-billing-ops owns billing incident classification; email-ops handles the separately requested customer correspondence.",
+        "ecc-knowledge-ops owns separately requested durable thread capture; drafting or sending does not automatically save knowledge."
+      ],
+      "readiness": {
+        "requirements": [
+          "Live mailbox work requires an existing authenticated and permitted mail connector, browser session, or mail client for the identified account and thread.",
+          "Sent-folder or equivalent client-side evidence is required for any send-success claim.",
+          "No mail account, connector, credential, or send surface was inspected or verified; supplied thread text supports draft-only work."
+        ],
+        "side_effects": [
+          "Mailbox reads expose private message content to the active tooling.",
+          "Saved drafts, sends, forwarding, archiving, moving, deletion, and mailbox-setting changes mutate local or remote mailbox state and require separately authorized scope.",
+          "Follow-up proposals do not create schedules or authorize further sends."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-google-workspace-ops",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/google-workspace-ops/SKILL.md",
+      "adaptations": [
+        "Preserved Drive-first asset discovery, ownership/version disambiguation, structure inspection, precise Docs/Sheets/Slides edits, and duplicate/canonical-asset recommendations.",
+        "Clarified service capabilities rather than named agents and required existing authenticated asset access.",
+        "Separated reads and recommendations from edits, uploads, imports, renames, archives, merges, deletion, and sharing; retained export-only fallback with live/visual limitations.",
+        "Added pinned provenance, attribution, MIT license, and instruction-only installation scope."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "ecc-frontend-slides creates browser-based presentations; this guide operates existing Google Workspace assets and requires a real Google surface for live edits.",
+        "ecc-knowledge-ops classifies and stores durable knowledge; this guide focuses on finding and precisely operating Docs, Sheets, Slides, and Drive assets."
+      ],
+      "readiness": {
+        "requirements": [
+          "An existing authenticated and permitted Google Drive/Docs/Sheets/Slides connector or browser session, correct account, and exact-file access are required for live work.",
+          "Current tool interfaces and edit permissions must be checked at invocation; layout-sensitive changes require an available visual inspection surface.",
+          "No Google account, connector, file access, or visual editing workflow was inspected or verified; supplied exports only support explicitly limited analysis."
+        ],
+        "side_effects": [
+          "Reading assets accesses potentially private shared documents and spreadsheets.",
+          "Edits, imports, uploads, renames, merges, archives, deletion, and sharing change live workspace state and require separately authorized scope."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-knowledge-ops",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/knowledge-ops/SKILL.md",
+      "adaptations": [
+        "Preserved the six storage roles, classification/deduplication/storage/indexing workflow, conversation/workspace/tracker/cross-source sync patterns, canonical-home discipline, and redaction quality gate.",
+        "Made Claude memory paths, TodoWrite, and MCP operation names harness-neutral examples; removed assumptions that every memory layer exists, auto-loads, or provides vector search.",
+        "Replaced unconditional multi-store writes and periodic sync with selected existing stores, requested on-demand operations, and separately authorized commit/push/export actions.",
+        "Added pinned provenance, attribution, MIT license, explicit store prerequisites, and proposal-only fallback when a destination is unavailable."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "ecc-google-workspace-ops operates specific shared assets; knowledge-ops decides canonical storage, ingestion, deduplication, and selected cross-store synchronization.",
+        "ecc-email-ops can provide a thread summary for a separately requested knowledge save; mailbox work does not imply durable capture.",
+        "ecc-deep-research produces cited findings; knowledge-ops can store them only when a destination and write scope are requested."
+      ],
+      "readiness": {
+        "requirements": [
+          "The user must identify existing source and destination stores and grant the required read/write scope; none of the six storage layers is provisioned by the guide.",
+          "GitHub, Linear, configured harness memory, MCP memory, knowledge-base Git remotes, Supabase/PostgreSQL, and vector stores each require their own existing configuration and authorized access when selected.",
+          "Only user-selected session exports and source folders are in scope; no account, memory service, database, remote, or session-export availability was inspected or verified."
+        ],
+        "side_effects": [
+          "Saving or deduplicating can modify memory, databases, tracker records, documents, local files, and indexes.",
+          "Commit/push and cross-source sync can disclose private session or workspace content to remote stores; redaction and separate destination authorization are required.",
+          "Sync examples do not install recurring jobs, watchers, hooks, or new services."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-lead-intelligence",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/lead-intelligence/SKILL.md",
+      "adaptations": [
+        "Preserved the five-stage qualification/outreach-drafting pipeline, signal and mutual weights, warm-path types, enrichment fields, voice capture, channel rules, examples, and untrusted-profile protections.",
+        "Bundled all four upstream helper-role documents under references/ without tool/model registration frontmatter; stages run inline or through already-permitted delegation.",
+        "Made social-graph-ranker and connections-optimizer optional uninstalled companions with limited inline ranking and recommendation fallbacks; namespaced ecc-brand-voice with an inline voice-profile fallback.",
+        "Retained upstream bridge equations while flagging undefined B_ext, normalization, and decay/engagement parameters; numerical graph-model claims require those missing definitions and real data.",
+        "Separated read credentials from write prerequisites, text drafts from in-app writes/sends, and configuration examples from actual setup; removed unverified replacement-product claims.",
+        "Added pinned provenance, attribution, MIT license, and source links for each complete helper reference."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "ecc-market-research evaluates markets; lead-intelligence qualifies individual people and companies for evidenced outreach drafts.",
+        "ecc-brand-voice owns reusable voice profiles; lead-intelligence consumes one or derives a limited profile inline.",
+        "ecc-investor-outreach specializes fundraising/partner correspondence; lead-intelligence adds prospect ranking and warm-path evidence.",
+        "ecc-x-api owns direct API patterns and ecc-email-ops owns mailbox state; neither is a required dependency for text-only lead qualification and drafting."
+      ],
+      "readiness": {
+        "requirements": [
+          "The full upstream path needs existing Exa search access and X API graph/search access with endpoint-specific tiers, quota, and appropriate read authentication.",
+          "Optional enhancements need separately existing LinkedIn access or authorized browser session, Apollo/Clay API access, GitHub access, and a mail client for explicitly requested saved drafts.",
+          "Supplied profiles and graph exports support limited inline qualification; unavailable graph fields, enrichment data, and unsupported scores must remain explicit gaps.",
+          "Current Exa/X tool schemas, authentication support, graph access, and quotas must be checked at invocation. No credentials, cookies, accounts, connectors, or graph access were inspected or verified.",
+          "The source decay model leaves B_ext, factor normalization, lambda, beta, and engagement definitions incomplete; the guide preserves this as an unresolved prerequisite for explicit model computation."
+        ],
+        "side_effects": [
+          "Search/enrichment and graph reads disclose queries or contact identifiers to providers, access personal/network data, and can consume quota.",
+          "Saving drafts in mail/social surfaces, sending outreach, publishing replies, changing follows, and scheduling follow-ups are separate mutations, not consequences of qualification.",
+          "Helper references create no registered agents, models, tool grants, or service connections."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-social-publisher",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/social-publisher/SKILL.md",
+      "adaptations": [
+        "Preserved account listing, optional media upload, schedule JSON, validation, apply/publish, status reads, all 13 upstream provider keys, and untrusted-response protections.",
+        "Kept SocialClaw and TweetClaw setup commands and pinned package examples as historical reference only, not installation or account-connection instructions.",
+        "Separated draft schedules from external validation submission, uploads, publishing, scheduling, and bounded status checks; no monitors or jobs are installed.",
+        "Made TweetClaw and upstream social-graph-ranker optional with supplied-evidence/verified-connection fallbacks; namespaced the optional ecc-x-api reference.",
+        "Added community-origin provenance, attribution, MIT license, current endpoint/version/provider-access checks, and explicit no-live-service fallback."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "ecc-content-engine, ecc-crosspost, and ecc-marketing-campaign plan or draft content; social-publisher owns separately authorized SocialClaw delivery operations.",
+        "ecc-x-api describes direct X operations; SocialClaw remains a distinct publishing transport and must not be silently substituted.",
+        "ecc-lead-intelligence targets individual outreach; social-publisher handles account/platform campaign publishing rather than prospect qualification."
+      ],
+      "readiness": {
+        "requirements": [
+          "Live use requires an existing SocialClaw workspace, approved SC_API_KEY access, connected provider accounts, service capability/quota, and current API documentation.",
+          "CLI examples require an already-installed compatible CLI; upstream socialclaw@0.1.12, getsocialclaw.com endpoints, provider support, and sample schedules must be rechecked at invocation.",
+          "TweetClaw is optional and not installed; only an already-approved OpenClaw integration may be used, with its separate configuration/credentials. The upstream @xquik/tweetclaw@1.6.31 example is not verified current.",
+          "No SocialClaw/TweetClaw account, credential, package, provider connection, endpoint, or delivery integration was inspected or verified."
+        ],
+        "side_effects": [
+          "External validation submits campaign content; media upload sends local assets to SocialClaw.",
+          "Apply can schedule or publish to connected real accounts; accepted run IDs are not proof of provider delivery.",
+          "Account connections, plugin/CLI installation, logins, monitors, and scheduled jobs are outside this import; status commands are only bounded requested reads."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-x-api",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/x-api/SKILL.md",
+      "adaptations": [
+        "Preserved authentication examples, tweet/thread posting, timeline/search/voice reads, username lookup, legacy media flow, rate-limit/error fragments, and untrusted-timeline protections.",
+        "Flagged endpoint/tier/authentication drift, including current user-context OAuth support and the legacy v1.1 media endpoint; examples are not production-complete client code.",
+        "Separated live reads and drafts from separately authorized uploads/posts/DMs/account changes, and bounded engagement reads from bot or monitor setup.",
+        "Namespaced optional brand-voice/content-engine/crosspost references with inline fallbacks; connections-optimizer remains an uninstalled optional workflow with review-only fallback.",
+        "Added pinned provenance, attribution, MIT license, existing dependency/credential prerequisites, and explicit no-live-access limitations."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "ecc-social-publisher uses SocialClaw rather than direct X endpoints; these are distinct transports with separate credentials and authorization.",
+        "ecc-content-engine and ecc-crosspost own content drafting/adaptation; x-api owns direct API interaction patterns.",
+        "ecc-brand-voice and ecc-lead-intelligence can use authorized X source evidence but do not require write credentials for text drafting."
+      ],
+      "readiness": {
+        "requirements": [
+          "Live calls need an existing X developer app/account, endpoint-appropriate tier and quota, and approved app-only or user-context authentication with suitable scopes.",
+          "Python examples need requests and, for OAuth 1.0a examples, requests-oauthlib; neither dependency is installed by this import.",
+          "Verify current developer docs for all endpoints, especially upload.twitter.com/1.1/media/upload.json, current OAuth support, quotas, and response shapes at invocation.",
+          "Examples contain placeholders and incomplete client handling; the thread sample is not atomic, and the rate-limit snippet only prints a delay. No account, credentials, Python dependencies, endpoint, quota, or live flow was inspected or verified."
+        ],
+        "side_effects": [
+          "Read calls disclose queries/account identifiers to X and consume endpoint quota.",
+          "Media upload, tweets, thread replies, DMs, follows, blocks, and account changes affect real external accounts and require separate authorization.",
+          "Threads may partially publish; an attempted request or draft cannot support a full-success claim. No bot or monitoring schedule is created."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-finance-billing-ops",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/finance-billing-ops/SKILL.md",
+      "adaptations": [
+        "Preserved freshest-evidence snapshots, revenue/customer/product/recommendation separation, duplicate-checkout classification, entitlement tracing, and operator handoff.",
+        "Namespaced approved companions with inline fallbacks; research-ops, github-ops, and verification-loop remain optional uninstalled workflows.",
+        "Separated source-code evidence from deployed runtime claims and limited verification to existing evidence or separately authorized safe sandbox work.",
+        "Added pinned provenance, attribution, MIT license, existing billing/code/source prerequisites, financial-advice limitations, and separate authorization for financial and communication mutations."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "ecc-customer-billing-ops owns individual-customer remediation; finance-billing-ops owns broader revenue truth, pricing conclusions, and code-backed entitlement behavior.",
+        "ecc-market-research and ecc-deep-research supply current competitor evidence, not live billing facts or entitlement verification.",
+        "understand-codebase can trace unfamiliar code; this guide narrows that activity to checkout, quantities, seats, quotas, and billing portals."
+      ],
+      "readiness": {
+        "requirements": [
+          "Live revenue evidence needs an existing authorized billing surface such as Stripe in the correct account and test/live environment; otherwise supplied snapshot timestamps are required.",
+          "Code-backed product truth requires access to actual checkout/entitlement code and relevant revision/deployment evidence; runtime behavior needs separate observed evidence.",
+          "Current pricing comparisons require accessible primary pricing sources and comparable billing units/terms.",
+          "No billing account, connector, credential, revenue snapshot, product repository, or checkout runtime was inspected or verified."
+        ],
+        "side_effects": [
+          "Billing reads expose confidential revenue and customer information; code/source reads do not prove deployed behavior.",
+          "Refunds, cancellations, charges, subscription/seat changes, portal creation, issue creation, customer sends, and live checkout tests are separate authorized operations.",
+          "This is operational evidence gathering, not tax, legal, accounting, or investment advice."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    },
+    {
+      "name": "ecc-customer-billing-ops",
+      "source": "https://github.com/affaan-m/ECC/blob/e04ea0b9cc8248686edf5ac751cadff550e162b8/skills/customer-billing-ops/SKILL.md",
+      "adaptations": [
+        "Preserved identity resolution, incident classification, duplicate-versus-team intent, annual/proration contract checks, remediation ordering, portal-first recommendations, and product-gap handoff.",
+        "Marked remedy tables and source examples as recommendations rather than automatic financial operations; refunds are not assumed reversible.",
+        "Separated read/classify/draft work from exact-customer/charge authorization for financial mutations and separate customer-message sends.",
+        "Added pinned provenance, attribution, MIT license, existing Stripe-equivalent prerequisites, financial-advice limitations, untrusted-support boundaries, and actual-state verification requirements."
+      ],
+      "dependencies": [],
+      "overlap": [
+        "ecc-finance-billing-ops owns broader revenue/pricing/product truth; customer-billing-ops owns the individual customer incident and proposed remediation.",
+        "ecc-email-ops can handle separately authorized correspondence and Sent proof; customer-billing-ops returns a follow-up draft by default.",
+        "Google Workspace customer trackers can support evidence, but do not replace the billing system of record or establish refund authority."
+      ],
+      "readiness": {
+        "requirements": [
+          "Live investigation needs an existing permitted billing connector/dashboard such as Stripe, the intended account/test-live environment, and reliable customer/subscription/invoice identifiers.",
+          "Current platform capabilities, contract terms, proration, and operator authority must be verified before a case-specific mutation.",
+          "Supplied records support timestamped analysis only; no billing account, connector, credential, customer identity mapping, portal, or financial mutation was inspected or verified."
+        ],
+        "side_effects": [
+          "Reads expose customer PII and financial state; responses must minimize identifiers and never expose secret keys or full card data.",
+          "Refunds, cancellations, subscription/seat changes, charges, and portal-session creation change real financial or account state; refunds are not assumed reversible.",
+          "Issue creation and customer sends are distinct external actions; proposed follow-ups and backlog items remain drafts unless separately authorized.",
+          "This is an operational workflow, not legal, tax, accounting, or investment advice."
+        ],
+        "status": "instruction-only; integration not verified"
+      }
+    }
+  ],
+  "files": [
+    ".agents/skills/ecc-deep-research/SKILL.md",
+    ".agents/skills/ecc-deep-research/LICENSE",
+    ".agents/skills/ecc-email-ops/SKILL.md",
+    ".agents/skills/ecc-email-ops/LICENSE",
+    ".agents/skills/ecc-google-workspace-ops/SKILL.md",
+    ".agents/skills/ecc-google-workspace-ops/LICENSE",
+    ".agents/skills/ecc-knowledge-ops/SKILL.md",
+    ".agents/skills/ecc-knowledge-ops/LICENSE",
+    ".agents/skills/ecc-lead-intelligence/SKILL.md",
+    ".agents/skills/ecc-lead-intelligence/LICENSE",
+    ".agents/skills/ecc-lead-intelligence/references/signal-scorer.md",
+    ".agents/skills/ecc-lead-intelligence/references/mutual-mapper.md",
+    ".agents/skills/ecc-lead-intelligence/references/enrichment-agent.md",
+    ".agents/skills/ecc-lead-intelligence/references/outreach-drafter.md",
+    ".agents/skills/ecc-social-publisher/SKILL.md",
+    ".agents/skills/ecc-social-publisher/LICENSE",
+    ".agents/skills/ecc-x-api/SKILL.md",
+    ".agents/skills/ecc-x-api/LICENSE",
+    ".agents/skills/ecc-finance-billing-ops/SKILL.md",
+    ".agents/skills/ecc-finance-billing-ops/LICENSE",
+    ".agents/skills/ecc-customer-billing-ops/SKILL.md",
+    ".agents/skills/ecc-customer-billing-ops/LICENSE",
+    ".agents/ecc/BusinessConnected.json"
+  ],
+  "exclusions": [],
+  "file_paths_relative_to": "home directory"
+}

@@ -1,0 +1,22 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- /* Manage preferences only; retain local credentials, trust decisions, and generated state. */ -}}
+{{- $current := dict -}}
+{{- if (trim .chezmoi.stdin) -}}
+{{- $current = fromJson .chezmoi.stdin -}}
+{{- end -}}
+{{- $before := toJson $current -}}
+{{- $desired := `{
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.5",
+  "defaultThinkingLevel": "medium",
+  "theme": "dark",
+  "packages": [
+    "git:github.com/DietrichGebert/ponytail"
+  ]
+}` | fromJson -}}
+{{- $_ := mergeOverwrite $current $desired -}}
+{{- if eq $before (toJson $current) -}}
+{{- .chezmoi.stdin -}}
+{{- else -}}
+{{- $current | toPrettyJson -}}
+{{- end -}}

@@ -1,0 +1,115 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- /* Manage preferences only; retain local credentials, trust decisions, and generated state. */ -}}
+{{- $current := dict -}}
+{{- if (trim .chezmoi.stdin) -}}
+{{- $current = fromToml .chezmoi.stdin -}}
+{{- end -}}
+{{- $before := toJson $current -}}
+{{- $desired := `{
+  "model": "gpt-6-astra",
+  "personality": "pragmatic",
+  "model_reasoning_effort": "high",
+  "approvals_reviewer": "auto_review",
+  "service_tier": "default",
+  "features": {
+    "hooks": true,
+    "multi_agent": true,
+    "js_repl": false
+  },
+  "plugins": {
+    "notion@openai-curated": {
+      "enabled": true
+    },
+    "documents@openai-primary-runtime": {
+      "enabled": true
+    },
+    "spreadsheets@openai-primary-runtime": {
+      "enabled": true
+    },
+    "presentations@openai-primary-runtime": {
+      "enabled": true
+    },
+    "pdf@openai-primary-runtime": {
+      "enabled": true
+    },
+    "template-creator@openai-primary-runtime": {
+      "enabled": true
+    },
+    "sites@openai-bundled": {
+      "enabled": true
+    },
+    "visualize@openai-bundled": {
+      "enabled": true
+    },
+    "ponytail@ponytail": {
+      "enabled": true
+    },
+    "browser@openai-bundled": {
+      "enabled": true
+    },
+    "computer-use@openai-bundled": {
+      "enabled": true
+    },
+    "chrome@openai-bundled": {
+      "enabled": true
+    },
+    "codex-app-tools@openai-bundled": {
+      "enabled": true
+    },
+    "unified-computer-use@openai-bundled": {
+      "enabled": true
+    }
+  },
+  "desktop": {
+    "appearanceTheme": "system",
+    "followUpQueueMode": "queue",
+    "dock-icon-preference": "app-default",
+    "conversationDetailMode": "STEPS_PROSE",
+    "realtimeVoiceScreenContextEnabled": true,
+    "appearanceLightCodeThemeId": "codex",
+    "appearanceLightChromeTheme": {
+      "accent": "#0169cc",
+      "contrast": 45,
+      "ink": "#0d0d0d",
+      "opaqueWindows": false,
+      "surface": "#ffffff",
+      "fonts": {},
+      "semanticColors": {
+        "diffAdded": "#00a240",
+        "diffRemoved": "#e02e2a",
+        "skill": "#751ed9"
+      }
+    }
+  },
+  "mcp_servers": {
+    "playwright": {
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "command": "npx",
+      "tools": {
+        "browser_tabs": {
+          "approval_mode": "approve"
+        },
+        "browser_run_code_unsafe": {
+          "approval_mode": "approve"
+        }
+      }
+    },
+    "figma": {
+      "url": "https://mcp.figma.com/mcp"
+    }
+  },
+  "marketplaces": {
+    "ponytail": {
+      "source_type": "git",
+      "source": "https://github.com/DietrichGebert/ponytail.git"
+    }
+  }
+}` | fromJson -}}
+{{- $_ := mergeOverwrite $current $desired -}}
+{{- if eq $before (toJson $current) -}}
+{{- .chezmoi.stdin -}}
+{{- else -}}
+{{- $current | toToml -}}
+{{- end -}}
