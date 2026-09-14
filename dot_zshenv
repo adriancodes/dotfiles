@@ -1,0 +1,26 @@
+# ~/.zshenv — sourced before .zprofile/.zshrc and before zsh's terminal setup.
+#
+# Terminal terminfo resolution lives here (not .zshrc) on purpose. Some terminals
+# — notably Ghostty — ship their terminfo (xterm-ghostty) only inside the app
+# bundle and expose it via $TERMINFO, which `su -` strips. That leaves $TERM
+# unresolvable in another account (e.g. neo) and breaks line editing with
+# "can't find terminal definition for xterm-ghostty".
+#
+# We must NOT fix it by setting TERMINFO_DIRS: assigning it inside a running zsh
+# triggers an immediate terminal re-init that fails just the same. Instead, copy
+# the compiled entry into ~/.terminfo — a DEFAULT terminfo search path — so zsh
+# resolves it with no env var and no re-init. If we can't, fall back to a
+# universal entry so typing always works. Interactive shells only; once the entry
+# is copied, infocmp succeeds and this whole block is skipped on later shells.
+if [[ -o interactive ]] && ! infocmp "$TERM" >/dev/null 2>&1; then
+    _ti_hex=$(printf '%x' "'${TERM}")   # ncurses hashes by first char, e.g. 78 = 'x'
+    for _src in /Applications/Ghostty.app/Contents/Resources/terminfo; do
+        if [[ -r $_src/$_ti_hex/$TERM ]]; then
+            mkdir -p "$HOME/.terminfo/$_ti_hex" 2>/dev/null && \
+                cp "$_src/$_ti_hex/$TERM" "$HOME/.terminfo/$_ti_hex/" 2>/dev/null
+            break
+        fi
+    done
+    unset _ti_hex _src
+    infocmp "$TERM" >/dev/null 2>&1 || export TERM=xterm-256color
+fi

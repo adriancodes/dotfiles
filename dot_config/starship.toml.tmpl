@@ -62,9 +62,9 @@ symbol = " "
 
 [hostname]
 ssh_symbol = " "
-# ssh_only = false  # This makes hostname always show
-# format = "[$hostname](bold blue) "
-# disabled = false
+ssh_only = false  # Always show host — distinguishes adrian@macbook-air from neo@agent-neo
+format = "[@$hostname]($style) "
+style = "bold dimmed green"
 
 [java]
 symbol = " "
@@ -178,6 +178,27 @@ symbol = " "
 symbol = " "
 
 [username]
+{{- if eq .chezmoi.username "neo" }}
+style_user = "bold red"  # agent profile — red so it's unmistakable which account you're in
+{{- else }}
 style_user = "bold dimmed blue"
+{{- end }}
 show_always = true  # This makes username always show
 format = "[$user]($style) "
+
+# Colored prompt character. Success is green normally, but yellow in the agent
+# (neo) profile so even the caret signals which account you're operating in.
+[character]
+{{- if eq .chezmoi.username "neo" }}
+success_symbol = "[❯](bold yellow)"
+{{- else }}
+success_symbol = "[❯](bold green)"
+{{- end }}
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold green)"
+
+# Show how long slow commands took (only when >2s)
+[cmd_duration]
+min_time = 2000
+format = "[took $duration]($style) "
+style = "bold yellow"

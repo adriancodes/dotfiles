@@ -18,10 +18,24 @@
 # Performance profiling (uncomment to debug slow startup)
 # zmodload zsh/zprof
 
+# Locale — guarantee UTF-8 even when the parent didn't set one (notably
+# `su - neo`, where macOS drops LANG). A non-UTF-8 locale makes multibyte prompt
+# glyphs miscount, so backspace appears to insert spaces and zinit's color codes
+# render as literal {nl}{info} tokens. The :- guards leave an existing locale as-is.
+export LANG="${LANG:-en_US.UTF-8}"
+export LC_ALL="${LC_ALL:-$LANG}"
+
+# Terminal terminfo resolution (Ghostty's xterm-ghostty under `su -`, etc.) is
+# handled in ~/.zshenv — it must run before zsh's terminal setup, which .zshrc is
+# too late for.
+
 # XDG Base Directory Specification
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+
+# Keep PATH free of duplicates no matter how many times it's appended below
+typeset -U path PATH
 
 # ZINIT
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -35,17 +49,12 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Initialize completion before loading plugins
-autoload -Uz compinit
-if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
-    compinit
-else
-    compinit -C
-fi
-
 # Load plugins
-# Note: zsh-syntax-highlighting must be loaded last
-zinit ice lucid wait='0'
+# Note: zsh-syntax-highlighting must be loaded last.
+# Completion is initialized once at the end via zinit's zicompinit (after every
+# completion source is loaded), so there's no manual compinit here. blockf stops
+# zsh-completions from calling compdef before that single init runs.
+zinit ice lucid wait='0' blockf
 zinit light zsh-users/zsh-completions
 
 zinit ice lucid wait='0'
@@ -61,8 +70,12 @@ zinit snippet OMZP::aws
 zinit snippet OMZP::command-not-found
 
 # Must be loaded last
-zinit ice lucid wait='0' atinit='zpcompinit'
-zinit light zsh-users/zsh-syntax-highlighting
+# compinit -i: silently skip "insecure" completion dirs instead of prompting.
+# On a shared Mac, Homebrew's completion dirs are owned by the brew-owning user
+# (adrian), which zsh flags for any OTHER account (neo). -i drops just those and
+# keeps each account's own secure completions. No-op for the brew owner.
+zinit ice lucid wait='0' atinit='autoload -Uz compinit; compinit -i; zicdreplay'
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 # Enhanced keybindings
 bindkey -e  # Emacs keybindings
@@ -75,7 +88,7 @@ bindkey '^[[1;5C' forward-word        # Ctrl+right
 bindkey '^[[1;5D' backward-word       # Ctrl+left
 
 # History configuration
-HISTSIZE=100000000
+HISTSIZE=1000000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 setopt HIST_IGNORE_ALL_DUPS    # Remove older duplicate entries from history
@@ -117,13 +130,9 @@ if (( $+commands[bat] )); then
     alias cat='bat'
 fi
 
-if (( $+commands[fd] )); then
-    alias find='fd'
-fi
-
-if (( $+commands[ripgrep] )); then
-    alias grep='rg'
-fi
+# Note: fd and rg are NOT flag-compatible with find/grep, so they're left under
+# their own names rather than shadowing the classics (avoids breaking pasted
+# `find -name` / `grep -oP` style commands). Use `fd` and `rg` directly.
 
 # Conditional aliases based on OS
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -135,7 +144,7 @@ fi
 
 # Shell
 
-alias reloadz='zsh'
+alias reloadz='exec zsh'
 
 # Directory and file operations
 alias ..='cd ..'
@@ -145,7 +154,6 @@ alias mkdir='mkdir -pv'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
-alias cat='bat'
 alias cr='cursor'
 alias em='emacs -nw'
 alias editrc='emacs -nw ~/.zshrc'
@@ -162,16 +170,15 @@ alias gl='git log --oneline --graph --decorate'
 
 # Utility aliases
 alias aliases='alias | sort'         # List all aliases
-alias paths='echo -e ${PATH//: \'
+alias paths='echo -e ${PATH//:/\n}'  # Print each PATH entry on its own line
 
 # Development
 # alias npm-update='npx npm-check-updates -u && npm install'
 # alias yarn-update='yarn upgrade-interactive --latest'
 # alias docker-clean='docker system prune -af'
 
-# Emcas
+# Emacs
 alias doomsync='~/.emacs.d/bin/doom sync'
-
 
 # FZF configuration
 if (( $+commands[fzf] )); then
@@ -191,11 +198,10 @@ if [[ -f /opt/homebrew/bin/brew ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Node Version Manager
-export NVM_DIR="$HOME/.nvm"
-if [[ -f "$(brew --prefix nvm)/nvm.sh" ]]; then
-    source "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
-fi
+# Node/Python/Go versions are managed by mise (activated at the very end of this
+# file so its shims take precedence). nvm was removed — it loaded synchronously on
+# every startup and its node was already shadowed. mise installs runtimes per-user,
+# which also suits the non-admin neo account (no brew/admin needed there).
 
 # Paths
 # Local binaries
@@ -212,7 +218,7 @@ if (( $+commands[go] )); then
 fi
 
 # pnpm
-export PNPM_HOME="/Users/adrian.martin/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -236,7 +242,21 @@ if (( $+commands[direnv] )); then
     eval "$(direnv hook zsh)"
 fi
 
-
+# atuin — SQLite-backed, searchable shell history on Ctrl+R. Initialized on the
+# first precmd (deferred), NOT synchronously here: the syntax-highlighter and
+# autosuggestions are turbo-loaded after the first prompt, and initializing atuin
+# ahead of them tangles the zle widget-wrapping and corrupts on-screen typing.
+# This block is registered last, so its precmd hook runs after zinit's — meaning
+# atuin wraps the editor after those plugins. --disable-up-arrow keeps up/down.
+if (( $+commands[atuin] )); then
+    autoload -Uz add-zsh-hook
+    _atuin_lazy_init() {
+        eval "$(atuin init zsh --disable-up-arrow)"
+        add-zsh-hook -d precmd _atuin_lazy_init
+        unfunction _atuin_lazy_init
+    }
+    add-zsh-hook precmd _atuin_lazy_init
+fi
 
 # Load any local overrides
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
@@ -244,8 +264,27 @@ fi
 # Performance profiling (uncomment with first line to debug slow startup)
 # zprof
 
-
 # Added by Antigravity
 export PATH="/Users/adrian/.antigravity/antigravity/bin:$PATH"
 
-. "$HOME/.local/share/../bin/env"
+# Sourced only if present — this file is created by the uv/rust installer and
+# won't exist on every account (e.g. neo), so guard it to avoid a startup error.
+[[ -f "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/adrian/.lmstudio/bin"
+# End of LM Studio CLI section
+
+# bun completions
+[ -s "/Users/adrian/.bun/_bun" ] && source "/Users/adrian/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# mise — activate LAST so its runtime shims sit ahead of every PATH entry above
+# (including the Hermes node symlink in ~/.local/bin). Guarded so accounts without
+# mise just skip it. Run `mise use -g node@lts` once per account to pick a runtime.
+if (( $+commands[mise] )); then
+    eval "$(mise activate zsh)"
+fi
