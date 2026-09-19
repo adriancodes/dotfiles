@@ -8,7 +8,7 @@
   "excluded_resource_prefixes": [
     "evals/ (development-only fixtures, runners, and historical evaluation output; never loaded at runtime)"
   ],
-  "note": "Content hashes describe this saved snapshot, not autonomous discovery or workflow effectiveness. Supplemental upstream revisions apply to the downloaded licenses/references, not to the installed skill revisions.",
+  "note": "Content hashes describe this saved snapshot, not autonomous discovery or workflow effectiveness. Compatible source revisions identify matching installed skill folder trees and definition blobs, not proven original installation commits. Other supplemental pins describe only the downloaded licenses/references.",
   "skills": [
     {
       "name": "37signals-way",
@@ -30,7 +30,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/api-and-interface-design/SKILL.md",
-        "installed_source_folder_hash": "f7eefe1133c8540d00f279a171053cc9551ec5c4"
+        "installed_source_folder_hash": "f7eefe1133c8540d00f279a171053cc9551ec5c4",
+        "definition_git_blob": "820d6d981f90b7802e0ea8b75bb966a3d78b8d0f",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -78,7 +80,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/browser-testing-with-devtools/SKILL.md",
-        "installed_source_folder_hash": "42be59520831f02c46bce7bed1aac6ab0592947c"
+        "installed_source_folder_hash": "42be59520831f02c46bce7bed1aac6ab0592947c",
+        "definition_git_blob": "9864d2724e273e1164d62ab10b73590ae00fd6a8",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -102,7 +106,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/ci-cd-and-automation/SKILL.md",
-        "installed_source_folder_hash": "34db321777a17e268ac425f0f7f2501dda55c955"
+        "installed_source_folder_hash": "34db321777a17e268ac425f0f7f2501dda55c955",
+        "definition_git_blob": "118456fcb10225c030769a4fee7815b9c536b0ce",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -162,7 +168,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/code-review-and-quality/SKILL.md",
-        "installed_source_folder_hash": "8c26aef07c0ac94770d48ed68e72c0fd585420a6"
+        "installed_source_folder_hash": "8c26aef07c0ac94770d48ed68e72c0fd585420a6",
+        "definition_git_blob": "7dfa56362fa65fff450ee5aa02393b85b9c26d85",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -174,7 +182,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/code-simplification/SKILL.md",
-        "installed_source_folder_hash": "15b6e21924188ee46402a8c91963162fd9056c7d"
+        "installed_source_folder_hash": "15b6e21924188ee46402a8c91963162fd9056c7d",
+        "definition_git_blob": "239b2848489511de30d9e63b0bd183adc4b01347",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -210,7 +220,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/constraint-driven-development/SKILL.md",
-        "installed_source_folder_hash": "1a25910ac583dc0cd2f481ee6a27d883dc3a72dc"
+        "installed_source_folder_hash": "1a25910ac583dc0cd2f481ee6a27d883dc3a72dc",
+        "definition_git_blob": "d5e12fda543a81b0e2e950e18cac0ce1aa808ecc",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -234,7 +246,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/context-engineering/SKILL.md",
-        "installed_source_folder_hash": "8912c45063ef4b48d56c0b12a3cb27c9747c1045"
+        "installed_source_folder_hash": "8912c45063ef4b48d56c0b12a3cb27c9747c1045",
+        "definition_git_blob": "04718d0b2083c6f7b22c0d679f0022549ae7522d",
+        "compatible_source_revision": "cda4542ade0f3c532494b9a48837eb01d39925f1"
       },
       "excluded_development_file_count": 0
     },
@@ -366,7 +380,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/debugging-and-error-recovery/SKILL.md",
-        "installed_source_folder_hash": "97a66b4d4750b1b5108da8633104bb1e020275ab"
+        "installed_source_folder_hash": "97a66b4d4750b1b5108da8633104bb1e020275ab",
+        "definition_git_blob": "03775802b244cddf2f58f6c54039f6e6ee8702f2",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -390,7 +406,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/deprecation-and-migration/SKILL.md",
-        "installed_source_folder_hash": "452a130309afc52a26beceb21f1467936e53a37c"
+        "installed_source_folder_hash": "452a130309afc52a26beceb21f1467936e53a37c",
+        "definition_git_blob": "7bf884ca5743d63be448725f88041dde8a10cd5d",
+        "compatible_source_revision": "cda4542ade0f3c532494b9a48837eb01d39925f1"
       },
       "excluded_development_file_count": 0
     },
@@ -462,7 +480,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/documentation-and-adrs/SKILL.md",
-        "installed_source_folder_hash": "85f57bdd7dcddaa589c6f36e8ac87423005c3de0"
+        "installed_source_folder_hash": "85f57bdd7dcddaa589c6f36e8ac87423005c3de0",
+        "definition_git_blob": "7faf52c9558fa60faf7362cf473cf24784f9209b",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -498,7 +518,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/doubt-driven-development/SKILL.md",
-        "installed_source_folder_hash": "385c1dbda7db05fac824808e18239ee9d29cfce7"
+        "installed_source_folder_hash": "385c1dbda7db05fac824808e18239ee9d29cfce7",
+        "definition_git_blob": "ea46342c5dcfe445004a6fa5bc43e71f3f25e78d",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -1440,7 +1462,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/frontend-ui-engineering/SKILL.md",
-        "installed_source_folder_hash": "893e7558baef6a0773aec4c152ca8bccd544fa03"
+        "installed_source_folder_hash": "893e7558baef6a0773aec4c152ca8bccd544fa03",
+        "definition_git_blob": "837df875900d4d431c6d51a3251bac0d4bd5dfed",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -1464,7 +1488,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/git-workflow-and-versioning/SKILL.md",
-        "installed_source_folder_hash": "116794299a8929231257cdade82bd87bd0986321"
+        "installed_source_folder_hash": "116794299a8929231257cdade82bd87bd0986321",
+        "definition_git_blob": "c64f9f2697b0e4a65978c5fab80327da56ad6069",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -1620,7 +1646,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/idea-refine/SKILL.md",
-        "installed_source_folder_hash": "14f474d8f51370ddd9127ff3d171810a1acf891a"
+        "installed_source_folder_hash": "14f474d8f51370ddd9127ff3d171810a1acf891a",
+        "definition_git_blob": "38955e8943f2ea68c041f10ef1902d94bdfb1cb9",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -1740,7 +1768,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/incremental-implementation/SKILL.md",
-        "installed_source_folder_hash": "cc6920585c0808b8fbf368f6705a1a806193ebf2"
+        "installed_source_folder_hash": "cc6920585c0808b8fbf368f6705a1a806193ebf2",
+        "definition_git_blob": "6df12f9a878c80305c42bcdbe8a43a10d2e0c933",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -1776,7 +1806,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/interview-me/SKILL.md",
-        "installed_source_folder_hash": "0797d64561cca6ad975d9e5d1f1497cba83a517b"
+        "installed_source_folder_hash": "0797d64561cca6ad975d9e5d1f1497cba83a517b",
+        "definition_git_blob": "de5e3aff0c497e2d474e329cde447678632e082b",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -1932,7 +1964,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/observability-and-instrumentation/SKILL.md",
-        "installed_source_folder_hash": "6fc52117cbeb28c0f2eb56c54fd24a101a873263"
+        "installed_source_folder_hash": "6fc52117cbeb28c0f2eb56c54fd24a101a873263",
+        "definition_git_blob": "87a848a88097eef7478ee3260bf1ce30242c61c1",
+        "compatible_source_revision": "cda4542ade0f3c532494b9a48837eb01d39925f1"
       },
       "excluded_development_file_count": 0
     },
@@ -1968,7 +2002,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/performance-optimization/SKILL.md",
-        "installed_source_folder_hash": "d7cc0bec423819ebe153ec70177caaec4bad3fea"
+        "installed_source_folder_hash": "d7cc0bec423819ebe153ec70177caaec4bad3fea",
+        "definition_git_blob": "cbc7e950a6f376d25ac88cf310d5a48555db2ec1",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -1980,7 +2016,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/planning-and-task-breakdown/SKILL.md",
-        "installed_source_folder_hash": "3045f95a156dc71d7b5ac1e29ce795bb5cac2b71"
+        "installed_source_folder_hash": "3045f95a156dc71d7b5ac1e29ce795bb5cac2b71",
+        "definition_git_blob": "296249b64334bcfd1aeaefd27b9e3e5494e38ec0",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -2136,7 +2174,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/security-and-hardening/SKILL.md",
-        "installed_source_folder_hash": "a33a42fdaf569207c675e3b3185d0c6f51445823"
+        "installed_source_folder_hash": "a33a42fdaf569207c675e3b3185d0c6f51445823",
+        "definition_git_blob": "05debf5eb3cd936b2e5581ea3c9144ca9354f180",
+        "compatible_source_revision": "226bdd3aef2a74f43782c01583d91bcea92915ed"
       },
       "excluded_development_file_count": 0
     },
@@ -2184,7 +2224,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/shipping-and-launch/SKILL.md",
-        "installed_source_folder_hash": "af26f5856dd69858e880df41b09ee69db275c284"
+        "installed_source_folder_hash": "af26f5856dd69858e880df41b09ee69db275c284",
+        "definition_git_blob": "a61dc0d468149ca374406ee253ff2a35daa30fcf",
+        "compatible_source_revision": "226bdd3aef2a74f43782c01583d91bcea92915ed"
       },
       "excluded_development_file_count": 0
     },
@@ -2220,7 +2262,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/source-driven-development/SKILL.md",
-        "installed_source_folder_hash": "d88d094056a158b53859e29181b15a56a6acd910"
+        "installed_source_folder_hash": "d88d094056a158b53859e29181b15a56a6acd910",
+        "definition_git_blob": "d1f599a9fe8eb77d4af7dc2f45404c2f6363e441",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -2232,7 +2276,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/spec-driven-development/SKILL.md",
-        "installed_source_folder_hash": "3f7ea0883fced84b5338688c915ce6e0435e35f3"
+        "installed_source_folder_hash": "3f7ea0883fced84b5338688c915ce6e0435e35f3",
+        "definition_git_blob": "f3f5877c5d6be8f74408c308393bfb45cbcf53c4",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -2327,7 +2373,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/test-driven-development/SKILL.md",
-        "installed_source_folder_hash": "b5f106f5bf4a9b07bbef660602b01764029d2fbf"
+        "installed_source_folder_hash": "b5f106f5bf4a9b07bbef660602b01764029d2fbf",
+        "definition_git_blob": "0cfd2f33d78961a23365b34bd92e08026dd140bc",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -2423,7 +2471,9 @@
         "source": "addyosmani/agent-skills",
         "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
         "skillPath": "skills/using-agent-skills/SKILL.md",
-        "installed_source_folder_hash": "72b68da3152a96bbe8cb6a24a666fc39929378db"
+        "installed_source_folder_hash": "72b68da3152a96bbe8cb6a24a666fc39929378db",
+        "definition_git_blob": "5a73cd77353507db2e7f49f7238fb9e0c712b1aa",
+        "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
       },
       "excluded_development_file_count": 0
     },
@@ -2602,6 +2652,11 @@
   ],
   "files": [
     {
+      "path": ".agents/.skill-lock.json",
+      "sha256": "6a1b7f0af4c3841380915cbb4689f229f216f375168cc6cdca15ca739fc6795b",
+      "mode": 420
+    },
+    {
       "path": ".agents/references/accessibility-checklist.md",
       "sha256": "61c759d94d52296231f5f310b92b401f56c44e4430dc3cc95ebac5d7b1d5ffac",
       "mode": 420
@@ -2629,6 +2684,11 @@
     {
       "path": ".agents/references/performance-checklist.md",
       "sha256": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067",
+      "mode": 420
+    },
+    {
+      "path": ".agents/references/revisions/d2c37ef6225dd8726cdd369a8030307f48592d26/security-checklist.md",
+      "sha256": "a8bbff3b1ac9122985e98fbe9a8fa09cd8ad53b190bac7f8f0f63687900f7d7a",
       "mode": 420
     },
     {
@@ -9907,41 +9967,96 @@
       }
     },
     "addyosmani/agent-skills": {
-      "revision": "c004a74784a08295d52749b04cda634125b9a581",
       "files": {
         "LICENSE": {
-          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/c004a74784a08295d52749b04cda634125b9a581/LICENSE",
-          "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7"
+          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/d2c37ef6225dd8726cdd369a8030307f48592d26/LICENSE",
+          "sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+          "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
         },
         "references/security-checklist.md": {
-          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/c004a74784a08295d52749b04cda634125b9a581/references/security-checklist.md",
-          "sha256": "963922cb36bc87b81e56c8f86ff8f6db813ed7efe88066914dceaf6adba2ac90"
+          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/226bdd3aef2a74f43782c01583d91bcea92915ed/references/security-checklist.md",
+          "sha256": "963922cb36bc87b81e56c8f86ff8f6db813ed7efe88066914dceaf6adba2ac90",
+          "git_blob": "b7df3eb04178e4a24bfa405431bf8dee6a89a8c4",
+          "matching_installed_consumers": [
+            "security-and-hardening",
+            "shipping-and-launch"
+          ],
+          "historical_variants": [
+            {
+              "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/d2c37ef6225dd8726cdd369a8030307f48592d26/references/security-checklist.md",
+              "sha256": "a8bbff3b1ac9122985e98fbe9a8fa09cd8ad53b190bac7f8f0f63687900f7d7a",
+              "git_blob": "0f656479b05812383abfd8d11ab72a6d7dd47e14",
+              "matching_installed_consumers": [
+                "code-review-and-quality"
+              ],
+              "deployed_path": ".agents/references/revisions/d2c37ef6225dd8726cdd369a8030307f48592d26/security-checklist.md",
+              "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
+            }
+          ],
+          "compatible_source_revision": "226bdd3aef2a74f43782c01583d91bcea92915ed"
         },
         "references/performance-checklist.md": {
-          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/c004a74784a08295d52749b04cda634125b9a581/references/performance-checklist.md",
-          "sha256": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067"
+          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/226bdd3aef2a74f43782c01583d91bcea92915ed/references/performance-checklist.md",
+          "sha256": "40f564d1e62341e277c01ba42c42d95264b9ef3b8e5a23249dc6e121a7e70067",
+          "git_blob": "ba9744fe60dbe4f04f3f907029638d923158d7a2",
+          "matching_installed_consumers": [
+            "code-review-and-quality",
+            "performance-optimization",
+            "shipping-and-launch"
+          ],
+          "compatible_source_revision": "226bdd3aef2a74f43782c01583d91bcea92915ed"
         },
         "references/accessibility-checklist.md": {
-          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/c004a74784a08295d52749b04cda634125b9a581/references/accessibility-checklist.md",
-          "sha256": "61c759d94d52296231f5f310b92b401f56c44e4430dc3cc95ebac5d7b1d5ffac"
+          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/226bdd3aef2a74f43782c01583d91bcea92915ed/references/accessibility-checklist.md",
+          "sha256": "61c759d94d52296231f5f310b92b401f56c44e4430dc3cc95ebac5d7b1d5ffac",
+          "git_blob": "c8c61e5f3d5a010a0d0ecb918bfaffe6c76fca78",
+          "matching_installed_consumers": [
+            "frontend-ui-engineering",
+            "shipping-and-launch"
+          ],
+          "compatible_source_revision": "226bdd3aef2a74f43782c01583d91bcea92915ed"
         },
         "references/definition-of-done.md": {
-          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/c004a74784a08295d52749b04cda634125b9a581/references/definition-of-done.md",
-          "sha256": "d1c75d2ae65d2c7a9cd01f93fa8de63e00e75f2fe5d08be224d576157054dcee"
+          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/226bdd3aef2a74f43782c01583d91bcea92915ed/references/definition-of-done.md",
+          "sha256": "d1c75d2ae65d2c7a9cd01f93fa8de63e00e75f2fe5d08be224d576157054dcee",
+          "git_blob": "35e39f9e15f6dd0ff4725a6e5cbce7f2aa69064a",
+          "matching_installed_consumers": [
+            "incremental-implementation",
+            "planning-and-task-breakdown",
+            "shipping-and-launch",
+            "using-agent-skills"
+          ],
+          "compatible_source_revision": "226bdd3aef2a74f43782c01583d91bcea92915ed"
         },
         "references/observability-checklist.md": {
-          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/c004a74784a08295d52749b04cda634125b9a581/references/observability-checklist.md",
-          "sha256": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8"
+          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/cda4542ade0f3c532494b9a48837eb01d39925f1/references/observability-checklist.md",
+          "sha256": "25fcd0e854596a5ab6f11b002050d245bf78f5ae0fcbd1df699b89451ae0e1e8",
+          "git_blob": "ad40d7aa3fca5d2091fa45be234c14aee22c3588",
+          "matching_installed_consumers": [
+            "observability-and-instrumentation"
+          ],
+          "compatible_source_revision": "cda4542ade0f3c532494b9a48837eb01d39925f1"
         },
         "references/testing-patterns.md": {
-          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/c004a74784a08295d52749b04cda634125b9a581/references/testing-patterns.md",
-          "sha256": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56"
+          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/d2c37ef6225dd8726cdd369a8030307f48592d26/references/testing-patterns.md",
+          "sha256": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56",
+          "git_blob": "bc96e271ad241ca567f06d21c6ecc001455b80f1",
+          "matching_installed_consumers": [
+            "test-driven-development"
+          ],
+          "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
         },
         "references/orchestration-patterns.md": {
-          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/c004a74784a08295d52749b04cda634125b9a581/references/orchestration-patterns.md",
-          "sha256": "61e543d86f19f86b83074f8c1c769455c7085a2c72dd47b1da21a8c63785be4a"
+          "url": "https://raw.githubusercontent.com/addyosmani/agent-skills/d2c37ef6225dd8726cdd369a8030307f48592d26/references/orchestration-patterns.md",
+          "sha256": "61e543d86f19f86b83074f8c1c769455c7085a2c72dd47b1da21a8c63785be4a",
+          "git_blob": "09cddd31d52a95be1d9bca814547d184b9945e44",
+          "matching_installed_consumers": [
+            "doubt-driven-development"
+          ],
+          "compatible_source_revision": "d2c37ef6225dd8726cdd369a8030307f48592d26"
         }
-      }
+      },
+      "note": "References were fetched from compatible commits matching installed consumer skill folder hashes and definition blobs at or before recorded update timestamps. Matching content does not establish the actual installation commit. The newer compatible shared security checklist is active; the older compatible variant is retained separately. Installed skill instructions and active reference bytes are unchanged."
     },
     "zenbu-labs/terminal-browser": {
       "revision": "6d682348f4af469b56fa0fd8331b4eb967030893",
@@ -9970,5 +10085,11 @@
         }
       }
     }
+  },
+  "skill_manager": {
+    "path": ".agents/.skill-lock.json",
+    "version": 3,
+    "record_count": 136,
+    "sha256": "6a1b7f0af4c3841380915cbb4689f229f216f375168cc6cdca15ca739fc6795b"
   }
 }
