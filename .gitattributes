@@ -1,0 +1,5 @@
+# Skill snapshot hashes cover original bytes, including upstream line endings.
+/dot_agents/skills/** -text
+/dot_agents/references/** -text
+/dot_codex/skills/** -text
+/private_dot_hermes/private_skills/** -text
